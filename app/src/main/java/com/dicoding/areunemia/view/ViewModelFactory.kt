@@ -3,7 +3,7 @@ package com.dicoding.areunemia.view
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.areunemia.data.local.UserRepository
+import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.di.Injection
 import com.dicoding.areunemia.view.login.LoginViewModel
 import com.dicoding.areunemia.view.main.MainViewModel

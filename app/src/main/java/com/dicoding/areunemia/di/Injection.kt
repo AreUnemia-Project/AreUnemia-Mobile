@@ -1,7 +1,7 @@
 package com.dicoding.areunemia.di
 
 import android.content.Context
-import com.dicoding.areunemia.data.local.UserRepository
+import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.local.pref.UserPreference
 import com.dicoding.areunemia.data.local.pref.dataStore
 

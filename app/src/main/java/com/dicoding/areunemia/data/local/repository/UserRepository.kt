@@ -1,4 +1,4 @@
-package com.dicoding.areunemia.data.local
+package com.dicoding.areunemia.data.local.repository
 
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.pref.UserPreference
