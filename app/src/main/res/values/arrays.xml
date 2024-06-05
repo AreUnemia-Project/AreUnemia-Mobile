@@ -1,3 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="scan_process_steps">
+        <item>Eye</item>
+        <item>Questionnaire</item>
+        <item>Confirm</item>
+    </string-array>
+
+    <string-array name="image_source_options">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </string-array>
+
+    <string-array name="answer_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="question_array">
+        <item>@string/first_question</item>
+        <item>@string/second_question</item>
+        <item>@string/third_question</item>
+        <item>@string/fourth_question</item>
+        <item>@string/fifth_question</item>
+        <item>@string/sixth_question</item>
+        <item>@string/seventh_question</item>
+        <item>@string/eighth_question</item>
+        <item>@string/ninth_question</item>
+        <item>@string/tenth_question</item>
+    </string-array>
+
 </resources>

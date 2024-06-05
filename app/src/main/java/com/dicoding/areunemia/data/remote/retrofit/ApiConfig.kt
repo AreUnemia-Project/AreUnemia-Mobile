@@ -25,5 +25,22 @@ class ApiConfig {
                 .build()
             return retrofit.create(ApiService::class.java)
         }
+        fun getApiServiceMock(): ApiService {
+            val loggingInterceptor =
+                if(BuildConfig.DEBUG) {
+                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+                } else {
+                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+                }
+            val client = OkHttpClient.Builder()
+                .addInterceptor(loggingInterceptor)
+                .build()
+            val retrofit = Retrofit.Builder()
+                .baseUrl("https://b524c09c-af98-434c-bae0-c1603421850b.mock.pstmn.io/API/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
+                .build()
+            return retrofit.create(ApiService::class.java)
+        }
     }
 }
