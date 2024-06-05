@@ -1,3 +1,114 @@
 <resources>
     <string name="app_name">AreUnemia</string>
+
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
+    <string name="login">Login</string>
+
+    <string name="email_error_message">Invalid email format</string>
+    <string name="email">Email</string>
+    <string name="password_error_message">Password must be at least 8 characters</string>
+    <string name="password">Password</string>
+
+    <string name="go_to_register">Don\'t have an account? %1$s</string>
+    <string name="register_here">Register here</string>
+
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="date_format">%d/%02d/%02d</string> <!-- Format: YYYY/MM/DD -->
+    <string name="gender">Gender</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="go_to_login">Already have an account? %1$s</string>
+    <string name="login_here">Login here</string>
+
+    <string name="anemia_prediction">Anemia Prediction:</string>
+    <string name="prediction_date">Prediction Date</string>
+
+    <string name="eyes">Eyes</string>
+    <string name="nails">Nails</string>
+    <string name="palm">Palm</string>
+    <string name="questionnaire_response">Questionnaire Response</string>
+    <string name="questionnaire_questions"><![CDATA[1. Do you often feel tired or fatigued, even after getting enough sleep?\n2. Do you notice that your skin tone, particularly on your face or palms, is paler than usual?\n3. Do you experience shortness of breath or rapid heartbeat, especially during physical activity?\n4. Do you experience unusual or excessive bruising or bleeding, such as nosebleeds or bleeding gums?\n5. Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?\n6. Do you often experience intense headaches, particularly ones that seem to come on suddenly or persist for long periods? \n7. Have you noticed a significant change in your appetite, such as a decreased desire to eat or unusual cravings for non-food items?\n8. Have you been feeling more irritable or moody than usual, without any obvious cause?\n9. Do you experience numbness or tingling sensations, particularly in your hands or feet?\n10. Have you noticed any changes in your nail beds, such as pale or spoon-shaped nails? ]]></string>
+
+    <string name="scan_with">Scan with</string>
+    <string name="scan_description">Scan your eyes with AreUnemia to get a quick anemia check, then answer a few health questions for better accuracy.</string>
+    <string name="scan_warning">Remember, this is just a preliminary check— always consult a healthcare professional for a confirmed diagnosis.</string>
+    <string name="scan_start">Start scanning now to stay proactive about your health!</string>
+    <string name="continue_text">Continue</string>
+
+    <string name="login_required">Login Required</string>
+    <string name="need_to_login">You need to log in to access this feature. Do you want to log in now?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_image">Change image</string>
+    <string name="questionnaire">Questionnaire</string>
+    <string name="title_activity_scan_process">ScanProcessActivity</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+    </string>
+
+    <string name="question_one">Question 1</string>
+    <string name="first_question">Do you often feel tired or fatigued, even after getting enough sleep?</string>
+
+    <string name="question_two">Question 2</string>
+    <string name="second_question">Do you notice that your skin tone, particularly on your face or palms, is paler than usual?</string>
+
+    <string name="question_three">Question 3</string>
+    <string name="third_question">Do you experience shortness of breath or rapid heartbeat, especially during physical activity?</string>
+
+    <string name="question_four">Question 4</string>
+    <string name="fourth_question">Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?</string>
+
+    <string name="question_five">Question 5</string>
+    <string name="fifth_question">Do you often feel tired or fatigued, even after getting enough sleep?</string>
+
+    <string name="question_six">Question 6</string>
+    <string name="sixth_question">Do you often experience intense headaches, particularly ones that seem to come on suddenly or persist for long periods?</string>
+
+    <string name="question_seven">Question 7</string>
+    <string name="seventh_question">Have you noticed a significant change in your appetite, such as a decreased desire to eat or unusual cravings for non-food items?</string>
+
+    <string name="question_eight">Question 8</string>
+    <string name="eighth_question">Have you been feeling more irritable or moody than usual, without any obvious cause?</string>
+
+    <string name="question_nine">Question 9</string>
+    <string name="ninth_question">Do you experience numbness or tingling sensations, particularly in your hands or feet?</string>
+
+    <string name="question_ten">Question 10</string>
+    <string name="tenth_question">Have you noticed any changes in your nail beds, such as pale or spoon-shaped nails?</string>
+    <string name="select_image_source">Select image source</string>
+    <string name="warning">Warning</string>
+    <string name="warning_message">Are you sure you want to exit? Any unsaved changes will be lost.</string>
+    <string name="empty_image_warning">Please enter an image first.</string>
+    <string name="edit_answer">Edit Answer</string>
+    <string name="cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="question_title">Question %1$d</string>
+
 </resources>
