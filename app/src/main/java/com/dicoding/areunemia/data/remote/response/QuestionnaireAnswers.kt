@@ -33,4 +33,26 @@ data class QuestionnaireAnswers(
 
     @field:SerializedName("question1")
     val question1: String? = null
+
 )
+
+
+data class AnswerItem(
+    val no: Int,
+    val answer: String?
+)
+
+fun QuestionnaireAnswers.toQuestionList(): List<AnswerItem> {
+    return listOf(
+        AnswerItem(1, question1),
+        AnswerItem(2, question2),
+        AnswerItem(3, question3),
+        AnswerItem(4, question4),
+        AnswerItem(5, question5),
+        AnswerItem(6, question6),
+        AnswerItem(7, question7),
+        AnswerItem(8, question8),
+        AnswerItem(9, question9),
+        AnswerItem(10, question10)
+    )
+}

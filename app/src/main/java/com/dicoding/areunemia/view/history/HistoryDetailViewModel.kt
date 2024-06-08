@@ -26,10 +26,6 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
 
-    companion object {
-        private const val TAG = "HistoryDetailViewModel"
-    }
-
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
     }
@@ -62,5 +58,8 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
         })
     }
 
+    companion object {
+        private const val TAG = "HistoryDetailViewModel"
+    }
 
 }

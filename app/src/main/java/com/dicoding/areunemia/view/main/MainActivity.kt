@@ -1,15 +1,16 @@
 package com.dicoding.areunemia.view.main
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivityMainBinding
+import com.dicoding.areunemia.utils.navigateToOtherFeature
+import com.dicoding.areunemia.utils.showLoginAlertDialog
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.account.AccountActivity
 import com.dicoding.areunemia.view.history.HistoryActivity
-import com.dicoding.areunemia.view.login.LoginActivity
 import com.dicoding.areunemia.view.scan.ScanActivity
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +30,14 @@ class MainActivity : AppCompatActivity() {
         setupBottomNavigation()
         setupView()
 
+        viewModel.getSession().observe(this) { user ->
+            if (!user.isLogin) {
+                // if not logged in
+            } else {
+                // if logged in
+            }
+        }
+
     }
 
     private fun setupView() {
@@ -40,25 +49,19 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.bottom_home -> true
                 R.id.bottom_scan -> {
-                    navigateToActivity(ScanActivity::class.java)
+                    navigateToOtherFeature(this, ScanActivity::class.java)
                     true
                 }
                 R.id.bottom_history -> {
-                    navigateToActivity(HistoryActivity::class.java)
+                    navigateToOtherFeature(this, HistoryActivity::class.java)
                     true
                 }
                 R.id.bottom_account -> {
-                    navigateToActivity(AccountActivity::class.java)
+                    navigateToOtherFeature(this, AccountActivity::class.java)
                     true
                 }
                 else -> false
             }
         }
-    }
-
-    private fun navigateToActivity(activityClass: Class<*>) {
-        startActivity(Intent(applicationContext, activityClass))
-        overridePendingTransition(0, 0)
-        finish()
     }
 }

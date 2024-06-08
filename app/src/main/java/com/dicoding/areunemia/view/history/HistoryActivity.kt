@@ -1,6 +1,7 @@
 package com.dicoding.areunemia.view.history
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.remote.response.HistoryItem
 import com.dicoding.areunemia.databinding.ActivityHistoryBinding
+import com.dicoding.areunemia.utils.navigateToOtherFeature
+import com.dicoding.areunemia.utils.showLoginAlertDialog
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.account.AccountActivity
 import com.dicoding.areunemia.view.adapter.HistoryAdapter
@@ -36,12 +39,10 @@ class HistoryActivity : AppCompatActivity() {
 
         historyViewModel.getSession().observe(this) { user ->
             if (!user.isLogin) {
-                showLoginAlertDialog()
-                setupAction()
-                observeViewModel()
+                showLoginAlertDialog(this)
             } else {
-                // User is logged in
-                // show history
+                setupViewLoggedIn()
+                observeViewModel()
             }
         }
     }
@@ -50,10 +51,9 @@ class HistoryActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    private fun setupAction() {
+    private fun setupViewLoggedIn() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistoryResult.layoutManager = layoutManager
-
         historyViewModel.getListStories()
     }
 
@@ -71,7 +71,10 @@ class HistoryActivity : AppCompatActivity() {
         val adapter = HistoryAdapter()
         adapter.submitList(historyResult)
         binding.rvHistoryResult.adapter = adapter
+        setupAction(adapter)
+    }
 
+    private fun setupAction(adapter: HistoryAdapter) {
         adapter.setOnItemClickListener(object : HistoryAdapter.OnItemClickListener {
             override fun onItemClick(history: HistoryItem) {
                 val intent = Intent(this@HistoryActivity, HistoryDetailActivity::class.java)
@@ -85,43 +88,24 @@ class HistoryActivity : AppCompatActivity() {
         binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
     }
 
-    private fun showLoginAlertDialog() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle(R.string.login_required)
-        builder.setMessage(R.string.need_to_login)
-        builder.setPositiveButton(R.string.yes) { _, _ ->
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        builder.setNegativeButton(R.string.no) { dialog, _ ->
-            dialog.dismiss()
-        }
-        builder.show()
-    }
-
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_home -> {
-                    navigateToActivity(MainActivity::class.java)
+                    navigateToOtherFeature(this, MainActivity::class.java)
                     true
                 }
                 R.id.bottom_scan -> {
-                    navigateToActivity(ScanActivity::class.java)
+                    navigateToOtherFeature(this, ScanActivity::class.java)
                     true
                 }
                 R.id.bottom_history -> true
                 R.id.bottom_account -> {
-                    navigateToActivity(AccountActivity::class.java)
+                    navigateToOtherFeature(this, AccountActivity::class.java)
                     true
                 }
                 else -> false
             }
         }
-    }
-
-    private fun navigateToActivity(activityClass: Class<*>) {
-        startActivity(Intent(applicationContext, activityClass))
-        overridePendingTransition(0, 0)
-        finish()
     }
 }

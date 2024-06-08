@@ -14,8 +14,11 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.areunemia.R
+import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.databinding.ActivityLoginBinding
+import com.dicoding.areunemia.utils.*
 import com.dicoding.areunemia.view.ViewModelFactory
+import com.dicoding.areunemia.view.main.MainActivity
 import com.dicoding.areunemia.view.register.RegisterActivity
 
 
@@ -34,9 +37,10 @@ class LoginActivity : AppCompatActivity() {
 
         setupView()
         setupAction()
+        observeViewModel()
     }
 
-    private fun setupView() {// Enable the Up button
+    private fun setupView() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = ""
     }
@@ -51,6 +55,7 @@ class LoginActivity : AppCompatActivity() {
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+                finish()
             }
         }
 
@@ -61,6 +66,53 @@ class LoginActivity : AppCompatActivity() {
         binding.messageTextView.text = spannableString
         binding.messageTextView.movementMethod = LinkMovementMethod.getInstance()
         binding.messageTextView.alpha = 1f
+
+        binding.loginButton.setOnClickListener {
+            val email = binding.edLoginEmail.text.toString()
+            val password = binding.edLoginPassword.text.toString()
+            loginViewModel.loginUser(email, password, this)
+        }
+    }
+
+    private fun observeViewModel() {
+        loginViewModel.loginResult.observe(this) { response ->
+            response?.let {
+                if (it.status == "success") {
+                    val user = it.data?.let { loginResult ->
+                        it.token?.let { it1 ->
+                            UserModel(
+                                loginResult.name,
+                                loginResult.email,
+                                loginResult.birthdate,
+                                loginResult.gender,
+                                it1,
+                            )
+                        }
+                    }
+                    user?.let { userModel ->
+                        loginViewModel.saveSession(userModel)
+                    }
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
+                }
+            }
+        }
+
+        loginViewModel.error.observe(this) { message ->
+            message?.let {
+                showErrorDialog(this, it)
+            }
+        }
+
+        loginViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+    }
+
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

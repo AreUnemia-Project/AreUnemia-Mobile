@@ -21,7 +21,7 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
     private var itemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(user: HistoryItem)
+        fun onItemClick(history: HistoryItem)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -58,42 +58,46 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
         }
 
         private fun formatPredictionResult(predictionResult: String?, context: Context): SpannableString {
+            val startIndex = if (Locale.getDefault().language == "en") 18 else 17
             return when (predictionResult) {
                 "Severe" -> {
-                    val formattedText = "Anemia Prediction: Severe"
+                    val formattedText = context.getString(R.string.anemia_prediction_template,
+                        context.getString(R.string.severe))
                     val spannableString = SpannableString(formattedText)
                     spannableString.setSpan(
                         ForegroundColorSpan(ContextCompat.getColor(context, R.color.red_dark)),
-                        18,
+                        startIndex,
                         formattedText.length,
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                     )
                     spannableString
                 }
                 "Moderate" -> {
-                    val formattedText = "Anemia Prediction: Moderate"
+                    val formattedText = context.getString(R.string.anemia_prediction_template,
+                        context.getString(R.string.moderate))
                     val spannableString = SpannableString(formattedText)
                     spannableString.setSpan(
                         ForegroundColorSpan(ContextCompat.getColor(context, R.color.red)),
-                        18,
+                        startIndex,
                         formattedText.length,
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                     )
                     spannableString
                 }
                 "Mild" -> {
-                    val formattedText = "Anemia Prediction: Mild"
+                    val formattedText = context.getString(R.string.anemia_prediction_template,
+                        context.getString(R.string.mild))
                     val spannableString = SpannableString(formattedText)
                     spannableString.setSpan(
                         ForegroundColorSpan(ContextCompat.getColor(context, R.color.orange)),
-                        18,
+                        startIndex,
                         formattedText.length,
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                     )
                     spannableString
                 }
-                "No Anemia" -> {
-                    val formattedText = "No Anemia Predicted"
+                "Healthy" -> {
+                    val formattedText = context.getString(R.string.no_anemia_predicted)
                     val spannableString = SpannableString(formattedText)
                     spannableString.setSpan(
                         ForegroundColorSpan(ContextCompat.getColor(context, R.color.grey_dark)),
@@ -104,7 +108,7 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
                     spannableString
                 }
                 else -> {
-                    val formattedText = "Unknown Prediction"
+                    val formattedText = context.getString(R.string.unknown_prediction)
                     val spannableString = SpannableString(formattedText)
                     spannableString.setSpan(
                         ForegroundColorSpan(ContextCompat.getColor(context, R.color.grey_dark)),

@@ -36,7 +36,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
-                android:text="@string/history"
                 android:textColor="@color/red"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -49,7 +48,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/prediction_date"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textStyle="italic"
@@ -66,7 +64,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="@string/eyes"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHistoryDetailDate" />
@@ -81,39 +79,33 @@
                 android:scaleType="fitCenter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvEyesTitle"
-                tools:src="@drawable/baseline_image_24" />
+                tools:src="@drawable/ic_image_24" />
 
             <TextView
                 android:id="@+id/tvQuestionnaireTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/questionnaire_response"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivEyesPhoto" />
 
-            <TextView
-                android:id="@+id/tvQuestionnaireAnswer"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuestionnaireResponse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="48dp"
-                android:text="@string/questionnaire_questions"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:overScrollMode="never"
+                android:scrollbarSize="0dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvQuestionnaireTitle"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@id/tvQuestionnaireTitle" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

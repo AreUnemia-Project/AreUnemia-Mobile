@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.main.MainActivity">
+    tools:context=".view.main.MainActivity"
+    android:theme="@style/Theme.AreUnemia">
 
     <TextView
         android:layout_width="wrap_content"
