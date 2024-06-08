@@ -24,10 +24,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"belum_ada/\"")
+            buildConfigField("String", "BASE_URL", "\"https://backend-areunemia-3cv52zngvq-et.a.run.app/\"")
         }
         debug {
-            buildConfigField("String", "BASE_URL", "\"belum_ada/\"")
+            buildConfigField("String", "BASE_URL", "\"https://backend-areunemia-3cv52zngvq-et.a.run.app/\"")
         }
     }
     compileOptions {
@@ -67,4 +67,6 @@ dependencies {
 
     implementation("com.github.kofigyan:StateProgressBar:69b4192777")
     implementation("com.github.yalantis:ucrop:2.2.8")
+
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }

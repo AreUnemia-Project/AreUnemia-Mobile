@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.FragmentEyeUploadBinding
 import com.dicoding.areunemia.databinding.FragmentQuestionnaireBinding
+import com.dicoding.areunemia.utils.showToast
 import com.dicoding.areunemia.view.ViewModelFactory
 
 class QuestionnaireFragment : Fragment() {
@@ -54,43 +55,43 @@ class QuestionnaireFragment : Fragment() {
 
     private fun getSelectedAnswer(radioGroup: RadioGroup): Int {
         return when (radioGroup.checkedRadioButtonId) {
-            // For Question 1
+            // For AnswerItem 1
             R.id.rbQuestionOneYes -> 1
             R.id.rbQuestionOneNo -> 0
 
-            // For Question 2
+            // For AnswerItem 2
             R.id.rbQuestionTwoYes -> 1
             R.id.rbQuestionTwoNo -> 0
 
-            // For Question 3
+            // For AnswerItem 3
             R.id.rbQuestionThreeYes -> 1
             R.id.rbQuestionThreeNo -> 0
 
-            // For Question 4
+            // For AnswerItem 4
             R.id.rbQuestionFourYes -> 1
             R.id.rbQuestionFourNo -> 0
 
-            // For Question 5
+            // For AnswerItem 5
             R.id.rbQuestionFiveYes -> 1
             R.id.rbQuestionFiveNo -> 0
 
-            // For Question 6
+            // For AnswerItem 6
             R.id.rbQuestionSixYes -> 1
             R.id.rbQuestionSixNo -> 0
 
-            // For Question 7
+            // For AnswerItem 7
             R.id.rbQuestionSevenYes -> 1
             R.id.rbQuestionSevenNo -> 0
 
-            // For Question 8
+            // For AnswerItem 8
             R.id.rbQuestionEightYes -> 1
             R.id.rbQuestionEightNo -> 0
 
-            // For Question 9
+            // For AnswerItem 9
             R.id.rbQuestionNineYes -> 1
             R.id.rbQuestionNineNo -> 0
 
-            // For Question 10
+            // For AnswerItem 10
             R.id.rbQuestionTenYes -> 1
             R.id.rbQuestionTenNo -> 0
 
@@ -114,7 +115,7 @@ class QuestionnaireFragment : Fragment() {
         if (!questionOneAnswered || !questionTwoAnswered || !questionThreeAnswered || !questionFourAnswered
             || !questionFiveAnswered || !questionSixAnswered || !questionSevenAnswered || !questionEightAnswered
             || !questionNineAnswered || !questionTenAnswered) {
-            showToast("Please answer all questions.")
+            showToast(requireContext(), "Please answer all the questions.")
             return false
         }
 
@@ -125,10 +126,5 @@ class QuestionnaireFragment : Fragment() {
     private fun setAnswers(answers: List<Int>) {
         scanProcessViewModel.setAnswers(answers)
     }
-
-    private fun showToast(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-    }
-
 
 }

@@ -24,12 +24,12 @@ class ScanViewModel (private val repository: UserRepository) : ViewModel() {
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
 
-    companion object {
-        private const val TAG = "ScanViewModel"
-    }
-
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
+    }
+
+    companion object {
+        private const val TAG = "ScanViewModel"
     }
 
 }

@@ -7,10 +7,13 @@ import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.dicoding.areunemia.data.remote.response.PredictionItem
+import com.dicoding.areunemia.data.remote.response.toQuestionList
 import com.dicoding.areunemia.databinding.ActivityHistoryDetailBinding
 import com.dicoding.areunemia.view.ViewModelFactory
+import com.dicoding.areunemia.view.adapter.AnswerHistoryAdapter
 import com.dicoding.areunemia.view.login.LoginActivity
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -30,30 +33,20 @@ class HistoryDetailActivity : AppCompatActivity() {
 
         val predictionId = intent.getStringExtra("prediction_id")
 
-        setupView()
-
-        historyDetailViewModel.getSession().observe(this) { user ->
-            if (!user.isLogin) {
-                showLoginAlertDialog()
-                predictionId?.let { predictionId ->
-                    setupAction(predictionId)
-                }
-                observeViewModel()
-            } else {
-                // User is logged in
-                // show history detail
-            }
+        predictionId?.let { predictionId ->
+            setupView(predictionId)
         }
+        observeViewModel()
     }
 
-    private fun setupView() {
+    private fun setupView(id: String) {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = ""
+        historyDetailViewModel.getHistoryDetail(id)
+        val layoutManager = LinearLayoutManager(this)
+        binding.rvQuestionnaireResponse.layoutManager = layoutManager
     }
 
-    private fun setupAction(id: String) {
-        historyDetailViewModel.getHistoryDetail(id)
-    }
 
     private fun observeViewModel() {
         historyDetailViewModel.historyDetail.observe(this) { historyDetailResult ->
@@ -71,6 +64,13 @@ class HistoryDetailActivity : AppCompatActivity() {
         Glide.with(this@HistoryDetailActivity)
             .load(historyDetailResult.eyePhoto)
             .into(binding.ivEyesPhoto)
+
+        val questionsList = historyDetailResult.questionnaireAnswers.toQuestionList()
+
+        val adapter = AnswerHistoryAdapter()
+        adapter.submitList(questionsList)
+        binding.rvQuestionnaireResponse.adapter = adapter
+
     }
 
     private fun formatDate(dateString: String?): String? {
@@ -81,19 +81,6 @@ class HistoryDetailActivity : AppCompatActivity() {
             return date?.let { it1 -> newSdf.format(it1) }
         }
         return ""
-    }
-
-    private fun showLoginAlertDialog() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Login Required")
-        builder.setMessage("You need to log in to access this feature. Do you want to log in now?")
-        builder.setPositiveButton("Yes") { _, _ ->
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        builder.setNegativeButton("No") { dialog, _ ->
-            dialog.dismiss()
-        }
-        builder.show()
     }
 
     private fun showLoading(state: Boolean) {

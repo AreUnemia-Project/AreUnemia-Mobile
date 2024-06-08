@@ -1,3 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="gender_array">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <string-array name="scan_process_steps">
+        <item>Mata</item>
+        <item>Kuesioner</item>
+        <item>Konfirmasi</item>
+    </string-array>
+
+    <string-array name="image_source_options">
+        <item>Galeri</item>
+        <item>Kamera</item>
+    </string-array>
+
+    <string-array name="answer_options">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string-array name="question_array">
+        <item>@string/first_question</item>
+        <item>@string/second_question</item>
+        <item>@string/third_question</item>
+        <item>@string/fourth_question</item>
+        <item>@string/fifth_question</item>
+        <item>@string/sixth_question</item>
+        <item>@string/seventh_question</item>
+        <item>@string/eighth_question</item>
+        <item>@string/ninth_question</item>
+        <item>@string/tenth_question</item>
+    </string-array>
+
 </resources>

@@ -1,10 +1,14 @@
 package com.dicoding.areunemia.view.account
 
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivityAccountBinding
+import com.dicoding.areunemia.utils.navigateToOtherFeature
 import com.dicoding.areunemia.view.history.HistoryActivity
 import com.dicoding.areunemia.view.main.MainActivity
 import com.dicoding.areunemia.view.scan.ScanActivity
@@ -31,15 +35,15 @@ class AccountActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_home -> {
-                    navigateToActivity(MainActivity::class.java)
+                    navigateToOtherFeature(this, MainActivity::class.java)
                     true
                 }
                 R.id.bottom_scan -> {
-                    navigateToActivity(ScanActivity::class.java)
+                    navigateToOtherFeature(this, ScanActivity::class.java)
                     true
                 }
                 R.id.bottom_history -> {
-                    navigateToActivity(HistoryActivity::class.java)
+                    navigateToOtherFeature(this, HistoryActivity::class.java)
                     true
                 }
                 R.id.bottom_account -> true
@@ -48,9 +52,4 @@ class AccountActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToActivity(activityClass: Class<*>) {
-        startActivity(Intent(applicationContext, activityClass))
-        overridePendingTransition(0, 0)
-        finish()
-    }
 }

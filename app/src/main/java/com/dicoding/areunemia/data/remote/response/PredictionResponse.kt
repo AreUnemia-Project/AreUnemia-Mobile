@@ -5,14 +5,15 @@ import com.google.gson.annotations.SerializedName
 data class PredictionResponse(
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: PredictionResult? = null,
 
 	@field:SerializedName("status")
 	val status: String? = null
 )
 
-data class Data(
+data class PredictionResult(
 
-	@field:SerializedName("“result”")
+	@field:SerializedName("result")
 	val result: String? = null
+
 )

@@ -17,6 +17,6 @@ data class PredictionItem(
     val predictionResult: String? = null,
 
     @field:SerializedName("questionnaireAnswers")
-    val questionnaireAnswers: QuestionnaireAnswers? = null
+    val questionnaireAnswers: QuestionnaireAnswers
 
 )

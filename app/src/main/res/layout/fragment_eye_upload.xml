@@ -17,8 +17,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/changeImageButton"
-        tools:src="@drawable/baseline_image_24"
-        app:srcCompat="@drawable/baseline_image_24"/>
+        tools:src="@drawable/ic_image_24"
+        app:srcCompat="@drawable/ic_image_24"/>
 
     <Button
         android:id="@+id/changeImageButton"

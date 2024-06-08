@@ -1,4 +1,4 @@
-package com.dicoding.areunemia.view.helper
+package com.dicoding.areunemia.utils
 
 import android.Manifest
 import android.content.ContentValues
@@ -157,11 +157,6 @@ fun rotateImage(source: Bitmap, angle: Float): Bitmap? {
     return Bitmap.createBitmap(
         source, 0, 0, source.width, source.height, matrix, true
     )
-}
-
-
-fun showToast(context: Context, message: String) {
-    Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
 
 private const val REQUIRED_PERMISSION = Manifest.permission.CAMERA

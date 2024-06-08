@@ -20,20 +20,20 @@
             android:paddingBottom="16dp">
 
             <TextView
-                android:id="@+id/tv_item_name"
+                android:id="@+id/tv_item_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginHorizontal="8dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textStyle="bold|italic"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:text="@string/question_title" />
 
             <TextView
-                android:id="@+id/tv_item_description"
+                android:id="@+id/tv_item_question"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
@@ -41,7 +41,7 @@
                 android:ellipsize="end"
                 android:maxLines="3"
                 android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/tv_item_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:text="@string/question_template" />
@@ -54,13 +54,13 @@
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="3"
-                android:background="@drawable/rounded_background"
+                android:background="@drawable/bg_rounded_green"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/tv_item_description"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_question"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:text="@string/yes" />
 

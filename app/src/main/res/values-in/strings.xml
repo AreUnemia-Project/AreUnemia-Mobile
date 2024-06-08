@@ -1,3 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">AreUnemia</string>
+
+    <!--Page names-->
+    <string name="home">Beranda</string>
+    <string name="scan">Pindai</string>
+    <string name="history">Riwayat</string>
+    <string name="account">Akun</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+
+    <!--Field-->
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="name">Nama</string>
+    <string name="birth_date">Tanggal Lahir</string>
+    <string name="date_format">%d/%02d/%02d</string> <!-- Format: YYYY/MM/DD -->
+    <string name="gender">Jenis Kelamin</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+
+    <!--Messages-->
+    <string name="error_message">Terjadi kesalahan yang tidak diketahui. Silakan coba lagi.</string>
+    <string name="email_error_message">Format email tidak valid</string>
+    <string name="password_error_message">Kata sandi harus terdiri dari minimal 8 karakter</string>
+    <string name="warning_message">Apakah Anda yakin ingin keluar? Perubahan yang belum disimpan akan hilang.</string>
+    <string name="empty_image_warning">Silakan masukkan gambar terlebih dahulu.</string>
+
+    <string name="go_to_register">Belum punya akun? %1$s</string>
+    <string name="register_here">Daftar di sini</string>
+
+    <string name="go_to_login">Sudah punya akun? %1$s</string>
+    <string name="login_here">Masuk di sini</string>
+
+    <string name="login_required">Login Diperlukan</string>
+    <string name="need_to_login">Anda perlu masuk untuk mengakses fitur ini. Apakah Anda ingin masuk sekarang?</string>
+
+    <string name="prediction_warning">Hasil yang diberikan oleh aplikasi ini hanyalah prediksi berdasarkan data yang Anda masukkan. Ini bukan pengganti nasihat, diagnosis, atau perawatan medis profesional.\n\nUntuk diagnosis yang akurat dan perawatan yang tepat, silakan berkonsultasi dengan profesional kesehatan atau kunjungi fasilitas medis terdekat.</string>
+    <string name="signup_success_message">Anda berhasil mendaftar dengan email %1$s.</string>
+    <string name="confirm_password_error_message">Kata sandi tidak cocok.</string>
+    <string name="confirm_submit_scan">Data Anda akan dianalisis dan disimpan. Apakah Anda ingin melanjutkan untuk mengirimkan pemindaian Anda?</string>
+    <string name="warning_to_scan">Hasil ini adalah prediksi berdasarkan data Anda dan bukan pengganti nasihat medis profesional.\n\nApakah Anda yakin ingin melanjutkan?</string>
+
+    <!--Reusable text-->
+    <string name="continue_text">Lanjutkan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="warning">Peringatan</string>
+    <string name="cancel">Batal</string>
+    <string name="title">Judul</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="success">Sukses</string>
+    <string name="error_title">Kesalahan</string>
+    <string name="ok">OK</string>
+    <string name="error">Kesalahan</string>
+
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi. Phasellus dapibus auctor erat, a scelerisque libero ullamcorper ut. Fusce at lacinia justo. Duis lobortis sit amet risus ac tincidunt. Suspendisse potenti.</string>
+
+    <!--Scan and History -->
+    <string name="scan_with">Pindai dengan</string>
+    <string name="scan_description">Pindai mata Anda dengan AreUnemia untuk mendapatkan pemeriksaan anemia cepat, kemudian jawab beberapa pertanyaan kesehatan untuk akurasi yang lebih baik.</string>
+    <string name="scan_warning">Ingat, ini hanya pemeriksaan awal— selalu berkonsultasilah dengan profesional kesehatan untuk diagnosis yang pasti.</string>
+    <string name="scan_start">Mulai memindai sekarang untuk tetap proaktif tentang kesehatan Anda!</string>
+    <string name="anemia_prediction">Prediksi Anemia:</string>
+    <string name="prediction_date">Tanggal Prediksi</string>
+    <string name="no_anemia_predicted">Terprediksi Tidak Anemia</string>
+    <string name="eyes">Mata</string>
+    <string name="questionnaire_response">Respon Kuesioner</string>
+    <string name="edit_answer">Edit Jawaban</string>
+    <string name="change_image">Ganti gambar</string>
+    <string name="select_image_source">Pilih sumber gambar</string>
+
+    <!--Questionnaire-->
+    <string name="questionnaire">Kuesioner</string>
+
+    <string name="question_one">Pertanyaan 1</string>
+    <string name="first_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah cukup tidur?</string>
+
+    <string name="question_two">Pertanyaan 2</string>
+    <string name="second_question">Apakah Anda memperhatikan bahwa warna kulit Anda, terutama di wajah atau telapak tangan, lebih pucat dari biasanya?</string>
+
+    <string name="question_three">Pertanyaan 3</string>
+    <string name="third_question">Apakah Anda mengalami sesak napas atau detak jantung cepat, terutama saat beraktivitas fisik?</string>
+
+    <string name="question_four">Pertanyaan 4</string>
+    <string name="fourth_question">Apakah Anda sering merasa pusing atau pingsan, terutama saat berdiri cepat?</string>
+
+    <string name="question_five">Pertanyaan 5</string>
+    <string name="fifth_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah cukup tidur?</string>
+
+    <string name="question_six">Pertanyaan 6</string>
+    <string name="sixth_question">Apakah Anda sering mengalami sakit kepala yang parah, terutama yang tampaknya muncul tiba-tiba atau bertahan lama?</string>
+
+    <string name="question_seven">Pertanyaan 7</string>
+    <string name="seventh_question">Apakah Anda memperhatikan perubahan signifikan dalam nafsu makan Anda, seperti keinginan untuk makan yang berkurang atau keinginan aneh untuk benda-benda non-makanan?</string>
+
+    <string name="question_eight">Pertanyaan 8</string>
+    <string name="eighth_question">Apakah Anda merasa lebih mudah tersinggung atau moody dari biasanya, tanpa sebab yang jelas?</string>
+
+    <string name="question_nine">Pertanyaan 9</string>
+    <string name="ninth_question">Apakah Anda mengalami mati rasa atau sensasi kesemutan, terutama di tangan atau kaki?</string>
+
+    <string name="question_ten">Pertanyaan 10</string>
+    <string name="tenth_question">Apakah Anda memperhatikan perubahan pada kuku Anda, seperti kuku yang pucat atau berbentuk sendok?</string>
+
+    <string name="question_title">Pertanyaan %1$d</string>
+    <string name="question_template">Ini adalah template pertanyaan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="you_are_predicted">Anda diprediksi dengan:</string>
+    <string name="anemia_results">Hasil Anemia</string>
+    <string name="go_to_scan_history">Pergi ke Riwayat Pindai</string>
+    <string name="go_back_to_home">Kembali ke Beranda</string>
+
+    <!--Result-->
+    <string name="severe_desc">Segera cari perhatian medis. Perawatan mungkin termasuk suplemen zat besi, vitamin, perubahan pola makan, atau transfusi darah. Sangat penting untuk mengikuti saran dokter Anda untuk mengelola gejala dan meningkatkan kesehatan Anda.</string>
+    <string name="moderate_desc">Berkonsultasilah dengan profesional kesehatan untuk mendapatkan saran, yang mungkin termasuk perubahan pola makan, suplemen zat besi, atau perawatan lainnya. Fokus pada makanan yang kaya zat besi dan pertimbangkan vitamin C untuk penyerapan yang lebih baik. Hindari aktivitas berat untuk mengelola gejala seperti kelelahan.</string>
+    <string name="mild_desc">Sesuaikan pola makan Anda untuk mencakup makanan yang kaya zat besi seperti bayam dan lentil, dan pertimbangkan sumber vitamin C untuk penyerapan yang lebih baik. Suplemen zat besi dapat membantu, tetapi konsultasikan terlebih dahulu dengan profesional kesehatan. Pantau gejala seperti kelelahan dan lemas, cari saran medis jika gejala terus berlanjut.</string>
+    <string name="healthy_desc">Fokus pada pola makan seimbang dengan makanan yang kaya zat besi seperti daging tanpa lemak dan sayuran berdaun hijau. Tetap terhidrasi dan berolahraga secara teratur untuk kesejahteraan secara keseluruhan. Jika mengalami kelelahan atau kelemahan, konsultasikan dengan profesional kesehatan untuk memastikan tidak ada masalah kesehatan lain. Pemeriksaan rutin membantu menjaga kesehatan optimal.</string>
+
+    <string name="severe">Parah</string>
+    <string name="moderate">Sedang</string>
+    <string name="mild">Ringan</string>
+    <string name="no_anemia">Tidak Anemia</string>
+
+    <string name="anemia_text">Anemia %1$s</string>
+    <string name="anemia_prediction_template">Prediksi Anemia: %1$s</string>
+    <string name="unknown_prediction">Prediksi Tidak Diketahui</string>
+
 </resources>

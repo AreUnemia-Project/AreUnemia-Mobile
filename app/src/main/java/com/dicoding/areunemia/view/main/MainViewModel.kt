@@ -9,9 +9,6 @@ import com.dicoding.areunemia.data.local.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: UserRepository) : ViewModel() {
-    companion object {
-        private const val TAG = "MainViewModel"
-    }
 
     fun getSession(): LiveData<UserModel> {
         return repository.getSession().asLiveData()
@@ -22,4 +19,9 @@ class MainViewModel(private val repository: UserRepository) : ViewModel() {
             repository.logout()
         }
     }
+
+    companion object {
+        private const val TAG = "MainViewModel"
+    }
+
 }

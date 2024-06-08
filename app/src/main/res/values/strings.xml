@@ -1,75 +1,80 @@
 <resources>
     <string name="app_name">AreUnemia</string>
 
+    <!--Page names-->
     <string name="home">Home</string>
     <string name="scan">Scan</string>
     <string name="history">History</string>
     <string name="account">Account</string>
     <string name="login">Login</string>
-
-    <string name="email_error_message">Invalid email format</string>
-    <string name="email">Email</string>
-    <string name="password_error_message">Password must be at least 8 characters</string>
-    <string name="password">Password</string>
-
-    <string name="go_to_register">Don\'t have an account? %1$s</string>
-    <string name="register_here">Register here</string>
-
     <string name="register">Register</string>
+
+    <!--Field-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="name">Name</string>
     <string name="birth_date">Birth Date</string>
     <string name="date_format">%d/%02d/%02d</string> <!-- Format: YYYY/MM/DD -->
     <string name="gender">Gender</string>
     <string name="confirm_password">Confirm Password</string>
+
+
+    <!--Messages-->
+    <string name="error_message">An unknown error occurred. Please try again.</string>
+    <string name="email_error_message">Invalid email format</string>
+    <string name="password_error_message">Password must be at least 8 characters</string>
+    <string name="warning_message">Are you sure you want to exit? Any unsaved changes will be lost.</string>
+    <string name="empty_image_warning">Please enter an image first.</string>
+
+    <string name="go_to_register">Don\'t have an account? %1$s</string>
+    <string name="register_here">Register here</string>
+
     <string name="go_to_login">Already have an account? %1$s</string>
     <string name="login_here">Login here</string>
 
-    <string name="anemia_prediction">Anemia Prediction:</string>
-    <string name="prediction_date">Prediction Date</string>
+    <string name="login_required">Login Required</string>
+    <string name="need_to_login">You need to log in to access this feature. Do you want to log in now?</string>
 
-    <string name="eyes">Eyes</string>
-    <string name="nails">Nails</string>
-    <string name="palm">Palm</string>
-    <string name="questionnaire_response">Questionnaire Response</string>
-    <string name="questionnaire_questions"><![CDATA[1. Do you often feel tired or fatigued, even after getting enough sleep?\n2. Do you notice that your skin tone, particularly on your face or palms, is paler than usual?\n3. Do you experience shortness of breath or rapid heartbeat, especially during physical activity?\n4. Do you experience unusual or excessive bruising or bleeding, such as nosebleeds or bleeding gums?\n5. Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?\n6. Do you often experience intense headaches, particularly ones that seem to come on suddenly or persist for long periods? \n7. Have you noticed a significant change in your appetite, such as a decreased desire to eat or unusual cravings for non-food items?\n8. Have you been feeling more irritable or moody than usual, without any obvious cause?\n9. Do you experience numbness or tingling sensations, particularly in your hands or feet?\n10. Have you noticed any changes in your nail beds, such as pale or spoon-shaped nails? ]]></string>
+    <string name="prediction_warning">The results provided by this application are only predictions based on the data you have entered. They are not a substitute for professional medical advice, diagnosis, or treatment.\n\nFor an accurate diagnosis and proper treatment, please consult a healthcare professional or visit your nearest medical facility.</string>
+    <string name="signup_success_message">You have successfully registered with the email %1$s.</string>
+    <string name="confirm_password_error_message">Password does not match.</string>
+    <string name="confirm_submit_scan">Your data will be analyzed and stored. Do you want to proceed with submitting your scan?</string>
+    <string name="warning_to_scan">The results are predictions based on your data and are not a substitute for professional medical advice.\n\nAre you sure you want to proceed?</string>
 
+    <!--Reusable text-->
+    <string name="continue_text">Continue</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="warning">Warning</string>
+    <string name="cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="confirm">Confirm</string>
+    <string name="success">Success</string>
+    <string name="error_title">Error</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi.
+        Phasellus dapibus auctor erat, a scelerisque libero ullamcorper ut. Fusce at lacinia justo.
+        Duis lobortis sit amet risus ac tincidunt. Suspendisse potenti.</string>
+
+    <!--Scan and History -->
     <string name="scan_with">Scan with</string>
     <string name="scan_description">Scan your eyes with AreUnemia to get a quick anemia check, then answer a few health questions for better accuracy.</string>
     <string name="scan_warning">Remember, this is just a preliminary check— always consult a healthcare professional for a confirmed diagnosis.</string>
     <string name="scan_start">Start scanning now to stay proactive about your health!</string>
-    <string name="continue_text">Continue</string>
-
-    <string name="login_required">Login Required</string>
-    <string name="need_to_login">You need to log in to access this feature. Do you want to log in now?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="anemia_prediction">Anemia Prediction:</string>
+    <string name="prediction_date">Prediction Date</string>
+    <string name="no_anemia_predicted">No Anemia Predicted</string>
+    <string name="eyes">Eyes</string>
+    <string name="questionnaire_response">Questionnaire Response</string>
+    <string name="edit_answer">Edit Answer</string>
     <string name="change_image">Change image</string>
-    <string name="questionnaire">Questionnaire</string>
-    <string name="title_activity_scan_process">ScanProcessActivity</string>
+    <string name="select_image_source">Select image source</string>
 
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
-        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
-        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
-        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
-        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
-        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
-        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
-        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
-        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
-        bibendum, vel congue leo egestas.\n\n
-        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
-        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
-        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
-        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
-        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
-        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
-        est.\n\n
-    </string>
+    <!--Questionnaire-->
+    <string name="questionnaire">Questionnaire</string>
 
     <string name="question_one">Question 1</string>
     <string name="first_question">Do you often feel tired or fatigued, even after getting enough sleep?</string>
@@ -100,15 +105,28 @@
 
     <string name="question_ten">Question 10</string>
     <string name="tenth_question">Have you noticed any changes in your nail beds, such as pale or spoon-shaped nails?</string>
-    <string name="select_image_source">Select image source</string>
-    <string name="warning">Warning</string>
-    <string name="warning_message">Are you sure you want to exit? Any unsaved changes will be lost.</string>
-    <string name="empty_image_warning">Please enter an image first.</string>
-    <string name="edit_answer">Edit Answer</string>
-    <string name="cancel">Cancel</string>
-    <string name="title">Title</string>
-    <string name="confirm">Confirm</string>
 
     <string name="question_title">Question %1$d</string>
+    <string name="question_template">This is a question template. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="you_are_predicted">You are predicted with:</string>
+    <string name="anemia_results">Anemia Results</string>
+    <string name="go_to_scan_history">Go to Scan History</string>
+    <string name="go_back_to_home">Go back to Home</string>
+
+    <!--Result-->
+    <string name="severe_desc">Seek immediate medical attention. Treatment may include iron supplements, vitamins, dietary changes, or blood transfusions. It\'s crucial to follow your doctor\'s advice to manage symptoms and improve your health.</string>
+    <string name="moderate_desc">Consult with a healthcare professional for advice, which may include dietary changes, iron supplements, or other treatments. Focus on iron-rich foods and consider vitamin C for better absorption. Pace yourself and avoid strenuous activities to manage symptoms like fatigue.</string>
+    <string name="mild_desc">Adjust your diet to include iron-rich foods like spinach and lentils, and consider vitamin C sources for better absorption. Iron supplements could help, but consult a healthcare professional first. Monitor symptoms like fatigue and weakness, seek medical advice if they persist.</string>
+    <string name="healthy_desc">Focus on a balanced diet with iron-rich foods like lean meats and leafy greens. Stay hydrated and exercise regularly for overall well-being. If experiencing fatigue or weakness, consult a healthcare professional to rule out other health issues. Regular check-ups help maintain optimal health.</string>
+
+    <string name="severe">Severe</string>
+    <string name="moderate">Moderate</string>
+    <string name="mild">Mild</string>
+    <string name="no_anemia">No Anemia</string>
+
+    <string name="anemia_text">%1$s Anemia</string>
+    <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
+    <string name="unknown_prediction">Unknown Prediction</string>
 
 </resources>
