@@ -7,8 +7,10 @@ import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.remote.response.PredictionItem
 import com.dicoding.areunemia.data.remote.response.toQuestionList
 import com.dicoding.areunemia.databinding.ActivityHistoryDetailBinding
@@ -59,7 +61,17 @@ class HistoryDetailActivity : AppCompatActivity() {
     }
 
     private fun setHistoryDetailResults(historyDetailResult: PredictionItem) {
-        binding.tvHistoryDetailResult.text = historyDetailResult.predictionResult
+        val (textResId, colorResId) = when (historyDetailResult.predictionResult) {
+            "Severe" -> R.string.severe to R.color.red_dark
+            "Moderate" -> R.string.moderate to R.color.red
+            "Mild" -> R.string.mild to R.color.orange
+            "Healthy" -> R.string.no_anemia to R.color.grey_dark
+            else -> R.string.unknown_prediction to R.color.grey_dark
+        }
+
+        binding.tvHistoryDetailResult.text = textResId?.let { getString(it) } ?: historyDetailResult.predictionResult
+        binding.tvHistoryDetailResult.setTextColor(ContextCompat.getColor(this, colorResId))
+
         binding.tvHistoryDetailDate.text = formatDate(historyDetailResult.createdAt)
         Glide.with(this@HistoryDetailActivity)
             .load(historyDetailResult.eyePhoto)

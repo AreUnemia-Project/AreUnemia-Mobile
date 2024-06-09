@@ -245,7 +245,8 @@ class ConfirmScanFragment : Fragment() {
 
             val questionnaireAnswers = JSONObject().apply {
                 answersList.forEachIndexed { index, answer ->
-                    put("question${index + 1}", answer)
+                    val answerText = if (answer == 1) "Yes" else "No"
+                    put("question${index + 1}", answerText)
                 }
             }
 

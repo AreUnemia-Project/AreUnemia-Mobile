@@ -59,7 +59,7 @@
     <!--Scan and History -->
     <string name="scan_with">Pindai dengan</string>
     <string name="scan_description">Pindai mata Anda dengan AreUnemia untuk mendapatkan pemeriksaan anemia cepat, kemudian jawab beberapa pertanyaan kesehatan untuk akurasi yang lebih baik.</string>
-    <string name="scan_warning">Ingat, ini hanya pemeriksaan awal— selalu berkonsultasilah dengan profesional kesehatan untuk diagnosis yang pasti.</string>
+    <string name="scan_warning">Ingat, ini hanya pemeriksaan awal — selalu berkonsultasilah dengan profesional kesehatan untuk diagnosis yang pasti.</string>
     <string name="scan_start">Mulai memindai sekarang untuk tetap proaktif tentang kesehatan Anda!</string>
     <string name="anemia_prediction">Prediksi Anemia:</string>
     <string name="prediction_date">Tanggal Prediksi</string>
