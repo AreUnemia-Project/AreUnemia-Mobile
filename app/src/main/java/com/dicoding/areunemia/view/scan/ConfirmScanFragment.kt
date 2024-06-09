@@ -87,7 +87,9 @@ class ConfirmScanFragment : Fragment() {
 
     private fun setupAction() {
         binding.ivEyesPhoto.setOnClickListener{
-            showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+            showEyeExampleDialog(this) {
+                showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+            }
         }
         binding.apply {
             val questionArray = resources.getStringArray(R.array.question_array)
@@ -149,6 +151,10 @@ class ConfirmScanFragment : Fragment() {
                 }
             }
         })
+
+        scanProcessViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
 
     }
 
@@ -250,6 +256,10 @@ class ConfirmScanFragment : Fragment() {
         } else {
             showToast(requireContext(), "Please provide all necessary information")
         }
+    }
+
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
     }
 
 }

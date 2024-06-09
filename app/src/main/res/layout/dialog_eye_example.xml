@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ivExampleEye"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:src="@drawable/pic_example_eye"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/example_eye_picture" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eye_picture_description"
+        android:paddingTop="16dp"
+        android:textAlignment="center" />
+
+</LinearLayout>

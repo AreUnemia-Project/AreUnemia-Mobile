@@ -1,12 +1,10 @@
 package com.dicoding.areunemia.view.history
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.remote.response.HistoryItem
@@ -16,7 +14,6 @@ import com.dicoding.areunemia.utils.showLoginAlertDialog
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.account.AccountActivity
 import com.dicoding.areunemia.view.adapter.HistoryAdapter
-import com.dicoding.areunemia.view.login.LoginActivity
 import com.dicoding.areunemia.view.main.MainActivity
 import com.dicoding.areunemia.view.scan.ScanActivity
 
@@ -54,7 +51,7 @@ class HistoryActivity : AppCompatActivity() {
     private fun setupViewLoggedIn() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistoryResult.layoutManager = layoutManager
-        historyViewModel.getListStories()
+        historyViewModel.getListHistories()
     }
 
     private fun observeViewModel() {

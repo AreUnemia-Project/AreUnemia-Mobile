@@ -37,7 +37,7 @@ class HistoryViewModel(private val repository: UserRepository) : ViewModel() {
         }
     }
 
-    fun getListStories() {
+    fun getListHistories() {
         _isLoading.value = true
         val client = ApiConfig.getApiServiceMock().getListHistory()
 
