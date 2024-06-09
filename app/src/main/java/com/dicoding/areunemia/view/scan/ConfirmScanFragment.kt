@@ -152,7 +152,7 @@ class ConfirmScanFragment : Fragment() {
             }
         })
 
-        scanProcessViewModel.isLoading.observe(this) {
+        scanProcessViewModel.isLoading.observe(viewLifecycleOwner) {
             showLoading(it)
         }
 
