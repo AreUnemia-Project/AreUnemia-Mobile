@@ -15,6 +15,7 @@ import androidx.fragment.app.activityViewModels
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.FragmentEyeUploadBinding
 import com.dicoding.areunemia.utils.allPermissionsGranted
+import com.dicoding.areunemia.utils.showEyeExampleDialog
 import com.dicoding.areunemia.utils.showImageSourceDialog
 import com.dicoding.areunemia.utils.showToast
 import com.dicoding.areunemia.utils.startCrop
@@ -78,10 +79,14 @@ class EyeUploadFragment : Fragment() {
         if (!allPermissionsGranted(requireContext())) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
-        showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+        showEyeExampleDialog(this) {
+            showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+        }
 
         binding.changeImageButton.setOnClickListener {
-            showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+            showEyeExampleDialog(this) {
+                showImageSourceDialog(this, requestPermissionLauncher, pickImageLauncher, takePhotoLauncher, ::setCurrentImageUri)
+            }
         }
         binding.continueStepButton.setOnClickListener {
             currentImageUri?.let {

@@ -70,6 +70,10 @@
     <string name="change_image">Ganti gambar</string>
     <string name="select_image_source">Pilih sumber gambar</string>
 
+    <string name="example_eye_picture">Contoh gambar mata</string>
+    <string name="eye_picture_description">Pastikan gambar yang diambil jelas, dengan pencahayaan yang baik, memperlihatkan konjungtiva mata, dan hanya mencakup satu mata.</string>
+
+
     <!--Questionnaire-->
     <string name="questionnaire">Kuesioner</string>
 

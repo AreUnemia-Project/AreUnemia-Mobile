@@ -73,6 +73,9 @@
     <string name="change_image">Change image</string>
     <string name="select_image_source">Select image source</string>
 
+    <string name="example_eye_picture">Eye Image Example</string>
+    <string name="eye_picture_description">Ensure that the picture is clear, taken in good lighting, shows the conjunctiva of the eye, and includes only one eye.</string>
+
     <!--Questionnaire-->
     <string name="questionnaire">Questionnaire</string>
 

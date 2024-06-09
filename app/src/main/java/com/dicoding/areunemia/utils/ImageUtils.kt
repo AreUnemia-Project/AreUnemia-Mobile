@@ -11,6 +11,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.PickVisualMediaRequest
@@ -88,6 +89,21 @@ fun showImageSourceDialog(
         }
     val dialog = builder.create()
     dialog.show()
+}
+
+fun showEyeExampleDialog(
+    fragment: Fragment,
+    onProceed: () -> Unit
+) {
+    val dialogView = LayoutInflater.from(fragment.requireContext()).inflate(R.layout.dialog_eye_example, null)
+    val builder = AlertDialog.Builder(fragment.requireContext())
+        .setView(dialogView)
+        .setTitle(R.string.example_eye_picture)
+        .setPositiveButton(R.string.ok) { _, _ ->
+            onProceed()
+        }
+        .setNegativeButton(R.string.cancel, null)
+    builder.create().show()
 }
 
 fun allPermissionsGranted(context: Context) =
