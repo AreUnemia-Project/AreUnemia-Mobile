@@ -131,5 +131,6 @@
     <string name="anemia_text">%1$s Anemia</string>
     <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
     <string name="unknown_prediction">Unknown Prediction</string>
+    <string name="no_history">No history to show</string>
 
 </resources>

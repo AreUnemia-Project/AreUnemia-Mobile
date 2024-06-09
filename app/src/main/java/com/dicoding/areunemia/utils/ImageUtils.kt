@@ -32,7 +32,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-private const val MAXIMAL_SIZE = 3000000 //3 MB
+private const val MAXIMAL_SIZE = 2000000 //2 MB
 private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
 
