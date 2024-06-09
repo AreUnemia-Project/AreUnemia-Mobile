@@ -1,22 +1,19 @@
 package com.dicoding.areunemia.view.history
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.dicoding.areunemia.R
-import com.dicoding.areunemia.data.remote.response.PredictionItem
+import com.dicoding.areunemia.data.remote.response.HistoryDetailItem
 import com.dicoding.areunemia.data.remote.response.toQuestionList
 import com.dicoding.areunemia.databinding.ActivityHistoryDetailBinding
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.adapter.AnswerHistoryAdapter
-import com.dicoding.areunemia.view.login.LoginActivity
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -44,7 +41,9 @@ class HistoryDetailActivity : AppCompatActivity() {
     private fun setupView(id: String) {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = ""
-        historyDetailViewModel.getHistoryDetail(id)
+
+        historyDetailViewModel.getHistoryDetail(id, this)
+
         val layoutManager = LinearLayoutManager(this)
         binding.rvQuestionnaireResponse.layoutManager = layoutManager
     }
@@ -60,7 +59,7 @@ class HistoryDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun setHistoryDetailResults(historyDetailResult: PredictionItem) {
+    private fun setHistoryDetailResults(historyDetailResult: HistoryDetailItem) {
         val (textResId, colorResId) = when (historyDetailResult.predictionResult) {
             "Severe" -> R.string.severe to R.color.red_dark
             "Moderate" -> R.string.moderate to R.color.red

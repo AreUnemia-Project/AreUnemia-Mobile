@@ -252,7 +252,7 @@ class ConfirmScanFragment : Fragment() {
 
             val answersBody = questionnaireAnswers.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
-            scanProcessViewModel.uploadScan(multipartBody, answersBody)
+            scanProcessViewModel.uploadScan(multipartBody, answersBody, requireContext())
 
         } else {
             showToast(requireContext(), "Please provide all necessary information")

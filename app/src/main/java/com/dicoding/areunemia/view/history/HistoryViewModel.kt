@@ -1,17 +1,20 @@
 package com.dicoding.areunemia.view.history
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.HistoryItem
 import com.dicoding.areunemia.data.remote.response.HistoryResponse
 import com.dicoding.areunemia.data.remote.retrofit.ApiConfig
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,7 +40,7 @@ class HistoryViewModel(private val repository: UserRepository) : ViewModel() {
         }
     }
 
-    fun getListHistories() {
+    fun getListHistories(context: Context) {
         _isLoading.value = true
         val client = ApiConfig.getApiServiceMock().getListHistory()
 
@@ -49,12 +52,19 @@ class HistoryViewModel(private val repository: UserRepository) : ViewModel() {
                 _isLoading.value = false
                 response.body()?.let { historyResponse ->
                     if (historyResponse.status.equals("error")) {
-                        _error.value = "error"
+                        _error.value = context.getString(R.string.error_message)
                     } else {
                         _listHistory.value = response.body()!!.data
                     }
-                } ?: run {
-                    _error.value = "error"
+                }
+                response.errorBody()?.let {
+                    val errorResponse = response.errorBody()?.string()
+                    val errorMessage = try {
+                        JSONObject(errorResponse ?: "").getString("message")
+                    } catch (e: Exception) {
+                        response.message()
+                    }
+                    _error.value = errorMessage ?: context.getString(R.string.error_message)
                 }
             }
 

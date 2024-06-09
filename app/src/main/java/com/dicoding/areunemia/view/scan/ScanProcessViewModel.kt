@@ -1,10 +1,12 @@
 package com.dicoding.areunemia.view.scan
 
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
+import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.PredictionResponse
@@ -57,31 +59,29 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
         return repository.getSession().asLiveData()
     }
 
-    fun uploadScan(eyePhoto: MultipartBody.Part, questionnaireAnswers: RequestBody) {
+    fun uploadScan(eyePhoto: MultipartBody.Part, questionnaireAnswers: RequestBody, context: Context) {
         _isLoading.value = true
         val client = ApiConfig.getApiServiceMock().postScan(eyePhoto, questionnaireAnswers)
 
         client.enqueue(object : Callback<PredictionResponse> {
             override fun onResponse(call: Call<PredictionResponse>, response: Response<PredictionResponse>) {
-                _isLoading.value = false
-                if (response.isSuccessful) {
-                    response.body()?.let { uploadResponse ->
+                response.body()?.let { uploadResponse ->
                         if (uploadResponse.status == "error") {
-                            _error.value = "Error"
+                            _error.value = context.getString(R.string.error_message)
                         } else {
                             _uploadResult.value = uploadResponse
                         }
                     } ?: run {
-                        _error.value = "Error"
+                        _error.value = context.getString(R.string.error_message)
                     }
-                } else {
+                response.errorBody()?.let {
                     val errorResponse = response.errorBody()?.string()
                     val errorMessage = try {
                         JSONObject(errorResponse ?: "").getString("message")
                     } catch (e: Exception) {
                         response.message()
                     }
-                    _error.value = errorMessage
+                    _error.value = errorMessage ?: context.getString(R.string.error_message)
                 }
             }
 

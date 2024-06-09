@@ -51,7 +51,7 @@ class HistoryActivity : AppCompatActivity() {
     private fun setupViewLoggedIn() {
         val layoutManager = LinearLayoutManager(this)
         binding.rvHistoryResult.layoutManager = layoutManager
-        historyViewModel.getListHistories()
+        historyViewModel.getListHistories(this)
     }
 
     private fun observeViewModel() {
