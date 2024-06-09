@@ -14,6 +14,7 @@ import com.dicoding.areunemia.utils.showLoginAlertDialog
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.account.AccountActivity
 import com.dicoding.areunemia.view.adapter.HistoryAdapter
+import com.dicoding.areunemia.view.login.LoginActivity
 import com.dicoding.areunemia.view.main.MainActivity
 import com.dicoding.areunemia.view.scan.ScanActivity
 
@@ -37,6 +38,8 @@ class HistoryActivity : AppCompatActivity() {
         historyViewModel.getSession().observe(this) { user ->
             if (!user.isLogin) {
                 showLoginAlertDialog(this)
+                showNoHistoryMessage(true)
+                showLoginButton(true)
             } else {
                 setupViewLoggedIn()
                 observeViewModel()
@@ -46,6 +49,8 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun setupView() {
         supportActionBar?.hide()
+        showNoHistoryMessage(false)
+        showLoginButton(false)
     }
 
     private fun setupViewLoggedIn() {
@@ -56,7 +61,12 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun observeViewModel() {
         historyViewModel.listHistory.observe(this) { historyResult ->
-            setHistoryResults(historyResult)
+            if (historyResult.isNullOrEmpty()) {
+                showNoHistoryMessage(true)
+            } else {
+                setHistoryResults(historyResult)
+                showNoHistoryMessage(false)
+            }
         }
 
         historyViewModel.isLoading.observe(this) {
@@ -83,6 +93,19 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun showLoading(state: Boolean) {
         binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE
+    }
+
+    private fun showNoHistoryMessage(state: Boolean) {
+        binding.tvNoHistory.visibility = if (state) View.VISIBLE else View.GONE
+    }
+
+    private fun showLoginButton(state: Boolean) {
+        binding.loginButton.apply {
+            visibility = if (state) View.VISIBLE else View.GONE
+            setOnClickListener {
+                startActivity(Intent(this@HistoryActivity, LoginActivity::class.java))
+            }
+        }
     }
 
     private fun setupBottomNavigation() {
