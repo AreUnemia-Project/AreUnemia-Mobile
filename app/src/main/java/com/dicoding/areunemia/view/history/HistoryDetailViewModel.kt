@@ -1,24 +1,26 @@
 package com.dicoding.areunemia.view.history
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
+import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.HistoryDetailResponse
-import com.dicoding.areunemia.data.remote.response.HistoryItem
-import com.dicoding.areunemia.data.remote.response.PredictionItem
+import com.dicoding.areunemia.data.remote.response.HistoryDetailItem
 import com.dicoding.areunemia.data.remote.retrofit.ApiConfig
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class HistoryDetailViewModel (private val repository: UserRepository) : ViewModel() {
 
-    private val _historyDetail = MutableLiveData<PredictionItem>()
-    val historyDetail: LiveData<PredictionItem> = _historyDetail
+    private val _historyDetail = MutableLiveData<HistoryDetailItem>()
+    val historyDetail: LiveData<HistoryDetailItem> = _historyDetail
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -30,7 +32,7 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
         return repository.getSession().asLiveData()
     }
 
-    fun getHistoryDetail(id: String) {
+    fun getHistoryDetail(id: String, context: Context) {
         _isLoading.value = true
         val client = ApiConfig.getApiServiceMock().getHistoryDetail(id)
 
@@ -42,12 +44,19 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
                 _isLoading.value = false
                 response.body()?.let { historyDetailResponse ->
                     if (historyDetailResponse.status.equals("error")) {
-                        _error.value = "error"
+                        _error.value = context.getString(R.string.error_message)
                     } else {
                         _historyDetail.value = historyDetailResponse.data!!
                     }
-                } ?: run {
-                    _error.value = "error"
+                }
+                response.errorBody()?.let {
+                    val errorResponse = response.errorBody()?.string()
+                    val errorMessage = try {
+                        JSONObject(errorResponse ?: "").getString("message")
+                    } catch (e: Exception) {
+                        response.message()
+                    }
+                    _error.value = errorMessage ?: context.getString(R.string.error_message)
                 }
             }
 

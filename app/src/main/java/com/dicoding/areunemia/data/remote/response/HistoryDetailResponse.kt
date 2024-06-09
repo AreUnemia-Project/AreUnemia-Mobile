@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class HistoryDetailResponse(
 
 	@field:SerializedName("data")
-	val data: PredictionItem? = null,
+	val data: HistoryDetailItem? = null,
 
 	@field:SerializedName("status")
 	val status: String? = null
