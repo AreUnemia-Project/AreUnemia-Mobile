@@ -58,7 +58,7 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
         }
 
         private fun formatPredictionResult(predictionResult: String?, context: Context): SpannableString {
-            val startIndex = if (Locale.getDefault().language == "en") 18 else 17
+            val startIndex = if (Locale.getDefault().language == "in") 17 else 18
             return when (predictionResult) {
                 "Severe" -> {
                     val formattedText = context.getString(R.string.anemia_prediction_template,
