@@ -41,6 +41,12 @@
     <string name="confirm_submit_scan">Your data will be analyzed and stored. Do you want to proceed with submitting your scan?</string>
     <string name="warning_to_scan">The results are predictions based on your data and are not a substitute for professional medical advice.\n\nAre you sure you want to proceed?</string>
 
+    <string name="please_complete_data">Please complete the data!</string>
+    <string name="email_exists_message">Email already exists!</string>
+    <string name="failed_register">Failed to register user</string>
+    <string name="invalid_login">Invalid email or password</string>
+    <string name="failed_login">Failed to login user</string>
+
     <!--Reusable text-->
     <string name="continue_text">Continue</string>
     <string name="yes">Yes</string>
@@ -132,5 +138,6 @@
     <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
     <string name="unknown_prediction">Unknown Prediction</string>
     <string name="no_history">No history to show</string>
+
 
 </resources>
