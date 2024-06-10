@@ -41,6 +41,12 @@
     <string name="confirm_submit_scan">Data Anda akan dianalisis dan disimpan. Apakah Anda ingin melanjutkan untuk mengirimkan pemindaian Anda?</string>
     <string name="warning_to_scan">Hasil ini adalah prediksi berdasarkan data Anda dan bukan pengganti nasihat medis profesional.\n\nApakah Anda yakin ingin melanjutkan?</string>
 
+    <string name="please_complete_data">Silakan lengkapi data!</string>
+    <string name="email_exists_message">Email sudah terdaftar!</string>
+    <string name="failed_register">Gagal mendaftarkan pengguna</string>
+    <string name="invalid_login">Email atau kata sandi tidak valid</string>
+    <string name="failed_login">Gagal memasukkan pengguna</string>
+
     <!--Reusable text-->
     <string name="continue_text">Lanjutkan</string>
     <string name="yes">Ya</string>
@@ -129,5 +135,6 @@
     <string name="anemia_text">Anemia %1$s</string>
     <string name="anemia_prediction_template">Prediksi Anemia: %1$s</string>
     <string name="unknown_prediction">Prediksi Tidak Diketahui</string>
+    <string name="no_history">Belum ada riwayat untuk ditampilkan</string>
 
 </resources>

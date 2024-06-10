@@ -102,7 +102,13 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel.error.observe(this) { message ->
             message?.let {
-                showErrorDialog(this, it)
+                val errorMessage = when (it) {
+                    "Please Complete the Data!" -> getString(R.string.please_complete_data)
+                    "Invalid email or password" -> getString(R.string.invalid_login)
+                    "Failed to login user" -> getString(R.string.failed_login)
+                    else -> it
+                }
+                showErrorDialog(this, errorMessage)
             }
         }
 

@@ -160,7 +160,13 @@ class RegisterActivity : AppCompatActivity() {
 
         registerViewModel.error.observe(this) { message ->
             message?.let {
-                showErrorDialog(this, it)
+                val errorMessage = when (it) {
+                    "Please Complete the Data!" -> getString(R.string.please_complete_data)
+                    "Email already exists!" -> getString(R.string.email_exists_message)
+                    "Failed to register user" -> getString(R.string.failed_register)
+                    else -> it
+                }
+                showErrorDialog(this, errorMessage)
             }
         }
 
