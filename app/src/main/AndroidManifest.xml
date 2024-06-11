@@ -22,7 +22,13 @@
         android:theme="@style/Theme.AreUnemia"
         tools:targetApi="31">
         <activity
-            android:name=".view.EditProfileActivity"
+            android:name=".view.account.ThemeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.account.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.account.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.MainActivity"

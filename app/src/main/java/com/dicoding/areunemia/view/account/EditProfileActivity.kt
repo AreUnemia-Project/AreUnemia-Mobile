@@ -1,4 +1,4 @@
-package com.dicoding.areunemia.view
+package com.dicoding.areunemia.view.account
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
