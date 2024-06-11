@@ -138,6 +138,13 @@
     <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
     <string name="unknown_prediction">Unknown Prediction</string>
     <string name="no_history">No history to show</string>
+    <string name="submit_data">Submit Data</string>
+
+    <!-- Gender string resources -->
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 
 </resources>
