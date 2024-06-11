@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.dicoding.areunemia.R
-import com.dicoding.areunemia.databinding.CustomAlertTitleBinding
+import com.dicoding.areunemia.databinding.CustomQuestionTitleBinding
 import com.dicoding.areunemia.databinding.FragmentConfirmScanBinding
 import com.dicoding.areunemia.utils.*
 import com.dicoding.areunemia.view.ViewModelFactory
@@ -178,9 +178,9 @@ class ConfirmScanFragment : Fragment() {
         val optionsArray = resources.getStringArray(R.array.answer_options)
         val dialogBuilder = AlertDialog.Builder(requireContext())
 
-        val alertTitleBinding = CustomAlertTitleBinding.inflate(layoutInflater)
+        val alertTitleBinding = CustomQuestionTitleBinding.inflate(layoutInflater)
         alertTitleBinding.customQuestionTitle.text = getString(R.string.question_title, questionNumber)
-        alertTitleBinding.customAlertTitle.text = questionText
+        alertTitleBinding.customQuestion.text = questionText
         dialogBuilder.setCustomTitle(alertTitleBinding.root)
 
         var selectedAnswer: Int? = null
