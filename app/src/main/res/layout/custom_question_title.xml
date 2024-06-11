@@ -16,7 +16,7 @@
         android:text="@string/title"/>
 
     <TextView
-        android:id="@+id/customAlertTitle"
+        android:id="@+id/customQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
