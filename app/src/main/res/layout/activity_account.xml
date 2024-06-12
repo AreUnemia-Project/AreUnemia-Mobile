@@ -6,14 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".view.account.AccountActivity">
 
+    <!-- Account Title -->
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/account"
-        android:textColor="@color/grey_dark"
-        android:layout_centerInParent="true"
-        android:textSize="36sp" />
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
+    <!-- Profile Section -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="320dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/btn_white_rounded_border"
+        android:text="Profile Information"
+        android:textAlignment="center"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Other Menu Title -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other Menu"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_account_border"
+        android:text="Edit Profile"
+        android:layout_below="@id/textView2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/btn_account_border"
+        android:text="Theme"
+        android:layout_below="@id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/btn_account_border"
+        android:text="Language"
+        android:layout_below="@id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/btn_account_border"
+        android:text="Logout"
+        android:layout_below="@id/button3" />
+
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"

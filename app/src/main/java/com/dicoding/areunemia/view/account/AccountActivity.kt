@@ -1,17 +1,15 @@
 package com.dicoding.areunemia.view.account
 
-import android.content.Context
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivityAccountBinding
 import com.dicoding.areunemia.utils.navigateToOtherFeature
 import com.dicoding.areunemia.view.history.HistoryActivity
 import com.dicoding.areunemia.view.main.MainActivity
 import com.dicoding.areunemia.view.scan.ScanActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AccountActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAccountBinding
@@ -25,6 +23,35 @@ class AccountActivity : AppCompatActivity() {
         setupBottomNavigation()
         setupView()
 
+        // Handle button clicks
+        binding.button.setOnClickListener {
+            val intent = Intent(this, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.button2.setOnClickListener {
+            val intent = Intent(this, ThemeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, LanguageActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.button4.setOnClickListener {
+            // Show confirmation dialog before logout
+            val builder = MaterialAlertDialogBuilder(this)
+            builder.setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Logout") { _, _ ->
+                    // Handle logout logic (e.g., remove user data, navigate to login)
+                }
+                .setNegativeButton("Cancel") { dialog, _ ->
+                    dialog.dismiss()
+                }
+            builder.show()
+        }
     }
 
     private fun setupView() {
@@ -51,5 +78,4 @@ class AccountActivity : AppCompatActivity() {
             }
         }
     }
-
 }
