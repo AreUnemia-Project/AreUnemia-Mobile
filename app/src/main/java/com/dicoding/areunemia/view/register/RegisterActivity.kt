@@ -126,7 +126,7 @@ class RegisterActivity : AppCompatActivity() {
                 },
                 year, month, day
             )
-            calendar.set(Calendar.YEAR, year - 12)
+            calendar.set(Calendar.YEAR, year - 13)
             datePickerDialog.datePicker.maxDate = calendar.timeInMillis
             datePickerDialog.show()
         }

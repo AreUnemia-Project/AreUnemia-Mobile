@@ -1,5 +1,7 @@
 package com.dicoding.areunemia.data.remote.retrofit
 
+import com.dicoding.areunemia.data.remote.response.EditPasswordResponse
+import com.dicoding.areunemia.data.remote.response.EditUserDataResponse
 import com.dicoding.areunemia.data.remote.response.HistoryDetailResponse
 import com.dicoding.areunemia.data.remote.response.HistoryResponse
 import com.dicoding.areunemia.data.remote.response.LoginResponse
@@ -13,6 +15,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Part
 import retrofit2.http.Path
 
@@ -33,6 +36,22 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<LoginResponse>
+
+    @FormUrlEncoded
+    @PUT("api/updateUser")
+    fun updateUserData(
+        @Field("name") name: String,
+        @Field("birthdate") birthDate: String,
+        @Field("gender") gender: String
+    ): Call<EditUserDataResponse>
+
+    @FormUrlEncoded
+    @PUT("api/updatePassword")
+    fun updatePassword(
+        @Field("oldPassword") oldPassword: String,
+        @Field("password") password: String,
+        @Field("confirmPassword") confirmPassword: String
+    ): Call<EditPasswordResponse>
 
     @GET("api/predictions")
     fun getListHistory(

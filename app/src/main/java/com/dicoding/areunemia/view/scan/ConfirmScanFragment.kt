@@ -251,7 +251,7 @@ class ConfirmScanFragment : Fragment() {
             }
 
             val answersBody = questionnaireAnswers.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
-
+            Log.e("ConfirmScanFragment", answersBody.toString())
             scanProcessViewModel.uploadScan(multipartBody, answersBody, requireContext())
 
         } else {

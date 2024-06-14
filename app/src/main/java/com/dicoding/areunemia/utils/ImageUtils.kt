@@ -116,8 +116,16 @@ fun startCrop(fragment: Fragment, uri: Uri) {
     val destinationUri = Uri.fromFile(File(fragment.requireContext().cacheDir, "${System.nanoTime()}.jpg"))
     UCrop.of(uri, destinationUri)
         .withAspectRatio(1f, 1f)
-        .withMaxResultSize(1080, 1080)
+        .withMaxResultSize(640, 640)
+        .withOptions(getUCropOptions()) // Setting options for exact result size
         .start(fragment.requireContext(), fragment)
+}
+
+private fun getUCropOptions(): UCrop.Options {
+    val options = UCrop.Options()
+    options.setCompressionQuality(100) // Set the compression quality to highest
+    options.withMaxResultSize(640, 640) // Ensuring the result size is exactly 640x640
+    return options
 }
 
 fun createCustomTempFile(context: Context): File {

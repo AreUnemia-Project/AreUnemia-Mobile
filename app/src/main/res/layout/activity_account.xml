@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,86 +8,213 @@
 
     <!-- Account Title -->
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvAccountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/account"
-        android:textColor="@color/black"
-        android:textSize="36sp"
+        android:textColor="@color/red"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
 
-    <!-- Profile Section -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="320dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_white_rounded_border"
-        android:text="Profile Information"
-        android:textAlignment="center"
-        android:layout_below="@id/textView3"
-        android:layout_centerHorizontal="true" />
+    <!-- Profile Sections Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileSectionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountTitle"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Profile Section -->
+        <LinearLayout
+            android:id="@+id/profileSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/btn_white_rounded_border"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/user_name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvBirthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="56dp"
+                android:text="@string/birth_date"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_calendar_month_24"
+                android:drawablePadding="4dp" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="56dp"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_outline_person_24"
+                android:drawablePadding="4dp" />
+        </LinearLayout>
+
+        <!-- Profile Section 2 -->
+        <LinearLayout
+            android:id="@+id/profileSection2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/btn_white_rounded_border"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvNotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/login_to_view_profile"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/red"
+                android:text="@string/login"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNotice"
+                android:layout_gravity="center"
+                tools:alpha="100" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <!-- Other Menu Title -->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvOtherMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Other Menu"
+        android:text="@string/other_menu"
         android:textColor="@color/red"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileSectionsContainer" />
 
     <!-- Buttons -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonEditProfile"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/btn_account_border"
-        android:text="Edit Profile"
-        android:layout_below="@id/textView2" />
+        android:text="@string/edit_profile"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_edit_square_24"
+        android:drawableRight="@drawable/ic_arrow_forward_24"
+        android:paddingHorizontal="16dp"
+        android:gravity="start|center_vertical"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOtherMenu" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonLanguage"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="6dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_account_border"
-        android:text="Theme"
-        android:layout_below="@id/button" />
+        android:text="@string/language"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_language_24"
+        android:drawableRight="@drawable/ic_arrow_forward_24"
+        android:paddingHorizontal="16dp"
+        android:gravity="start|center_vertical"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonEditProfile" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonLogout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="6dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_account_border"
-        android:text="Language"
-        android:layout_below="@id/button2" />
+        android:text="@string/logout"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_logout_24"
+        android:drawableRight="@drawable/ic_arrow_forward_24"
+        android:paddingHorizontal="16dp"
+        android:gravity="start|center_vertical"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonLanguage" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/btn_account_border"
-        android:text="Logout"
-        android:layout_below="@id/button3" />
+
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -99,6 +226,9 @@
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/bottom_background"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
         app:itemRippleColor="@color/transparent"
@@ -109,4 +239,4 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_menu" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

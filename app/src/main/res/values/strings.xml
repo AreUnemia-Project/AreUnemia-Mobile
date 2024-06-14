@@ -47,6 +47,19 @@
     <string name="invalid_login">Invalid email or password</string>
     <string name="failed_login">Failed to login user</string>
 
+    <string name="confirm_submit_data">Are you sure you want to submit the updated data?</string>
+    <string name="confirm_submit_password">Are you sure you want to submit the new password?</string>
+
+    <string name="update_data_message">You have successfully updated your profile</string>
+    <string name="failed_update_user">Failed to update user</string>
+    <string name="update_password_message">You have successfully updated your password</string>
+    <string name="are_you_sure_logout">Are you sure you want to logout?</string>
+    <string name="login_to_view_profile">Login to view profile</string>
+
+    <string name="session_expired">Session Expired</string>
+    <string name="session_expired_message">Your session has expired. Please log in again.</string>
+    <string name="token_expired">Token expired. User logged out.</string>
+
     <!--Reusable text-->
     <string name="continue_text">Continue</string>
     <string name="yes">Yes</string>
@@ -59,6 +72,7 @@
     <string name="error_title">Error</string>
     <string name="ok">OK</string>
     <string name="error">Error</string>
+    <string name="back">Back</string>
 
     <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi.
@@ -138,7 +152,24 @@
     <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
     <string name="unknown_prediction">Unknown Prediction</string>
     <string name="no_history">No history to show</string>
+
+
+    <!-- Account -->
+
+    <string name="language">Language</string>
+    <string name="logout">Logout</string>
+    <string name="user_name">User Name</string>
+
+    <string name="edit_password">Edit Password</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="old_password">Old Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="submit_password">Submit Password</string>
     <string name="submit_data">Submit Data</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="other_menu">Other Menu</string>
+
 
     <!-- Gender string resources -->
     <string-array name="gender_options">

@@ -51,7 +51,7 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
             dateString?.let {
                 val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
                 val date = sdf.parse(dateString)
-                val newSdf = SimpleDateFormat("EEEE • MMMM dd'th', yyyy", Locale.getDefault())
+                val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy", Locale.getDefault())
                 return date?.let { it1 -> newSdf.format(it1) }
             }
             return ""

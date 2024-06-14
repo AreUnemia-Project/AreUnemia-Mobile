@@ -47,6 +47,19 @@
     <string name="invalid_login">Email atau kata sandi tidak valid</string>
     <string name="failed_login">Gagal memasukkan pengguna</string>
 
+    <string name="confirm_submit_data">Apakah Anda yakin ingin menyimpan data yang diperbarui?</string>
+    <string name="confirm_submit_password">Apakah Anda yakin ingin menyimpan kata sandi baru?</string>
+
+    <string name="update_data_message">Profil Anda berhasil diperbarui</string>
+    <string name="failed_update_user">Gagal memperbarui pengguna</string>
+    <string name="update_password_message">Kata sandi Anda berhasil diperbarui</string>
+    <string name="are_you_sure_logout">Apakah Anda yakin ingin keluar?</string>
+    <string name="login_to_view_profile">Masuk untuk melihat profil</string>
+
+    <string name="session_expired">Sesi Berakhir</string>
+    <string name="session_expired_message">Sesi Anda telah berakhir. Silakan masuk kembali.</string>
+    <string name="token_expired">Token telah berakhir. Pengguna akan dikeluarkan.</string>
+
     <!--Reusable text-->
     <string name="continue_text">Lanjutkan</string>
     <string name="yes">Ya</string>
@@ -59,6 +72,7 @@
     <string name="error_title">Kesalahan</string>
     <string name="ok">OK</string>
     <string name="error">Kesalahan</string>
+    <string name="back">Kembali</string>
 
     <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi. Phasellus dapibus auctor erat, a scelerisque libero ullamcorper ut. Fusce at lacinia justo. Duis lobortis sit amet risus ac tincidunt. Suspendisse potenti.</string>
 
@@ -136,5 +150,21 @@
     <string name="anemia_prediction_template">Prediksi Anemia: %1$s</string>
     <string name="unknown_prediction">Prediksi Tidak Diketahui</string>
     <string name="no_history">Belum ada riwayat untuk ditampilkan</string>
+
+    <!-- Account -->
+
+    <string name="language">Bahasa</string>
+    <string name="logout">Keluar</string>
+    <string name="user_name">Nama Pengguna</string>
+
+    <string name="edit_password">Ubah Kata Sandi</string>
+    <string name="edit_data">Ubah Data</string>
+    <string name="old_password">Password Lama</string>
+    <string name="confirm_new_password">Konfirmasi Kata Sandi Baru</string>
+    <string name="new_password">Kata Sandi Baru</string>
+    <string name="submit_password">Simpan Perubahan Kata Sandi</string>
+    <string name="submit_data">Simpan Perubahan Data</string>
+    <string name="edit_profile">Ubah Profil</string>
+    <string name="other_menu">Menu Lainnya</string>
 
 </resources>

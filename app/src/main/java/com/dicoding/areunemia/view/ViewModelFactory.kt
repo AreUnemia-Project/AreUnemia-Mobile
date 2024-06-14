@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.di.Injection
+import com.dicoding.areunemia.view.account.AccountViewModel
+import com.dicoding.areunemia.view.account.EditProfileViewModel
 import com.dicoding.areunemia.view.history.HistoryDetailViewModel
 import com.dicoding.areunemia.view.history.HistoryViewModel
 import com.dicoding.areunemia.view.login.LoginViewModel
@@ -38,6 +40,12 @@ class ViewModelFactory(private val repository: UserRepository) : ViewModelProvid
             }
             modelClass.isAssignableFrom(ScanProcessViewModel::class.java) -> {
                 ScanProcessViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(AccountViewModel::class.java) -> {
+                AccountViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(EditProfileViewModel::class.java) -> {
+                EditProfileViewModel(repository) as T
             }
             // add view models here
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

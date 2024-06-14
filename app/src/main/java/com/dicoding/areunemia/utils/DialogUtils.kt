@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.view.login.LoginActivity
+import com.dicoding.areunemia.view.main.MainActivity
 
 fun showErrorDialog(context: Context, message: String?) {
     AlertDialog.Builder(context).apply {
@@ -35,6 +36,9 @@ fun showWarningDialog(context: Context, message: String, onContinue: () -> Unit)
         setMessage(message)
         setPositiveButton(context.getString(R.string.continue_text)) { _, _ ->
             onContinue()
+        }
+        setNegativeButton(R.string.cancel) { dialog, _ ->
+            dialog.dismiss()
         }
         create()
         show()
@@ -67,6 +71,29 @@ fun showConfirmationDialog(context: Context, message: String, onContinue: () -> 
         }
         .create()
         .show()
+}
+
+fun showLogoutAlertDialog(context: Context) {
+    AlertDialog.Builder(context).apply {
+        setTitle(context.getString(R.string.session_expired))
+        setMessage(context.getString(R.string.session_expired_message))
+        setPositiveButton(context.getString(R.string.login)) { _, _ ->
+            context.startActivity(Intent(context, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            })
+            context.startActivity(Intent(context, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            })
+        }
+        setNegativeButton(context.getString(R.string.back)) { _, _ ->
+            context.startActivity(Intent(context, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            })
+        }
+        setCancelable(false) // Prevent user from dismissing the dialog
+        create()
+        show()
+    }
 }
 
 fun showToast(context: Context, message: String) {

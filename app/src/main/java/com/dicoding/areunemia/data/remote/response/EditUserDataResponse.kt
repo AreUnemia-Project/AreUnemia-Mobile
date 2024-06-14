@@ -1,4 +1,12 @@
 package com.dicoding.areunemia.data.remote.response
 
-class EditUserDataResponse {
-}
+import com.google.gson.annotations.SerializedName
+
+data class EditUserDataResponse(
+
+    @field:SerializedName("message")
+    val message: String? = null,
+
+    @field:SerializedName("status")
+    val status: String? = null
+)
