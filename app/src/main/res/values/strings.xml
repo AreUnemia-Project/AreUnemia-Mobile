@@ -139,6 +139,12 @@
     <string name="unknown_prediction">Unknown Prediction</string>
     <string name="no_history">No history to show</string>
     <string name="submit_data">Submit Data</string>
+    <string name="headline">headline</string>
+    <string name="description">description</string>
+    <string name="medication_name">Medication Name</string>
+    <string name="enter_medication_name">Enter Medication Name</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="tap_to_select_reminder_time">Tap to select Reminder Time</string>
 
     <!-- Gender string resources -->
     <string-array name="gender_options">
