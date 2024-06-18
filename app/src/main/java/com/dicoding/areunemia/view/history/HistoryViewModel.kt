@@ -42,7 +42,7 @@ class HistoryViewModel(private val repository: UserRepository) : ViewModel() {
 
     fun getListHistories(context: Context) {
         _isLoading.value = true
-        val client = ApiConfig.getApiServiceMock().getListHistory()
+        val client = repository.apiServiceML.getListHistory()
 
         client.enqueue(object : Callback<HistoryResponse> {
             override fun onResponse(

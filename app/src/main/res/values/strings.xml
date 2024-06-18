@@ -96,6 +96,12 @@
     <string name="example_eye_picture">Eye Image Example</string>
     <string name="eye_picture_description">Ensure that the picture is clear, taken in good lighting, shows the conjunctiva of the eye, and includes only one eye.</string>
 
+    <string name="photo_taken">Photo was taken</string>
+    <string name="photo_failed">Failed to take photo</string>
+    <string name="permission_granted">Permission request granted</string>
+    <string name="permission_denied">Permission request denied</string>
+    <string name="provide_all_information">Please provide all necessary information</string>
+
     <!--Questionnaire-->
     <string name="questionnaire">Questionnaire</string>
 
@@ -109,10 +115,10 @@
     <string name="third_question">Do you experience shortness of breath or rapid heartbeat, especially during physical activity?</string>
 
     <string name="question_four">Question 4</string>
-    <string name="fourth_question">Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?</string>
+    <string name="fourth_question"> Do you experience unusual or excessive bruising or bleeding, such as nosebleeds or bleeding gums?</string>
 
     <string name="question_five">Question 5</string>
-    <string name="fifth_question">Do you often feel tired or fatigued, even after getting enough sleep?</string>
+    <string name="fifth_question">Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?</string>
 
     <string name="question_six">Question 6</string>
     <string name="sixth_question">Do you often experience intense headaches, particularly ones that seem to come on suddenly or persist for long periods?</string>
@@ -143,12 +149,12 @@
     <string name="mild_desc">Adjust your diet to include iron-rich foods like spinach and lentils, and consider vitamin C sources for better absorption. Iron supplements could help, but consult a healthcare professional first. Monitor symptoms like fatigue and weakness, seek medical advice if they persist.</string>
     <string name="healthy_desc">Focus on a balanced diet with iron-rich foods like lean meats and leafy greens. Stay hydrated and exercise regularly for overall well-being. If experiencing fatigue or weakness, consult a healthcare professional to rule out other health issues. Regular check-ups help maintain optimal health.</string>
 
-    <string name="severe">Severe</string>
-    <string name="moderate">Moderate</string>
-    <string name="mild">Mild</string>
+    <string name="severe">High Risk</string>
+    <string name="moderate">Moderate Risk</string>
+    <string name="mild">Low Risk</string>
     <string name="no_anemia">No Anemia</string>
 
-    <string name="anemia_text">%1$s Anemia</string>
+    <string name="anemia_text">%1$s of Anemia</string>
     <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
     <string name="unknown_prediction">Unknown Prediction</string>
     <string name="no_history">No history to show</string>
@@ -169,6 +175,7 @@
     <string name="submit_data">Submit Data</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="other_menu">Other Menu</string>
+    <string name="recommendation">Recommendation</string>
 
 
     <!-- Gender string resources -->

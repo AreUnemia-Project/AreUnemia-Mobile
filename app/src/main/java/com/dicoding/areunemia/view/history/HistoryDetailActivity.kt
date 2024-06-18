@@ -14,8 +14,10 @@ import com.dicoding.areunemia.data.remote.response.toQuestionList
 import com.dicoding.areunemia.databinding.ActivityHistoryDetailBinding
 import com.dicoding.areunemia.view.ViewModelFactory
 import com.dicoding.areunemia.view.adapter.AnswerHistoryAdapter
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Locale
+import java.util.TimeZone
 
 class HistoryDetailActivity : AppCompatActivity() {
 
@@ -60,16 +62,17 @@ class HistoryDetailActivity : AppCompatActivity() {
     }
 
     private fun setHistoryDetailResults(historyDetailResult: HistoryDetailItem) {
-        val (textResId, colorResId) = when (historyDetailResult.predictionResult) {
-            "Severe" -> R.string.severe to R.color.red_dark
-            "Moderate" -> R.string.moderate to R.color.red
-            "Mild" -> R.string.mild to R.color.orange
-            "Healthy" -> R.string.no_anemia to R.color.grey_dark
-            else -> R.string.unknown_prediction to R.color.grey_dark
+        val (textResId, descResId, colorResId) = when (historyDetailResult.predictionResult) {
+            "Severe" -> Triple(R.string.severe, R.string.severe_desc, R.color.red_dark)
+            "Moderate" -> Triple(R.string.moderate, R.string.moderate_desc, R.color.red)
+            "Mild" -> Triple(R.string.mild, R.string.mild_desc, R.color.orange)
+            "Healthy" -> Triple(R.string.no_anemia, R.string.healthy_desc, R.color.grey_dark)
+            else -> Triple(R.string.unknown_prediction, R.string.healthy_desc, R.color.grey_dark)
         }
 
-        binding.tvHistoryDetailResult.text = textResId?.let { getString(it) } ?: historyDetailResult.predictionResult
+        binding.tvHistoryDetailResult.text = getString(textResId)
         binding.tvHistoryDetailResult.setTextColor(ContextCompat.getColor(this, colorResId))
+        binding.tvPredictionDesc.text = getString(descResId)
 
         binding.tvHistoryDetailDate.text = formatDate(historyDetailResult.createdAt)
         Glide.with(this@HistoryDetailActivity)
@@ -81,18 +84,30 @@ class HistoryDetailActivity : AppCompatActivity() {
         val adapter = AnswerHistoryAdapter()
         adapter.submitList(questionsList)
         binding.rvQuestionnaireResponse.adapter = adapter
-
     }
 
     private fun formatDate(dateString: String?): String? {
         dateString?.let {
-            val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-            val date = sdf.parse(dateString)
-            val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy", Locale.getDefault())
-            return date?.let { it1 -> newSdf.format(it1) }
+            try {
+                // Correct the date format to match the date string, including fractional seconds
+                val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'", Locale.getDefault())
+                sdf.timeZone = TimeZone.getTimeZone("UTC")
+                val date = sdf.parse(dateString)
+
+                // Create a new SimpleDateFormat for WIB
+                val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy • HH:mm:ss", Locale.getDefault())
+                newSdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta") // WIB timezone
+
+                return date?.let { newSdf.format(it) }
+            } catch (e: ParseException) {
+                e.printStackTrace()
+            } catch (e: IllegalArgumentException) {
+                e.printStackTrace()
+            }
         }
         return ""
     }
+
 
     private fun showLoading(state: Boolean) {
         binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE

@@ -7,13 +7,13 @@ data class HistoryDetailItem(
     @field:SerializedName("createdAt")
     val createdAt: String? = null,
 
-    @field:SerializedName("eyePhoto")
+    @field:SerializedName("eyePhotoUrl")
     val eyePhoto: String? = null,
 
     @field:SerializedName("predictionId")
     val predictionId: String? = null,
 
-    @field:SerializedName("predictionResult")
+    @field:SerializedName("result")
     val predictionResult: String? = null,
 
     @field:SerializedName("questionnaireAnswers")

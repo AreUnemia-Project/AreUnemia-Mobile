@@ -61,7 +61,7 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
 
     fun uploadScan(eyePhoto: MultipartBody.Part, questionnaireAnswers: RequestBody, context: Context) {
         _isLoading.value = true
-        val client = ApiConfig.getApiServiceMock().postScan(eyePhoto, questionnaireAnswers)
+        val client = repository.apiServiceML.postScan(eyePhoto, questionnaireAnswers)
 
         client.enqueue(object : Callback<PredictionResponse> {
             override fun onResponse(call: Call<PredictionResponse>, response: Response<PredictionResponse>) {
@@ -77,7 +77,7 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
                 response.errorBody()?.let {
                     val errorResponse = response.errorBody()?.string()
                     val errorMessage = try {
-                        JSONObject(errorResponse ?: "").getString("message")
+                        JSONObject(errorResponse ?: "").getString("detail")
                     } catch (e: Exception) {
                         response.message()
                     }

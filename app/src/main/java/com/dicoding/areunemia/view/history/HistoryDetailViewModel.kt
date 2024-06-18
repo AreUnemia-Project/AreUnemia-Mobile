@@ -34,7 +34,7 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
 
     fun getHistoryDetail(id: String, context: Context) {
         _isLoading.value = true
-        val client = ApiConfig.getApiServiceMock().getHistoryDetail(id)
+        val client = repository.apiServiceML.getHistoryDetail(id)
 
         client.enqueue(object : Callback<HistoryDetailResponse> {
             override fun onResponse(

@@ -53,20 +53,20 @@ interface ApiService {
         @Field("confirmPassword") confirmPassword: String
     ): Call<EditPasswordResponse>
 
-    @GET("api/predictions")
+    @GET("api/predict/history")
     fun getListHistory(
     ): Call<HistoryResponse>
 
-    @GET("api/predictions/{id}")
+    @GET("api/predict/history/{id}")
     fun getHistoryDetail(
         @Path("id") id: String
     ): Call<HistoryDetailResponse>
 
     @Multipart
-    @POST("api/predictions")
+    @POST("api/predict")
     fun postScan(
         @Part eyePhoto: MultipartBody.Part,
-        @Part("questionnaireAnswers") answersBody: RequestBody
+        @Part("questionnaire_answers") answersBody: RequestBody
     ): Call<PredictionResponse>
 
 }

@@ -93,12 +93,17 @@
     <string name="example_eye_picture">Contoh gambar mata</string>
     <string name="eye_picture_description">Pastikan gambar yang diambil jelas, dengan pencahayaan yang baik, memperlihatkan konjungtiva mata, dan hanya mencakup satu mata.</string>
 
+    <string name="photo_taken">Foto berhasil diambil</string>
+    <string name="photo_failed">Gagal mengambil foto</string>
+    <string name="permission_granted">Permintaan izin diberikan</string>
+    <string name="permission_denied">Permintaan izin ditolak</string>
+    <string name="provide_all_information">Harap lengkapi semua informasi yang diperlukan</string>
 
     <!--Questionnaire-->
     <string name="questionnaire">Kuesioner</string>
 
     <string name="question_one">Pertanyaan 1</string>
-    <string name="first_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah cukup tidur?</string>
+    <string name="first_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah tidur dengan cukup?</string>
 
     <string name="question_two">Pertanyaan 2</string>
     <string name="second_question">Apakah Anda memperhatikan bahwa warna kulit Anda, terutama di wajah atau telapak tangan, lebih pucat dari biasanya?</string>
@@ -107,10 +112,10 @@
     <string name="third_question">Apakah Anda mengalami sesak napas atau detak jantung cepat, terutama saat beraktivitas fisik?</string>
 
     <string name="question_four">Pertanyaan 4</string>
-    <string name="fourth_question">Apakah Anda sering merasa pusing atau pingsan, terutama saat berdiri cepat?</string>
+    <string name="fourth_question">Apakah Anda mengalami memar atau pendarahan yang tidak biasa atau berlebihan, seperti mimisan atau gusi berdarah?</string>
 
     <string name="question_five">Pertanyaan 5</string>
-    <string name="fifth_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah cukup tidur?</string>
+    <string name="fifth_question">Apakah Anda sering mengalami pusing atau merasa ringan kepala, terutama saat berdiri dengan cepat?</string>
 
     <string name="question_six">Pertanyaan 6</string>
     <string name="sixth_question">Apakah Anda sering mengalami sakit kepala yang parah, terutama yang tampaknya muncul tiba-tiba atau bertahan lama?</string>
@@ -141,12 +146,12 @@
     <string name="mild_desc">Sesuaikan pola makan Anda untuk mencakup makanan yang kaya zat besi seperti bayam dan lentil, dan pertimbangkan sumber vitamin C untuk penyerapan yang lebih baik. Suplemen zat besi dapat membantu, tetapi konsultasikan terlebih dahulu dengan profesional kesehatan. Pantau gejala seperti kelelahan dan lemas, cari saran medis jika gejala terus berlanjut.</string>
     <string name="healthy_desc">Fokus pada pola makan seimbang dengan makanan yang kaya zat besi seperti daging tanpa lemak dan sayuran berdaun hijau. Tetap terhidrasi dan berolahraga secara teratur untuk kesejahteraan secara keseluruhan. Jika mengalami kelelahan atau kelemahan, konsultasikan dengan profesional kesehatan untuk memastikan tidak ada masalah kesehatan lain. Pemeriksaan rutin membantu menjaga kesehatan optimal.</string>
 
-    <string name="severe">Parah</string>
-    <string name="moderate">Sedang</string>
-    <string name="mild">Ringan</string>
+    <string name="severe">Berisiko Tinggi</string>
+    <string name="moderate">Berisiko Sedang</string>
+    <string name="mild">Berisiko Rendah</string>
     <string name="no_anemia">Tidak Anemia</string>
 
-    <string name="anemia_text">Anemia %1$s</string>
+    <string name="anemia_text">%1$s Anemia</string>
     <string name="anemia_prediction_template">Prediksi Anemia: %1$s</string>
     <string name="unknown_prediction">Prediksi Tidak Diketahui</string>
     <string name="no_history">Belum ada riwayat untuk ditampilkan</string>
@@ -166,5 +171,7 @@
     <string name="submit_data">Simpan Perubahan Data</string>
     <string name="edit_profile">Ubah Profil</string>
     <string name="other_menu">Menu Lainnya</string>
+    <string name="recommendation">Rekomendasi</string>
+
 
 </resources>

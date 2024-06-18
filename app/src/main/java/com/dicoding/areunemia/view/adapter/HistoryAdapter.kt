@@ -11,11 +11,14 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.remote.response.HistoryItem
 import com.dicoding.areunemia.databinding.ItemHistoryBinding
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Locale
+import java.util.TimeZone
 
 class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
     private var itemClickListener: OnItemClickListener? = null
@@ -45,17 +48,33 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
         fun bind(history: HistoryItem, context: Context) {
             binding.tvItemDate.text = formatDate(history.createdAt)
             binding.tvItemName.text = formatPredictionResult(history.predictionResult, context)
+            Glide.with(context)
+                .load(getAnemiaImageResource(history.predictionResult))
+                .into(binding.ivAnemia)
         }
 
         private fun formatDate(dateString: String?): String? {
             dateString?.let {
-                val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-                val date = sdf.parse(dateString)
-                val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy", Locale.getDefault())
-                return date?.let { it1 -> newSdf.format(it1) }
+                try {
+                    // Correct the date format to match the date string, including fractional seconds
+                    val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'", Locale.getDefault())
+                    sdf.timeZone = TimeZone.getTimeZone("UTC")
+                    val date = sdf.parse(dateString)
+
+                    // Create a new SimpleDateFormat for WIB
+                    val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy • HH:mm:ss", Locale.getDefault())
+                    newSdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta") // WIB timezone
+
+                    return date?.let { newSdf.format(it) }
+                } catch (e: ParseException) {
+                    e.printStackTrace()
+                } catch (e: IllegalArgumentException) {
+                    e.printStackTrace()
+                }
             }
             return ""
         }
+
 
         private fun formatPredictionResult(predictionResult: String?, context: Context): SpannableString {
             val startIndex = if (Locale.getDefault().language == "in") 17 else 18
@@ -118,6 +137,16 @@ class HistoryAdapter: ListAdapter<HistoryItem, HistoryAdapter.MyViewHolder>(DIFF
                     )
                     spannableString
                 }
+            }
+        }
+
+        private fun getAnemiaImageResource(predictionResult: String?): Int {
+            return when (predictionResult) {
+                "Severe" -> R.drawable.pic_severe_small
+                "Moderate" -> R.drawable.pic_moderate_small
+                "Mild" -> R.drawable.pic_mild_small
+                "Healthy" -> R.drawable.pic_no_small
+                else -> R.drawable.pic_no_small
             }
         }
     }

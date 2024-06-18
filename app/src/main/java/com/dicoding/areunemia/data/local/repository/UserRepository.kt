@@ -6,7 +6,7 @@ import com.dicoding.areunemia.data.remote.retrofit.ApiService
 import kotlinx.coroutines.flow.Flow
 
 class UserRepository private constructor(
-    val apiService: ApiService, private val userPreference: UserPreference
+    val apiService: ApiService, val apiServiceML: ApiService, private val userPreference: UserPreference
 ) {
 
     suspend fun saveSession(user: UserModel) {
@@ -23,6 +23,7 @@ class UserRepository private constructor(
 
     companion object {
         fun getInstance(apiService: ApiService,
-                        userPreference: UserPreference) = UserRepository(apiService, userPreference)
+                        apiServiceML: ApiService,
+                        userPreference: UserPreference) = UserRepository(apiService, apiServiceML, userPreference)
     }
 }
