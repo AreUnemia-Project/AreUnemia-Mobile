@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AreUnemia" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.AreUnemia" parent="Theme.Material3.Light">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
@@ -44,7 +44,7 @@
         <item name="colorSurface">@color/white</item>
     </style>
 
-    <style name="Theme.AreUnemia.SplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.AreUnemia.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="windowSplashScreenAnimationDuration">50</item>
         <item name="postSplashScreenTheme">@style/Theme.AreUnemia</item>
