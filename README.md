@@ -26,7 +26,7 @@ The AreUnemia Mobile application leverages advanced cloud-based image processing
 ## Download APK from Link
 
 You can download the latest version of the AreUnemia Mobile application APK from the following link:
-[Download APK](https://drive.google.com/file/d/1-jgX5sqknFm29zmSGiREKPQn6AcYn2c8/view?usp=drive_link)
+[Download APK](https://www.dropbox.com/scl/fi/vlkf7vdl5ix983qx557v8/AreUnemia.apk?rlkey=c1zy841y71qcifq0nv9d9ydc4&st=iosa9t07&dl=1)
 
 ## Tech Used
 
