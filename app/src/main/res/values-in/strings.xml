@@ -221,6 +221,6 @@
     <string name="medication_not_found">Obat tidak ditemukan</string>
     <string name="failed_update">Gagal memperbarui jadwal obat</string>
     <string name="please_answer_all">Silahkan jawab seluruh pertanyaan terlebih dahulu.</string>
-
+    <string name="prediction_error_message">Terjadi kesalahan dalam memproses gambar. Silakan coba lagi dan gunakan gambar lain.</string>
 
 </resources>

@@ -59,14 +59,13 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
 
         client.enqueue(object : Callback<PredictionResponse> {
             override fun onResponse(call: Call<PredictionResponse>, response: Response<PredictionResponse>) {
+                _isLoading.value = false
                 response.body()?.let { uploadResponse ->
                         if (uploadResponse.status == "error") {
                             _error.value = context.getString(R.string.error_message)
                         } else {
                             _uploadResult.value = uploadResponse
                         }
-                    } ?: run {
-                        _error.value = context.getString(R.string.error_message)
                     }
                 response.errorBody()?.let {
                     val errorResponse = response.errorBody()?.string()

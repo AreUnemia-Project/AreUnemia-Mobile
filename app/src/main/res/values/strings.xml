@@ -225,5 +225,6 @@
     <string name="medication_not_found">Medication not found</string>
     <string name="failed_update">Failed to update medication schedule</string>
     <string name="please_answer_all">Please answer all the questions.</string>
+    <string name="prediction_error_message">Error in processing image. Please try again and use another image.</string>
 
 </resources>

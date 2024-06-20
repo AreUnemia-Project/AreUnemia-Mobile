@@ -158,6 +158,16 @@ class ConfirmScanFragment : Fragment() {
             }
         })
 
+        scanProcessViewModel.error.observe(viewLifecycleOwner) { message ->
+            message?.let {
+                val errorMessage = when {
+                    it.contains("Prediction processing failed") -> getString(R.string.prediction_error_message)
+                    else -> it
+                }
+                showErrorDialog(requireContext(), errorMessage)
+            }
+        }
+
         scanProcessViewModel.isLoading.observe(viewLifecycleOwner) {
             showLoading(it)
         }
