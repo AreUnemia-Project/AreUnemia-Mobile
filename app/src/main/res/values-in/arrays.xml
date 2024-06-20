@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="gender_array">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <string-array name="scan_process_steps">
+        <item>Mata</item>
+        <item>Kuesioner</item>
+        <item>Konfirmasi</item>
+    </string-array>
+
+    <string-array name="image_source_options">
+        <item>Galeri</item>
+        <item>Kamera</item>
+    </string-array>
+
+    <string-array name="answer_options">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string-array name="question_array">
+        <item>@string/first_question</item>
+        <item>@string/second_question</item>
+        <item>@string/third_question</item>
+        <item>@string/fourth_question</item>
+        <item>@string/fifth_question</item>
+        <item>@string/sixth_question</item>
+        <item>@string/seventh_question</item>
+        <item>@string/eighth_question</item>
+        <item>@string/ninth_question</item>
+        <item>@string/tenth_question</item>
+    </string-array>
+
+    <!-- News Data -->
+    <string-array name="news_titles">
+        <item>Apakah menstruasi dapat menyebabkan anemia?</item>
+        <item>Anemia: Penyebab, Gejala, dan Pengobatan</item>
+        <item>Makanan yang Mengandung Zat Besi Mencegah Anemia</item>
+        <item>Apa Itu Anemia?</item>
+        <item>Memahami Anemia Defisiensi Besi</item>
+        <item>Mengapa anemia sering terjadi pada wanita?</item>
+        <item>Temukan penyebab, gejala, dan pengobatan anemia aplastik</item>
+        <item>Diet untuk Penderita Anemia yang Direkomendasikan oleh Ahli Gizi</item>
+        <item>Penjelasan Lengkap tentang Anemia yang Disebabkan oleh Kekurangan Zat Besi</item>
+        <item>Memahami Dampak Anemia pada Remaja</item>
+
+        <!-- Add more titles here -->
+    </string-array>
+
+    <string-array name="news_descriptions">
+    <item><![CDATA[
+        Anemia dapat menyelinap pada Anda—terutama anemia defisiensi besi. Hal ini dapat terjadi perlahan, selama bertahun-tahun, sehingga Anda mungkin tidak menyadari perubahannya. Kelelahan yang tidak dapat Anda hilangkan, terlepas dari berapa banyak Anda beristirahat. Merasa mudah kehabisan napas dari aktivitas yang biasa Anda lakukan sebelumnya. Perubahan yang tidak dapat dijelaskan pada rambut, kuku, kulit Anda. Ini hanyalah beberapa gejala defisiensi besi. Anemia adalah masalah kesehatan masyarakat yang besar secara global, dengan 1,62 miliar orang (24,8% dari populasi dunia) diperkirakan terpengaruh (1).<br><br>
+        <b>Pertama: apa itu anemia?</b><br>
+        Anemia adalah pengurangan sel darah merah atau hemoglobin dalam tubuh (2). Hemoglobin adalah protein yang mengandung besi di dalam sel darah merah Anda. Hemoglobin mengikat dan mengangkut molekul oksigen ke sel-sel tubuh Anda. Dengan lebih sedikit sel darah merah, tubuh Anda (termasuk otak Anda) tidak dapat menerima cukup oksigen dan berfungsi secara optimal.<br><br>
+        <b>Apa penyebab anemia?</b><br>
+        Sel darah merah dibuat di sumsum tulang Anda dan memiliki masa hidup sekitar 110 hari, di mana mereka beredar dan mengantarkan gas ke seluruh tubuh (3). Saat mereka menua, mereka akhirnya dipecah di limpa, kelenjar getah bening, dan hati, dan bagian-bagiannya didaur ulang di dalam tubuh. Setiap gangguan sepanjang siklus hidup sel darah merah (penciptaan, masa hidup fungsional, atau penghancuran) dapat menyebabkan anemia. Penyebab umum anemia termasuk: kehilangan darah, infeksi parasit, kekurangan gizi, masalah penyerapan, dan penyakit kronis (1,2). Anemia adalah topik yang luas. Ada banyak penyebab dan manifestasi yang berbeda dari anemia.<br><br>
+        Untuk tujuan artikel ini, kita hanya akan berfokus pada anemia defisiensi besi—jenis anemia tertentu—dan bagaimana hal itu berkaitan dengan kesehatan menstruasi dan ginekologi.<br><br>
+        <b>Menstruasi dan anemia</b><br>
+        Orang yang menstruasi secara tidak proporsional terpengaruh oleh anemia karena kehilangan darah melalui menstruasi. Ketika darah hilang setiap bulan selama menstruasi, besi dalam sel darah merah tersebut juga hilang. Jika asupan dan penyerapan zat besi bulanan tidak menggantikan zat besi yang hilang selama periode Anda, Anda dapat berakhir dengan anemia defisiensi besi (2).<br><br>
+        Orang dengan perdarahan menstruasi berat lebih rentan terhadap anemia defisiensi besi. Seseorang dianggap mengalami perdarahan menstruasi berat ketika periode menstruasinya biasanya lebih dari 80 ml (5). Beberapa penyebab perdarahan menstruasi berat dapat dikaitkan dengan fibroid (pertumbuhan jaringan otot abnormal di rahim Anda), adenomiosis (kondisi di mana jaringan endometrium menyerang ke dalam dinding otot rahim), polip (pertumbuhan abnormal pada leher rahim atau bagian dalam rahim Anda) atau kelainan perdarahan (6).<br><br>
+        Periode menstruasi bukan satu-satunya sumber anemia defisiensi besi ginekologi. Selama kehamilan dan laktasi, seperti halnya setiap masa pertumbuhan dan perkembangan yang meningkat, ada kebutuhan akan zat besi yang meningkat (2,7). Penting bagi orang yang hamil untuk memastikan bahwa mereka memiliki cukup zat besi, karena kadar zat besi yang rendah dapat membahayakan baik orang tua maupun anak (2). Selama kehamilan, Anda membutuhkan 2 hingga 3 kali jumlah zat besi normal yang Anda butuhkan saat tidak hamil (8). Kehilangan darah selama persalinan juga dapat berkontribusi lebih lanjut pada anemia.<br><br>
+        <b>Apa saja gejala anemia?</b><br>
+        Anemia, terutama jenis defisiensi besi, dapat memiliki onset yang licik karena dapat memakan waktu bertahun-tahun untuk berkembang secara perlahan. Beberapa gejala anemia defisiensi besi termasuk: kelelahan, kelemahan, sesak napas, konsentrasi yang buruk, pusing, intoleransi dingin, dan palpitasi jantung (1,2,9).<br><br>
+        Tanda fisik lain yang akan dicari oleh penyedia layanan kesehatan Anda adalah: pucat (terutama pada kelopak mata bagian dalam), rambut rontok, pecah-pecah di sudut mulut, perubahan kuku, dan sirkulasi yang buruk (jari tangan dan kaki dingin) (1,2,9).<br><br>
+        <b>Saya menderita anemia defisiensi besi. Sekarang apa?</b><br>
+        Tampaknya jelas — cukup makan lebih banyak zat besi, bukan? Nah, tidak selalu. Meningkatkan asupan zat besi melalui diet Anda adalah tempat yang bagus untuk memulai. Ada dua jenis zat besi makanan: heme dan nonheme.<br><br>
+        Sumber zat besi heme mengandung hemoglobin (ingat: ini adalah protein yang mengandung zat besi dalam sel darah), dan hanya ditemukan dalam sumber daging (10). Zat besi heme lebih mudah diserap daripada zat besi nonheme. Jeroan (seperti hati) umumnya memiliki konsentrasi zat besi heme tertinggi (11). Semua daging mengandung zat besi heme, tidak hanya daging merah (meskipun memiliki konsentrasi zat besi heme yang lebih tinggi), tetapi ayam, babi, dan kalkun adalah sumber yang baik. Ikan, makanan laut, dan terutama kerang seperti tiram juga merupakan sumber zat besi yang baik (11).<br><br>
+        Zat besi nonheme tersedia dari sumber tanaman, seperti biji-bijian, kacang-kacangan, dan beberapa sayuran (10). Zat besi nonheme tidak diserap sebaik sumber zat besi heme. Populasi di mana asupan daging rendah dapat berjuang untuk mendapatkan cukup zat besi makanan. Senyawa lain yang ditemukan dalam sumber zat besi nonheme (seperti fitat, tanin, dan kalsium) juga dapat mengurangi penyerapan zat besi — jadi coba batasi asupan kopi dan teh langsung setelah makan (12,13). Makan sumber zat besi dengan vitamin C (buah jeruk, paprika, stroberi, dll.) akan membantu membuat zat besi makanan lebih mudah diserap (13). Beberapa sumber zat besi nonheme yang tinggi termasuk: kedelai/tofu, lentil, gandum, bit, kangkung, kacang-kacangan, molase, dan kacang-kacangan (11).<br><br>
+        Setelah seseorang mengalami anemia defisiensi besi, sayangnya, asupan zat besi makanan tidak selalu cukup untuk memperbaiki defisiensi. Tablet zat besi oral dan suplemen adalah pengobatan utama untuk anemia defisiensi besi. Sebelum mengonsumsi suplemen apa pun untuk anemia, bicarakan dengan praktisi perawatan kesehatan Anda. Ada banyak jenis anemia yang berbeda dengan penyebab yang berbeda, jadi penting untuk memastikan bahwa Anda mengobati jenis anemia yang tepat dan penyebab dasarnya.
+    ]]></item>
+        <item><![CDATA[
+        Anemia adalah gangguan yang mengakibatkan penurunan jumlah sel darah merah atau kadar hemoglobin yang lebih rendah dalam darah. Hal ini disebabkan oleh penurunan sekresi hemoglobin atau kehilangan hemoglobin yang berlebihan atau peningkatan kerusakan sel darah merah.<br><br>
+        Anemia didiagnosis berdasarkan tingkat hemoglobin, pada pria jika kadar hemoglobin turun di bawah 13g/dl dan wanita jika kadar hemoglobin di bawah 12g/dl.<br><br>
+        Sel darah merah terdiri dari hemoglobin yang terikat pada protein yang memberi warna. Fungsi hemoglobin termasuk membawa oksigen dari paru-paru ke seluruh bagian tubuh dan karbon dioksida dari tubuh ke paru-paru yang dihembuskan. Sel darah merah terutama diproduksi di sumsum tulang dan tubuh membutuhkan nutrisi penting zat besi dan vitamin B12 untuk menghasilkan sel darah merah.<br><br>
+        <b>Penyebab</b><br>
+        Anemia disebabkan oleh beberapa faktor yang meliputi produksi hemoglobin yang berkurang karena kekurangan zat besi, kekurangan vitamin B12, kelainan talasemia, dan kelainan sumsum tulang. Kondisi genetik seperti anemia sel sabit, infeksi, dan gangguan autoimun yang mengakibatkan peningkatan pemecahan sel darah merah. Anemia juga dikategorikan berdasarkan ukuran sel darah merah, jika sel-selnya kecil maka disebut anemia mikrositik dan jika selnya besar maka disebut anemia makrositik. Anemia berkisar dari bentuk ringan hingga berat, namun anemia memerlukan perhatian medis segera karena dapat menjadi tanda peringatan dari kondisi kesehatan serius lainnya.<br><br>
+        <b>Faktor Risiko</b><br>
+        Faktor-faktor tertentu dapat meningkatkan risiko anemia yang meliputi diet yang buruk, masalah usus seperti penyakit celiac dan Crohn, menstruasi dan menopause, kehamilan, penyakit kronis - kanker dan gagal ginjal, faktor genetik, alkoholisme, dan paparan bahan kimia beracun.<br><br>
+        Tanda dan gejala anemia berbeda tergantung pada penyebabnya. Gejala anemia semakin memburuk seiring kondisi menjadi lebih parah.<br>
+        - Kelelahan<br>
+        - Kebingungan<br>
+        - Kurang konsentrasi<br>
+        - Kelemahan<br>
+        - Kulit pucat<br>
+        - Detak jantung tidak teratur atau Aritmia<br>
+        - Sesak napas<br>
+        - Pusing<br>
+        - Nyeri dada<br>
+        - Tangan dan kaki dingin<br><br>
+        <b>Diagnosis dan Pengobatan</b><br>
+        Dokter umumnya mendiagnosis anemia dengan melakukan penilaian fisik lengkap dan riwayat medis. Dokter juga menyarankan tes darah tertentu seperti CBC untuk menentukan penyebab anemia yang mendasarinya.<br><br>
+        Pengobatan biasanya tergantung pada penyebab yang mendasari yang mencakup - suplemen zat besi, vitamin B 12, asam folat dan vitamin C diberikan untuk meningkatkan kadar hemoglobin. Jika anemia disebabkan akibat penyakit kronis maka transfusi darah direkomendasikan untuk meningkatkan kadar zat besi, transplantasi sumsum tulang dan juga mengobati kondisi lain yang mendasarinya sangat penting.<br><br>
+        <b>Disclaimer:</b><br>
+        Konten yang disediakan di sini hanya untuk tujuan informasi. Blog ini tidak dimaksudkan untuk menggantikan nasihat medis, diagnosis, atau pengobatan. Selalu cari nasihat dari penyedia layanan kesehatan yang berkualifikasi untuk pertanyaan atau masalah apa pun yang Anda miliki mengenai kondisi medis. Reliance tidak mendukung atau merekomendasikan tes, dokter, prosedur, opini, atau informasi spesifik apa pun yang disebutkan di blog ini.
+    ]]></item>
+        <item><![CDATA[
+        Makanan yang Mengandung Zat Besi Mencegah Anemia<br>
+        1. Kacang Hitam<br>
+        Diakui sebagai raja makanan kaya zat besi, kacang hitam dan kacang merah berada di puncak. Hanya satu cangkir kacang hitam atau kacang merah yang dimasak dapat menyumbang 15,1 mg zat besi, jauh melebihi kebutuhan harian untuk orang dewasa yang umumnya sekitar 8 mg.<br><br>
+        2. Sumber Zat Besi Hewani yang Lezat<br>
+        Pecinta daging sapi dan tuna bisa bersukacita! Daging sapi dan sepotong filet tuna masing-masing mengandung 2 mg dan 2,5 mg zat besi. Selain kaya akan protein, kedua bahan makanan ini juga merupakan sumber zat besi yang mudah diserap oleh tubuh.<br><br>
+        3. Sayuran Hijau<br>
+        Bagi mereka yang vegetarian atau membatasi konsumsi dagingnya, jangan khawatir! Sayuran hijau seperti bayam dan brokoli merupakan sumber zat besi nabati yang baik. Setengah cangkir bayam yang direbus mengandung 3,1 mg zat besi, sedangkan satu cangkir brokoli yang dikukus menawarkan 1 mg zat besi.<br><br>
+        Untuk meningkatkan penyerapan zat besi dari sumber tanaman, konsumsi sayuran ini bersama dengan makanan yang kaya vitamin C seperti tomat.<br><br>
+        4. Tahu<br>
+        Makanan serbaguna berbahan dasar kedelai ini ternyata merupakan sumber zat besi yang mengejutkan. Setengah cangkir tahu mengandung 3,4 mg zat besi. Selain itu, tahu juga kaya akan protein nabati berkualitas tinggi.<br><br>
+        5. Kerang<br>
+        Kerang tidak hanya menawarkan rasa yang unik, tetapi juga mengandung cukup banyak zat besi. Sepuluh kerang ukuran sedang yang dimasak dengan baik mengandung sekitar 2 mg zat besi. Selain kerang, tiram dan remis juga dikenal sebagai sumber zat besi yang baik.<br><br>
+        6. Biji Labu<br>
+        Biji labu yang sering kita abaikan sebenarnya mengandung kadar zat besi yang cukup tinggi. Satu cangkir biji labu panggang menawarkan 2,1 mg zat besi. Selain itu, biji labu juga kaya akan lemak sehat, protein, dan serat.<br><br>
+        7. Dada Ayam dan Hati Sapi<br>
+        Dada ayam, meskipun kandungan zat besinya tidak setinggi kacang hitam, tetap bisa menjadi sumber zat besi yang berharga dalam menu Anda. Satu cangkir dada ayam tanpa kulit yang dimasak mengandung sekitar 1,3 mg zat besi.<br><br>
+        Bagi yang suka jeroan, hati sapi adalah pilihan yang tepat. Hati sapi dikenal sebagai makanan yang sangat kaya akan zat besi, namun perlu dikonsumsi dalam jumlah sedang karena kandungan kolesterolnya yang tinggi.
+    ]]></item>
+        <item><![CDATA[
+        Anemia adalah kondisi yang berkembang ketika darah Anda menghasilkan jumlah sel darah merah yang sehat lebih rendah dari biasanya. Jika Anda menderita anemia, tubuh Anda tidak mendapatkan cukup darah yang kaya oksigen. Kekurangan oksigen dapat membuat Anda merasa lelah atau lemah. Anda juga mungkin mengalami sesak napas, pusing, sakit kepala, atau detak jantung tidak teratur. Menurut Centers for Disease Control and Preventionexternal link, sekitar 3 juta orang di Amerika Serikat menderita anemia.<br><br>
+        Ada banyak jenis anemia, termasuk:<br>
+        - Anemia defisiensi besi<br>
+        - Anemia defisiensi vitamin B12<br>
+        - Anemia hemolitik<br><br>
+        Anemia ringan adalah kondisi umum dan dapat diobati yang dapat berkembang pada siapa saja. Hal ini dapat muncul tiba-tiba atau seiring waktu, dan dapat disebabkan oleh diet Anda, obat yang Anda minum, atau kondisi medis lainnya. Anemia juga bisa kronis, artinya berlangsung lama dan mungkin tidak pernah sembuh total. Beberapa jenis anemia bersifat turun-temurun. Jenis anemia yang paling umum adalah anemia defisiensi besi.<br><br>
+        Beberapa orang berisiko lebih tinggi untuk anemia, termasuk wanita selama menstruasi dan kehamilan. Orang yang tidak mendapatkan cukup zat besi atau vitamin tertentu dan orang yang minum obat atau perawatan tertentu juga berisiko lebih tinggi.<br><br>
+        Anemia juga bisa menjadi tanda dari kondisi yang lebih serius, seperti pendarahan di perut, peradangan akibat infeksi, penyakit ginjal, kanker, atau penyakit autoimun. Dokter Anda akan menggunakan riwayat medis Anda, pemeriksaan fisik, dan hasil tes untuk mendiagnosis anemia.<br><br>
+        Perawatan untuk anemia tergantung pada jenis yang Anda miliki dan seberapa serius kondisinya. Untuk beberapa jenis anemia ringan hingga sedang, Anda mungkin membutuhkan suplemen zat besi, vitamin, atau obat-obatan yang membuat tubuh Anda menghasilkan lebih banyak sel darah merah. Untuk mencegah anemia di masa depan, dokter Anda mungkin juga menyarankan perubahan pola makan yang sehat.
+    ]]></item>
+        <item><![CDATA[
+        Anemia defisiensi besi adalah jenis anemia yang terjadi karena tubuh kekurangan zat besi. Kondisi ini mengakibatkan penurunan jumlah sel darah merah yang sehat dalam tubuh.<br><br>
+        Zat besi adalah mineral penting yang dibutuhkan tubuh untuk menghasilkan salah satu komponen sel darah merah, yaitu hemoglobin. Hemoglobin adalah protein yang berfungsi untuk mengangkut oksigen untuk didistribusikan ke seluruh jaringan tubuh.<br><br>
+        Ketika terjadi kekurangan zat besi, tubuh tidak dapat menghasilkan cukup hemoglobin. Kurangnya produksi hemoglobin mengurangi pasokan oksigen dalam darah sehingga tubuh tidak mendapatkan cukup oksigen. Inilah yang menyebabkan penderita anemia defisiensi besi menjadi mudah lelah, lemah, dan bahkan sesak napas.<br><br>
+        Anemia defisiensi besi pada wanita hamil dapat mengganggu perkembangan janin dan bayi. Selain itu, kondisi ini juga meningkatkan risiko kelahiran prematur, penyakit infeksi, dan kematian ibu dan anak.<br><br>
+        Anemia defisiensi besi adalah jenis anemia yang paling umum, menyumbang sekitar 50% dari semua jenis anemia yang ada.<br><br>
+        <b>Penyebab dan Gejala Anemia Defisiensi Besi</b><br>
+        Penyebab anemia defisiensi besi bervariasi. Namun, anemia defisiensi besi umumnya terjadi pada orang dengan kondisi berikut:<br>
+        - Mengonsumsi makanan yang mengandung zat besi lebih sedikit<br>
+        - Mengalami gangguan penyerapan di saluran pencernaan (malabsorpsi) sehingga tidak dapat menyerap zat besi secara optimal<br>
+        - Mengalami pendarahan<br>
+        - Selama kehamilan sehingga lebih banyak zat besi dibutuhkan<br>
+        - Menderita gagal ginjal kronis<br><br>
+        Gejala anemia defisiensi besi bisa sulit dideteksi jika derajatnya masih ringan. Namun, kondisi ini bisa ditandai dengan kulit pucat, lesu atau lemah, kelelahan, pusing, nafsu makan berkurang, dan detak jantung yang lebih cepat atau berdebar.<br><br>
+        <b>Pengobatan dan Pencegahan Anemia Defisiensi Besi</b><br>
+        Anemia defisiensi besi umumnya mudah diobati. Inti dari pengobatan anemia defisiensi besi adalah mengembalikan pasokan zat besi tubuh dan mengobati penyebab dasar kekurangan zat besi.<br>
+        Agar kadar zat besi dalam tubuh kembali normal, pasien akan disarankan untuk meningkatkan asupan zat besi, yaitu dengan mengonsumsi suplemen zat besi dan makanan yang kaya zat besi.<br>
+        Sementara itu, pengobatan penyebab mendasar anemia defisiensi besi tergantung pada jenis penyakitnya. Jika penyebabnya adalah pendarahan hebat dan kadar hemoglobin sangat rendah, dokter dapat melakukan transfusi sel darah merah.<br>
+        Anemia defisiensi besi dapat dicegah dengan mengonsumsi makanan yang kaya zat besi, seperti daging merah, ikan, kacang-kacangan dan gandum. Selain itu, mengonsumsi makanan atau minuman yang mengandung vitamin C juga dapat meningkatkan penyerapan zat besi.
+    ]]></item>
+        <item><![CDATA[
+        Anemia. Nama penyakit ini pasti sudah tidak asing lagi bagi Anda sejak akhir SD atau awal SMP—saat sebagian besar siswi di kelas Anda mulai menstruasi.<br><br>
+        Sayangnya, kondisi medis yang erat kaitannya dengan wanita ini sering diabaikan. Padahal, jika dibiarkan, anemia bisa berlanjut dari remaja hingga Anda hamil dan menular ke bayi Anda.<br><br>
+        WHO menyebut anemia sebagai kondisi di mana kadar hemoglobin (Hb) dalam darah lebih rendah dari nilai normal. Hal ini juga didefinisikan sebagai kondisi ketika jumlah sel darah merah atau kemampuan mengangkut oksigen tidak mencukupi untuk kebutuhan fisiologis tubuh.<br><br>
+        Wanita dewasa yang tidak hamil dapat dikategorikan menderita anemia jika konsentrasi Hb dalam tubuhnya kurang dari 12 g/dL, sedangkan pada wanita hamil kurang dari 11 g/dL.<br><br>
+        Di antara wanita hamil, anemia sering disamakan dengan masalah tekanan darah.<br><br>
+        “Seringkali wanita hamil yang menderita anemia menyangkalnya dengan mengatakan tekanan darahnya normal. "Padahal itu dua hal yang berbeda," kata Prof. Dr. Endang Laksminingsih, MPH., Dr.PH, ahli gizi dan Koordinator Positive Deviance Resource Center (PDRC) di bawah naungan Universitas Indonesia.<br><br>
+        Hemoglobin terbentuk dari kombinasi protein dan zat besi (Fe) dalam sel darah merah. Jika Anda kekurangan satu dari Fe, protein, asam folat, vitamin B12 atau vitamin A, maka kadar Hb Anda juga akan menurun. Kondisi ini disebut anemia. Sedangkan tekanan darah mengacu pada tekanan yang dihasilkan oleh pompa jantung untuk mengalirkan darah ke seluruh tubuh. Dalam satu molekul Hb terdapat empat Fe, masing-masing mengikat satu oksigen. Oksigen dalam Hb kemudian diedarkan ke seluruh tubuh untuk mengaktifkan fungsi otot dan otak. Orang yang menderita anemia akan mengalami efek mulai dari lesu dan lemah, hingga menurunnya tingkat kecerdasan.<br><br>
+        Berdasarkan data WHO tahun 2019, prevalensi anemia pada wanita usia subur 15-49 tahun di seluruh dunia mencapai 29,9 persen atau setara dengan lebih dari 500 juta orang—dengan hampir separuhnya, 234 juta orang, ditemukan di kawasan Asia Tenggara saja.<br><br>
+        Di Indonesia, menurut Riset Kesehatan Dasar atau Riskesdas 2018, anemia menyerang 38,5 persen balita (bayi di bawah 5 tahun). Persentasenya pada anak usia 5-14 tahun sebesar 26,8 persen dan pada kategori usia 15-24 tahun sekitar 32 persen (artinya, anemia ditemukan pada 1 dari 3 remaja). Angka ini bahkan lebih tinggi pada ibu hamil, yaitu 48,9 persen. Endang menambahkan, idealnya Anda mulai memperhatikan asupan hemoglobin Anda sejak remaja, atau setelah menstruasi. Tujuannya agar Anda tetap memiliki Hb yang cukup saat mencapai kehamilan. Masa kritis pembentukan organ janin terjadi pada 8 minggu pertama kehamilan. Sayangnya, pada saat itu banyak wanita yang tidak menyadari kehamilannya, sehingga banyak yang menderita anemia. Padahal, pada masa inilah nutrisi dalam tubuh diserap oleh janin untuk berkembang.<br><br>
+        Jika ibu kekurangan Hb, janin akan beradaptasi dan berkembang tanpa Hb yang cukup. Di masa depan, mereka juga akan menderita anemia seperti ibunya. Masalahnya, kekurangan gizi pada awal kehamilan tidak dapat diperbaiki pada bulan-bulan berikutnya. Apa artinya? Ini berarti Anda harus menyiapkan asupan Hb Anda jauh sebelum Anda hamil.<br><br>
+        “Remaja putri yang tidak anemia saat hamil berisiko menjadi anemia karena kebutuhannya meningkat tajam. "Apalagi yang sudah anemia [sejak remaja]," kata Endang.<br><br>
+        Itulah alasan di balik meningkatnya prevalensi penderita anemia dari remaja putri hingga ibu hamil. Selain anemia yang menurun pada anak-anak, anemia pada ibu hamil juga dapat menyebabkan bayi lahir dengan berat badan rendah, kelahiran prematur dan pendarahan.<br><br>
+        <b>Kebiasaan Buruk Menyebabkan Anemia</b><br>
+        Ternyata ada juga kebiasaan sepele yang dapat meningkatkan risiko terkena anemia. Hal ini berlaku bagi Anda yang suka minum teh hijau setelah makan dengan tujuan menurunkan lemak tubuh, termasuk yang suka minum teh, kopi, atau susu setelah makan.<br>
+        Minum teh, kopi dan susu setelah makan dapat menyebabkan tubuh kehilangan Fe yang dapat menyebabkan anemia. Kandungan tanin dan fitat dalam teh dan kopi, serta kalsium dan fosfor dalam susu, dapat mengikat zat besi sehingga sulit diserap. Apakah jenis minuman di atas dilarang untuk wanita? Tidak juga. Anda tetap bisa menikmati teh, kopi atau susu, asalkan diberi jeda sekitar dua jam setelah makan berat.<br>
+        Sayangnya, tanpa tes darah, anemia sulit dideteksi karena memiliki gejala yang mirip dengan kekurangan gizi lainnya. Gejalanya cukup umum, seperti kulit pucat, mata menguning, otot lemas, pusing, pingsan, kelelahan, limpa membesar, atau bahkan serangan jantung.<br><br>
+        “Selama menstruasi, sel darah merah keluar, secara otomatis semua zat yang ada di sana, termasuk Fe, protein, dll, juga keluar," jelas Endang.<br><br>
+        Selain menstruasi dan kekurangan vitamin, beberapa penyebab anemia lainnya adalah infeksi. Misalnya cacing, malaria, tuberkulosis, HIV/AIDS. Atau penyakit hemolitik seperti talasemia.<br><br>
+        <b>Jadi, apa yang bisa Anda lakukan untuk menghindari anemia?</b><br>
+        Hal utama tentu saja mengonsumsi makanan bergizi seimbang, terutama yang kaya zat besi, vitamin B dan C termasuk sayuran hijau seperti bayam atau kale, daging merah dan ayam, hati, ikan dan hasil laut, kacang-kacangan, biji-bijian dan berbagai buah. seperti jeruk, pepaya, mangga, stroberi, bit.<br>
+        Mengonsumsi tablet tambahan darah (TTD) juga sangat dianjurkan. Mengacu pada pedoman pemberian TTD yang dikeluarkan oleh Kementerian Kesehatan tahun 2020, TTD dapat diberikan kepada remaja putri sekali seminggu atau total 52 tablet selama setahun penuh, sedangkan untuk ibu hamil minimal total 90 tablet selama masa kehamilan. Dianjurkan agar tablet dikonsumsi bersama makanan yang mengandung vitamin C, misalnya jus jeruk, agar penyerapannya lebih baik.<br>
+        Jangan khawatir, mengonsumsi TTD sama sekali tidak berbahaya.<br><br>
+        Tubuh kita pada dasarnya dapat mengatur penyerapan zat besi. Jika jumlah zat besi cukup, kelebihannya akan dikeluarkan melalui feses.<br><br>
+        Jangan lupa, perhatikan efek samping TTD seperti mual, muntah, sakit perut, feses berwarna hitam, dan sembelit. Biasanya, efek samping ini menjadi salah satu faktor yang membuat seseorang enggan mengonsumsinya. Bukankah begitu?
+    ]]></item>
+        <item><![CDATA[
+        Apakah Anda tahu bahwa ada banyak jenis anemia? Mungkin Anda sering mendengar tentang anemia yang terkait dengan kurangnya sel darah merah yang menyebabkan masalah kesehatan, tetapi ternyata ada lebih dari 400 jenis anemia, dan salah satunya adalah anemia aplastik yang perlu Anda waspadai.<br><br>
+        <b>Apa sebenarnya anemia aplastik itu? Dan bagaimana anemia aplastik diobati?</b> Ayo cari tahu lebih lanjut di sini! <br><br>
+        <b>Apa itu anemia aplastik?</b> Anemia aplastik adalah jenis gangguan darah yang terjadi karena kondisi di mana sumsum tulang memiliki masalah dalam menghasilkan sel darah baru dalam jumlah yang cukup. Anemia aplastik menyebabkan sumsum tulang tidak mampu mereproduksi satu atau semua jenis sel darah merah termasuk sel darah putih dan trombosit. <br><br>
+        Secara umum, penyakit ini dialami oleh mereka yang baru saja mencapai usia 20 tahun dan lanjut usia dan jenis anemia ini merupakan jenis penyakit yang jarang terjadi dan serius.<br><br>
+        Dilihat dari penyebabnya, anemia aplastik dibagi menjadi dua, yaitu anemia aplastik yang muncul pada usia tertentu (acquired aplastic anemia) dan anemia aplastik yang telah dimiliki seseorang sejak lahir (inherited aplastic anemia). Anemia aplastik karena penyebab genetik biasanya terjadi karena kerusakan gen pada anak.<br><br>
+        <b>Faktor penyebab anemia aplastik</b> <br>
+        Beberapa penyebab umum anemia aplastik, yaitu: <br>
+        1. Gangguan sistem kekebalan atau autoimun. <br>
+        Autoimun terjadi ketika sistem kekebalan tubuh menyerang sel-sel sehat, termasuk sel-sel di sumsum tulang, sehingga meningkatkan risiko terkena anemia aplastik. Ketika sistem kekebalan menyerang tubuh itu sendiri, ia juga menyerang sel-sel induk (sel-sel yang belum memiliki fungsi sendiri sehingga dapat berubah dan beradaptasi tergantung pada lokasinya) yang ada di sumsum tulang.<br><br>
+        2. Penyakit genetik atau keturunan.<br>
+        Jika suatu keluarga memiliki riwayat anemia aplastik, seorang anak atau keturunannya juga memiliki risiko lebih besar terkena anemia aplastik. <br><br>
+        3. Infeksi virus. <br>
+        Beberapa virus sangat terkait dengan anemia aplastik, termasuk Hepatitis, Epstein-Barr, Cytomegalovirus, dan human immunodeficiency virus (HIV). Virus-virus ini dapat menyerang sumsum tulang.<br><br>
+        4. Radioterapi dan kemoterapi. <br>
+        Terapi radiasi atau radioterapi dan kemoterapi juga merupakan faktor yang menyebabkan anemia aplastik. Hal ini karena kedua metode pengobatan kanker ini dapat merusak sel induk.<br><br>
+        5. Penggunaan obat-obatan tertentu.<br>
+        Penggunaan obat-obatan seperti antibiotik kloramfenikol (digunakan untuk mengobati infeksi bakteri) dan obat-obatan untuk penyakit yang menyerang sistem sendi.<br><br>
+        <b>Gejala anemia aplastik</b><br>
+        Gejala yang muncul bervariasi tergantung pada situasi dan kondisi seseorang dengan anemia aplastik. Namun, umumnya, gejala yang sering terjadi meliputi: <br>
+        - Kelelahan <br>
+        - Kulit pucat <br>
+        - Sakit kepala dan pusing <br>
+        - Demam <br>
+        - Memar pada kulit dan mudah berdarah <br>
+        - Mimisan<br><br>
+        <b>Pengobatan dan perawatan anemia aplastik</b><br>
+        Jika Anda mengalami gejala anemia, Anda dapat berkonsultasi dengan dokter untuk mendapatkan diagnosis dan pengobatan yang tepat. Jika Anda menderita anemia aplastik, pengobatan yang biasanya diberikan oleh dokter adalah: <br><br>
+        1. Antibiotik dan antivirus<br>
+        Orang dengan anemia lebih rentan terhadap infeksi, oleh karena itu, dokter akan merekomendasikan antibiotik atau antivirus.<br><br>
+        2. Transfusi darah. <br>
+        Transfusi darah biasanya dilakukan jika orang dengan anemia mengalami kekurangan sel darah yang drastis dan mendadak.<br><br>
+        3. Imunosupresan atau imunosupresif.<br>
+        Pemberian obat untuk menekan sistem kekebalan tubuh. Pengobatan ini biasa digunakan oleh pasien dengan gangguan autoimun. <br><br>
+        4. Transplantasi sel induk. <br>
+        Prosedur transplantasi sel induk umumnya dilakukan untuk menggantikan sel induk yang rusak dengan sel yang sehat. Prosedur ini biasanya diberikan ketika pasien telah menerima pengobatan imunosupresan tetapi kondisi pasien belum membaik.
+    ]]></item>
+        <item><![CDATA[
+        Anemia adalah kondisi kesehatan ketika tubuh Anda kekurangan sel darah merah. Alasan utama untuk kondisi ini adalah kehilangan darah, penghancuran sel darah merah atau tubuh individu tidak mampu menciptakan jumlah sel darah merah yang dibutuhkan. Diet memainkan peran penting dalam mengelola anemia. Di sini kami mengeksplorasi item makanan<br><br>
+        <b>Jenis-jenis Anemia:</b><br>
+        - Anemia Defisiensi Besi: Ini adalah jenis anemia yang paling umum. Sel darah merah mengandung protein yang disebut hemoglobin. Ini mengandung banyak zat besi. Karena kekurangan zat besi, tubuh Anda tidak dapat menghasilkan cukup hemoglobin yang dibutuhkan untuk membuat cukup sel darah merah untuk mengirimkan darah kaya oksigen ke seluruh tubuh Anda.<br><br>
+        - Anemia Pernisiosa: Kekurangan vitamin B-12 dan folat juga dapat mempengaruhi kemampuan individu untuk menghasilkan sel darah merah. Jika tubuh individu tidak mampu memproses B-12 dengan baik, Anda bisa mengalami anemia pernisiosa. Diet kaya zat besi dan vitamin B seperti rencana di bawah ini penting jika Anda menderita anemia.<br><br>
+        <b>Tips untuk Diet bagi Penderita Anemia</b><br><br>
+        <b>Makanan yang Kaya Zat Besi:</b><br>
+        - Kacang-kacangan dan biji-bijian merupakan bagian dari rencana diet untuk anemia<br>
+        - Biji labu merupakan sumber zat besi yang sangat baik.<br>
+        - Banyak makanan mengandung kadar zat besi yang tinggi. Hal ini membuat seseorang mudah mengombinasikannya dan membuat makanan lezat.<br>
+        - Makanan bergizi yang membantu meningkatkan asupan zat besi.<br><br>
+        <b>Buah-buahan dan sayuran:</b><br>
+        - Selada air<br>
+        - Kale keriting dan varietas lainnya<br>
+        - Bayam<br>
+        - Collard greens<br>
+        - Dandelion greens<br>
+        - Swiss chard<br>
+        - Buah jeruk<br>
+        - Paprika merah dan kuning<br>
+        - Brokoli<br><br>
+        Namun, beberapa sayuran hijau tua mengandung oksalat, yang dapat menghambat penyerapan zat besi. Jadi, daripada hanya mengandalkan sayuran, seseorang harus mengupayakan mendapatkan zat besi dari berbagai sumber.<br><br>
+        <b>Kacang-kacangan dan Biji-bijian:</b><br>
+        - Biji labu<br>
+        - Kacang mete<br>
+        - Pistachio<br>
+        - Biji rami<br>
+        - Pine nuts<br>
+        - Biji bunga matahari<br><br>
+        <b>Daging dan Ikan:</b><br>
+        - Daging sapi<br>
+        - Domba<br>
+        - Hati<br>
+        - Kerang<br>
+        - Udang<br>
+        - Sarden<br>
+        - Tuna<br>
+        - Salmon<br><br>
+        <b>Produk susu:</b><br>
+        - Susu mentah<br>
+        - Yogurt<br>
+        - Keju<br><br>
+        <b>Kacang-kacangan dan Polong-polongan:</b><br>
+        - Kacang merah<br>
+        - Kacang arab<br>
+        - Kedelai<br>
+        - Kacang-kacangan mata hitam<br>
+        - Kacang pinto<br>
+        - Kacang hitam<br>
+        - kacang polong<br>
+        - Lima kacang<br><br>
+        <b>Makanan yang Harus Dihindari:</b><br>
+        - Hindari minum teh atau kopi, karena dapat mempengaruhi penyerapan zat besi.<br>
+        - Makanan di luar.<br>
+        - Rempah-rempah.<br>
+        - Goreng.<br>
+        - Hindari alkohol.<br>
+        - Hindari kalsium dengan zat besi.<br><br>
+        <b>Tips untuk Mendapatkan Lebih Banyak Zat Besi dalam Diet</b><br><br>
+        Mengonsumsi makanan kaya zat besi dalam rutinitas harian Anda adalah cara terbaik untuk mendapatkan zat besi. Namun, strategi berikut dapat memaksimalkan asupan zat besi seseorang:<br>
+        - Vitamin C meningkatkan penyerapan zat besi, terutama dari zat besi non-heme. Cobalah menambahkan buah jeruk, paprika, bayam, dan makanan lain yang mengandung vitamin C dalam diet Anda jika Anda mengonsumsi pil zat besi untuk meningkatkan penyerapan. Segera sebelum dan setelah minum pil zat besi, hindari minum teh dan kopi, protein kedelai, makanan tinggi serat, dan suplemen kalsium.<br><br>
+        - Jika Anda suka makan makanan non-vegetarian maka Anda bisa menambahkan banyak daging, terutama jeroan. Zat besi heme yang ditemukan dalam daging lebih mudah diserap daripada bentuk non-heme yang ditemukan dalam tumbuhan. domba, Daging sapi, ayam daging gelap, babi, tiram, dan hati adalah semua sumber zat besi heme.<br><br>
+        - Bersabarlah. Kadang-kadang bisa memakan waktu beberapa bulan peningkatan asupan zat besi sebelum Anda melihat peningkatan yang nyata pada kadar zat besi dalam darah.
+    ]]></item>
+        <item><![CDATA[
+        Anemia mengacu pada penurunan jumlah sel darah merah yang bersirkulasi. Ini adalah gangguan darah yang paling umum di populasi umum dan diperkirakan mempengaruhi dua miliar orang di seluruh dunia.<br><br>
+        Kekurangan zat besi adalah penyebab anemia yang paling umum, yang disebabkan oleh kekurangan zat besi yang cukup untuk membentuk sel darah merah normal. Zat besi sangat penting untuk pembentukan hemoglobin, komponen utama sel darah merah untuk membawa oksigen dari paru-paru ke semua jaringan di tubuh.<br><br>
+        <b>Dari mana asal zat besi?</b><br>
+        Zat besi berasal dari makanan. Sumber makanan yang mengandung kadar zat besi tinggi termasuk daging merah dan hati. Jumlah yang lebih kecil ditemukan dalam sereal sarapan yang diperkaya, kacang-kacangan, sayuran berdaun hijau, dan telur.<br><br>
+        <b>Apa saja gejala anemia defisiensi besi?</b><br>
+        Kekurangan zat besi umumnya menyebabkan kelelahan, kelelahan, dan kulit pucat. Jika parah, itu juga dapat menyebabkan sesak napas saat beraktivitas, rambut rontok, tinitus (denging di telinga) dan kadang-kadang hasrat aneh untuk zat non-makanan seperti kapur dan kotoran (pica), terutama pada anak-anak.<br><br>
+        <b>Apa penyebab kekurangan zat besi?</b><br>
+        Di negara berkembang, rendahnya zat besi dalam makanan adalah penyebab utama anemia defisiensi besi. Pada pria dan wanita pasca-menopause, penyebab paling umum adalah perdarahan di perut dan usus. Ini bisa disebabkan oleh tukak lambung, kanker lambung, kanker usus besar, atau dengan mengonsumsi obat penghilang rasa sakit. Pada wanita usia reproduksi, pendarahan berlebihan selama menstruasi dan kehamilan terlihat.<br><br>
+        <b>Bagaimana anemia defisiensi besi didiagnosis?</b><br>
+        Organisasi Kesehatan Dunia mendefinisikan anemia sebagai nilai hemoglobin darah kurang dari 13 g/dl pada pria dan 12g/dl pada wanita. Diagnosis juga mencakup jumlah sel darah lengkap, apusan tepi, jumlah retikulosit, dan indeks zat besi serum (ferritin serum dan zat besi serum).<br><br>
+        <b>Bagaimana kekurangan zat besi diobati?</b><br>
+        Pengobatan untuk anemia defisiensi besi adalah suplementasi zat besi oral. Suplementasi oral murah, aman, dan efektif. Efek samping umum dari pengobatan oral termasuk gastritis, diare, dan sembelit. Penggantian zat besi diberikan melalui pembuluh darah jika pengobatan oral tidak ditoleransi karena efek samping.<br><br>
+        <b>Masalah lebih lanjut</b><br>
+        Jika anemia defisiensi besi tidak diobati, hal itu dapat membuat kita lebih rentan terhadap penyakit dan infeksi, karena kekurangan zat besi memengaruhi sistem pertahanan alami tubuh (sistem kekebalan). Anemia defisiensi besi yang parah dapat meningkatkan risiko komplikasi yang memengaruhi jantung atau paru-paru. Wanita hamil dengan anemia parah atau tidak diobati juga memiliki risiko komplikasi yang lebih tinggi sebelum dan setelah melahirkan.
+    ]]></item>
+        <item><![CDATA[
+        Memasuki masa remaja, tentu banyak aktivitas dan hobi yang ingin Anda jalani. Oleh karena itu, penting bagi remaja untuk terus menjaga kesehatan dan kebugaran fisik, agar terhindar dari berbagai jenis masalah kesehatan yang dapat mengganggu aktivitas sehari-hari. Salah satu penyakit yang harus diwaspadai adalah anemia.<br><br>
+        Anemia adalah penyakit yang terjadi ketika tubuh kekurangan sel darah merah yang sehat atau ketika sel darah merah tidak berfungsi dengan baik. Hal ini menyebabkan organ tubuh tidak mendapatkan cukup oksigen, sehingga penderita anemia memiliki kulit pucat dan mudah lelah.<br><br>
+        <b>Penyakit Penyerta Anemia</b><br>
+        Tidak hanya itu, anemia juga menyebabkan berbagai masalah kesehatan, antara lain:<br><br>
+        1. Penurunan imunitas<br>
+        2. Penurunan konsentrasi<br>
+        3. Mengalami penurunan prestasi belajar<br>
+        4. Tidak fit dan mengalami penurunan produktivitas<br>
+        5. Pada remaja putri, anemia dapat meningkatkan risiko kematian saat melahirkan, bayi lahir prematur, dan berat bayi cenderung rendah.<br><br>
+        <b>Tips mencegah Anemia</b><br>
+        Diharapkan dengan adanya berbagai macam penyakit yang disebabkan oleh anemia pada remaja di atas dapat meningkatkan kesadaran remaja sehingga dapat mulai menerapkan berbagai macam pencegahan anemia, seperti mengkonsumsi makanan tinggi zat besi, asam folat, vitamin A, C, Zinc dan mengkonsumsi tablet tambahan darah.<br><br>
+        Teruslah menjalankan kebiasaan hidup sehat dan segera pergi ke fasilitas kesehatan terdekat untuk pemeriksaan jika Anda mengalami gejala anemia, agar bisa mendapatkan penanganan sedini mungkin.
+    ]]></item>
+    </string-array>
+
+
+    <string-array name="news_dates">
+        <item>17 Oktober 2017</item>
+        <item>23 September 2019</item>
+        <item>15 Mei 2024</item>
+        <item>24 Maret 2022</item>
+        <item>28 April 2023</item>
+        <item>12 Oktober 2023</item>
+        <item>30 Maret 2023</item>
+        <item>18 Oktober 2019</item>
+        <item>6 Mei 2018</item>
+        <item>16 November 2023</item>
+    </string-array>
+
+    <integer-array name="news_images">
+        <item>@drawable/img01</item>
+        <item>@drawable/img02</item>
+        <item>@drawable/img03</item>
+        <item>@drawable/img04</item>
+        <item>@drawable/img05</item>
+        <item>@drawable/img06</item>
+        <item>@drawable/img07</item>
+        <item>@drawable/img08</item>
+        <item>@drawable/img09</item>
+        <item>@drawable/img10</item>
+        <!-- Add more image resources here -->
+    </integer-array>
+
+</resources>

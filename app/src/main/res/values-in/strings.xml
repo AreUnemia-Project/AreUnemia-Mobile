@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AreUnemia</string>
+
+    <!--Page names-->
+    <string name="home">Beranda</string>
+    <string name="scan">Pindai</string>
+    <string name="history">Riwayat</string>
+    <string name="account">Akun</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+
+    <!--Field-->
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="name">Nama</string>
+    <string name="birth_date">Tanggal Lahir</string>
+    <string name="date_format">%d/%02d/%02d</string> <!-- Format: YYYY/MM/DD -->
+    <string name="gender">Jenis Kelamin</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+
+    <!--Messages-->
+    <string name="error_message">Terjadi kesalahan yang tidak diketahui. Silakan coba lagi.</string>
+    <string name="email_error_message">Format email tidak valid</string>
+    <string name="password_error_message">Kata sandi harus terdiri dari minimal 8 karakter</string>
+    <string name="warning_message">Apakah Anda yakin ingin keluar? Perubahan yang belum disimpan akan hilang.</string>
+    <string name="empty_image_warning">Silakan masukkan gambar terlebih dahulu.</string>
+
+    <string name="go_to_register">Belum punya akun? %1$s</string>
+    <string name="register_here">Daftar di sini</string>
+
+    <string name="go_to_login">Sudah punya akun? %1$s</string>
+    <string name="login_here">Masuk di sini</string>
+
+    <string name="login_required">Login Diperlukan</string>
+    <string name="need_to_login">Anda perlu masuk untuk mengakses fitur ini. Apakah Anda ingin masuk sekarang?</string>
+
+    <string name="prediction_warning">Hasil yang diberikan oleh aplikasi ini hanyalah prediksi berdasarkan data yang Anda masukkan. Ini bukan pengganti nasihat, diagnosis, atau perawatan medis profesional.\n\nUntuk diagnosis yang akurat dan perawatan yang tepat, silakan berkonsultasi dengan profesional kesehatan atau kunjungi fasilitas medis terdekat.</string>
+    <string name="signup_success_message">Anda berhasil mendaftar dengan email %1$s.</string>
+    <string name="confirm_password_error_message">Kata sandi tidak cocok.</string>
+    <string name="confirm_submit_scan">Data Anda akan dianalisis dan disimpan. Apakah Anda ingin melanjutkan untuk mengirimkan pemindaian Anda?</string>
+    <string name="warning_to_scan">Hasil ini adalah prediksi berdasarkan data Anda dan bukan pengganti nasihat medis profesional.\n\nApakah Anda yakin ingin melanjutkan?</string>
+
+    <string name="please_complete_data">Silakan lengkapi data!</string>
+    <string name="email_exists_message">Email sudah terdaftar!</string>
+    <string name="failed_register">Gagal mendaftarkan pengguna</string>
+    <string name="invalid_login">Email atau kata sandi tidak valid</string>
+    <string name="failed_login">Gagal memasukkan pengguna</string>
+
+    <string name="confirm_submit_data">Apakah Anda yakin ingin menyimpan data yang diperbarui?</string>
+    <string name="confirm_submit_password">Apakah Anda yakin ingin menyimpan kata sandi baru?</string>
+
+    <string name="update_data_message">Profil Anda berhasil diperbarui</string>
+    <string name="failed_update_user">Gagal memperbarui pengguna</string>
+    <string name="update_password_message">Kata sandi Anda berhasil diperbarui</string>
+    <string name="are_you_sure_logout">Apakah Anda yakin ingin keluar?</string>
+    <string name="login_to_view_profile">Masuk untuk melihat profil</string>
+
+    <string name="session_expired">Sesi Berakhir</string>
+    <string name="session_expired_message">Sesi Anda telah berakhir. Silakan masuk kembali.</string>
+    <string name="token_expired">Token telah berakhir. Pengguna akan dikeluarkan.</string>
+
+    <!--Reusable text-->
+    <string name="continue_text">Lanjutkan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="warning">Peringatan</string>
+    <string name="cancel">Batal</string>
+    <string name="title">Judul</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="success">Sukses</string>
+    <string name="error_title">Kesalahan</string>
+    <string name="ok">OK</string>
+    <string name="error">Kesalahan</string>
+    <string name="back">Kembali</string>
+
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi. Phasellus dapibus auctor erat, a scelerisque libero ullamcorper ut. Fusce at lacinia justo. Duis lobortis sit amet risus ac tincidunt. Suspendisse potenti.</string>
+
+    <!--Scan and History -->
+    <string name="scan_with">Pindai dengan</string>
+    <string name="scan_description">Pindai mata Anda dengan AreUnemia untuk mendapatkan pemeriksaan anemia cepat, kemudian jawab beberapa pertanyaan kesehatan untuk akurasi yang lebih baik.</string>
+    <string name="scan_warning">Ingat, ini hanya pemeriksaan awal — selalu berkonsultasilah dengan profesional kesehatan untuk diagnosis yang pasti.</string>
+    <string name="scan_start">Mulai memindai sekarang untuk tetap proaktif tentang kesehatan Anda!</string>
+    <string name="anemia_prediction">Prediksi Anemia:</string>
+    <string name="prediction_date">Tanggal Prediksi</string>
+    <string name="no_anemia_predicted">Terprediksi Tidak Anemia</string>
+    <string name="eyes">Mata</string>
+    <string name="questionnaire_response">Respon Kuesioner</string>
+    <string name="edit_answer">Edit Jawaban</string>
+    <string name="change_image">Ganti gambar</string>
+    <string name="select_image_source">Pilih sumber gambar</string>
+
+    <string name="example_eye_picture">Contoh gambar mata</string>
+    <string name="eye_picture_description">Pastikan gambar yang diambil jelas, dengan pencahayaan yang baik, memperlihatkan konjungtiva mata, dan hanya mencakup satu mata.</string>
+
+    <string name="photo_taken">Foto berhasil diambil</string>
+    <string name="photo_failed">Gagal mengambil foto</string>
+    <string name="permission_granted">Permintaan izin diberikan</string>
+    <string name="permission_denied">Permintaan izin ditolak</string>
+    <string name="provide_all_information">Harap lengkapi semua informasi yang diperlukan</string>
+
+    <!--Questionnaire-->
+    <string name="questionnaire">Kuesioner</string>
+
+    <string name="question_one">Pertanyaan 1</string>
+    <string name="first_question">Apakah Anda sering merasa lelah atau kelelahan, bahkan setelah tidur dengan cukup?</string>
+
+    <string name="question_two">Pertanyaan 2</string>
+    <string name="second_question">Apakah Anda memperhatikan bahwa warna kulit Anda, terutama di wajah atau telapak tangan, lebih pucat dari biasanya?</string>
+
+    <string name="question_three">Pertanyaan 3</string>
+    <string name="third_question">Apakah Anda mengalami sesak napas atau detak jantung cepat, terutama saat beraktivitas fisik?</string>
+
+    <string name="question_four">Pertanyaan 4</string>
+    <string name="fourth_question">Apakah Anda mengalami memar atau pendarahan yang tidak biasa atau berlebihan, seperti mimisan atau gusi berdarah?</string>
+
+    <string name="question_five">Pertanyaan 5</string>
+    <string name="fifth_question">Apakah Anda sering mengalami pusing atau merasa ringan kepala, terutama saat berdiri dengan cepat?</string>
+
+    <string name="question_six">Pertanyaan 6</string>
+    <string name="sixth_question">Apakah Anda sering mengalami sakit kepala yang parah, terutama yang tampaknya muncul tiba-tiba atau bertahan lama?</string>
+
+    <string name="question_seven">Pertanyaan 7</string>
+    <string name="seventh_question">Apakah Anda memperhatikan perubahan signifikan dalam nafsu makan Anda, seperti keinginan untuk makan yang berkurang atau keinginan aneh untuk benda-benda non-makanan?</string>
+
+    <string name="question_eight">Pertanyaan 8</string>
+    <string name="eighth_question">Apakah Anda merasa lebih mudah tersinggung atau moody dari biasanya, tanpa sebab yang jelas?</string>
+
+    <string name="question_nine">Pertanyaan 9</string>
+    <string name="ninth_question">Apakah Anda mengalami mati rasa atau sensasi kesemutan, terutama di tangan atau kaki?</string>
+
+    <string name="question_ten">Pertanyaan 10</string>
+    <string name="tenth_question">Apakah Anda memperhatikan perubahan pada kuku Anda, seperti kuku yang pucat atau berbentuk sendok?</string>
+
+    <string name="question_title">Pertanyaan %1$d</string>
+    <string name="question_template">Ini adalah template pertanyaan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="you_are_predicted">Anda diprediksi dengan:</string>
+    <string name="anemia_results">Hasil Anemia</string>
+    <string name="go_to_scan_history">Pergi ke Riwayat Pindai</string>
+    <string name="go_back_to_home">Kembali ke Beranda</string>
+
+    <!--Result-->
+    <string name="severe_desc">Segera cari perhatian medis. Perawatan mungkin termasuk suplemen zat besi, vitamin, perubahan pola makan, atau transfusi darah. Sangat penting untuk mengikuti saran dokter Anda untuk mengelola gejala dan meningkatkan kesehatan Anda.</string>
+    <string name="moderate_desc">Berkonsultasilah dengan profesional kesehatan untuk mendapatkan saran, yang mungkin termasuk perubahan pola makan, suplemen zat besi, atau perawatan lainnya. Fokus pada makanan yang kaya zat besi dan pertimbangkan vitamin C untuk penyerapan yang lebih baik. Hindari aktivitas berat untuk mengelola gejala seperti kelelahan.</string>
+    <string name="mild_desc">Sesuaikan pola makan Anda untuk mencakup makanan yang kaya zat besi seperti bayam dan lentil, dan pertimbangkan sumber vitamin C untuk penyerapan yang lebih baik. Suplemen zat besi dapat membantu, tetapi konsultasikan terlebih dahulu dengan profesional kesehatan. Pantau gejala seperti kelelahan dan lemas, cari saran medis jika gejala terus berlanjut.</string>
+    <string name="healthy_desc">Fokus pada pola makan seimbang dengan makanan yang kaya zat besi seperti daging tanpa lemak dan sayuran berdaun hijau. Tetap terhidrasi dan berolahraga secara teratur untuk kesejahteraan secara keseluruhan. Jika mengalami kelelahan atau kelemahan, konsultasikan dengan profesional kesehatan untuk memastikan tidak ada masalah kesehatan lain. Pemeriksaan rutin membantu menjaga kesehatan optimal.</string>
+
+    <string name="severe">Berisiko Tinggi</string>
+    <string name="moderate">Berisiko Sedang</string>
+    <string name="mild">Berisiko Rendah</string>
+    <string name="no_anemia">Tidak Anemia</string>
+
+    <string name="anemia_text">%1$s Anemia</string>
+    <string name="anemia_prediction_template">Prediksi Anemia: %1$s</string>
+    <string name="unknown_prediction">Prediksi Tidak Diketahui</string>
+    <string name="no_history">Belum ada riwayat untuk ditampilkan</string>
+
+    <!-- Account -->
+
+    <string name="language">Bahasa</string>
+    <string name="logout">Keluar</string>
+    <string name="user_name">Nama Pengguna</string>
+
+    <string name="edit_password">Ubah Kata Sandi</string>
+    <string name="edit_data">Ubah Data</string>
+    <string name="old_password">Password Lama</string>
+    <string name="confirm_new_password">Konfirmasi Kata Sandi Baru</string>
+    <string name="new_password">Kata Sandi Baru</string>
+    <string name="submit_password">Simpan Perubahan Kata Sandi</string>
+    <string name="submit_data">Simpan Perubahan Data</string>
+    <string name="edit_profile">Ubah Profil</string>
+    <string name="other_menu">Menu Lainnya</string>
+    <string name="recommendation">Rekomendasi</string>
+
+    <string name="headline">tajuk</string>
+    <string name="description">deskripsi</string>
+    <string name="medication_name">Nama Obat</string>
+    <string name="enter_medication_name">Masukkan Nama Obat</string>
+    <string name="reminder_time">Waktu Pengingat</string>
+    <string name="tap_to_select_reminder_time">Ketuk untuk memilih Waktu Pengingat</string>
+    <string name="information">Informasi</string>
+    <string name="medication_reminder">Pengingat Obat</string>
+    <string name="view_all">Lihat Semua</string>
+    <string name="skip">Lewati</string>
+    <string name="done">Selesai</string>
+    <string name="add">Tambah</string>
+    <string name="new_medication">Obat Baru</string>
+    <string name="submit">Kirim</string>
+    <string name="date_text">Tanggal</string>
+    <string name="notes">Catatan (opsional)</string>
+    <string name="dosage_in_mg">Dosis (dalam mg)</string>
+    <string name="add_more_schedule">Tambah Jadwal Lain</string>
+    <string name="schedule">Jadwal</string>
+    <string name="delete_schedule">Hapus Jadwal</string>
+    <string name="dosage_error_message">Silakan masukkan besaran dosis yang valid.</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="maximum_field_schedule">Maksimal memasukkan 5 jadwal.</string>
+    <string name="medication_added_message">Obat berhasil ditambahkan</string>
+    <string name="medication_duplicate_message">Obat sudah ada!</string>
+    <string name="failed_add_medication">Gagal menambahkan obat</string>
+    <string name="save">Simpan</string>
+    <string name="end_date_before_start_date">Tanggal akhir tidak boleh sebelum tanggal mulai.</string>
+    <string name="failed_get_medication">Gagal mendapatkan obat</string>
+    <string name="user_id_required">ID pengguna diperlukan</string>
+    <string name="medication_desc_initial">%1$smg</string>
+    <string name="medication_desc">%1$smg, %2$s</string>
+    <string name="to_take">Untuk Diambil</string>
+    <string name="login_to_use_reminder">Masuk untuk menggunakan pengingat</string>
+    <string name="no_medications_found">Tidak ada obat yang ditampilkan</string>
+    <string name="formatted_date_with_time">%1$s pada %2$s</string>
+    <string name="today">Hari ini</string>
+
+    <string name="confirm_delete_medication">Apakah Anda yakin ingin menghapus obat ini dan semua jadwalnya?</string>
+    <string name="confirm_mark_done">Apakah Anda yakin ingin menandai obat ini sebagai selesai?</string>
+    <string name="confirm_mark_skip">Apakah Anda yakin ingin menandai obat ini sebagai dilewati?</string>
+    <string name="medication_deleted">Obat berhasil dihapus.</string>
+    <string name="medication_done">Obat berhasil ditandai sebagai selesai.</string>
+    <string name="medication_skipped">Obat berhasil ditandai sebagai dilewati.</string>
+    <string name="failed_delete_medication">Gagal menghapus obat</string>
+    <string name="medication_not_found">Obat tidak ditemukan</string>
+    <string name="failed_update">Gagal memperbarui jadwal obat</string>
+    <string name="please_answer_all">Silahkan jawab seluruh pertanyaan terlebih dahulu.</string>
+
+
+</resources>

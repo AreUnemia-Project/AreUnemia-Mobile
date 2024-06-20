@@ -1,3 +1,229 @@
 <resources>
     <string name="app_name">AreUnemia</string>
+
+    <!--Page names-->
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
+    <!--Field-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="date_format">%d/%02d/%02d</string> <!-- Format: YYYY/MM/DD -->
+    <string name="gender">Gender</string>
+    <string name="confirm_password">Confirm Password</string>
+
+
+    <!--Messages-->
+    <string name="error_message">An unknown error occurred. Please try again.</string>
+    <string name="email_error_message">Invalid email format</string>
+    <string name="password_error_message">Password must be at least 8 characters</string>
+    <string name="warning_message">Are you sure you want to exit? Any unsaved changes will be lost.</string>
+    <string name="empty_image_warning">Please enter an image first.</string>
+
+    <string name="go_to_register">Don\'t have an account? %1$s</string>
+    <string name="register_here">Register here</string>
+
+    <string name="go_to_login">Already have an account? %1$s</string>
+    <string name="login_here">Login here</string>
+
+    <string name="login_required">Login Required</string>
+    <string name="need_to_login">You need to log in to access this feature. Do you want to log in now?</string>
+
+    <string name="prediction_warning">The results provided by this application are only predictions based on the data you have entered. They are not a substitute for professional medical advice, diagnosis, or treatment.\n\nFor an accurate diagnosis and proper treatment, please consult a healthcare professional or visit your nearest medical facility.</string>
+    <string name="signup_success_message">You have successfully registered with the email %1$s.</string>
+    <string name="confirm_password_error_message">Password does not match.</string>
+    <string name="confirm_submit_scan">Your data will be analyzed and stored. Do you want to proceed with submitting your scan?</string>
+    <string name="warning_to_scan">The results are predictions based on your data and are not a substitute for professional medical advice.\n\nAre you sure you want to proceed?</string>
+
+    <string name="please_complete_data">Please complete the data!</string>
+    <string name="email_exists_message">Email already exists!</string>
+    <string name="failed_register">Failed to register user</string>
+    <string name="invalid_login">Invalid email or password</string>
+    <string name="failed_login">Failed to login user</string>
+
+    <string name="confirm_submit_data">Are you sure you want to submit the updated data?</string>
+    <string name="confirm_submit_password">Are you sure you want to submit the new password?</string>
+
+    <string name="update_data_message">You have successfully updated your profile</string>
+    <string name="failed_update_user">Failed to update user</string>
+    <string name="update_password_message">You have successfully updated your password</string>
+    <string name="are_you_sure_logout">Are you sure you want to logout?</string>
+    <string name="login_to_view_profile">Login to view profile</string>
+
+    <string name="session_expired">Session Expired</string>
+    <string name="session_expired_message">Your session has expired. Please log in again.</string>
+    <string name="token_expired">Token expired. User logged out.</string>
+
+    <!--Reusable text-->
+    <string name="continue_text">Continue</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="warning">Warning</string>
+    <string name="cancel">Cancel</string>
+    <string name="title">Title</string>
+    <string name="confirm">Confirm</string>
+    <string name="success">Success</string>
+    <string name="error_title">Error</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="back">Back</string>
+
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quisque egestas magna ut metus viverra, sit amet fringilla urna fermentum. Nulla facilisi.
+        Phasellus dapibus auctor erat, a scelerisque libero ullamcorper ut. Fusce at lacinia justo.
+        Duis lobortis sit amet risus ac tincidunt. Suspendisse potenti.</string>
+
+    <!--Scan and History -->
+    <string name="scan_with">Scan with</string>
+    <string name="scan_description">Scan your eyes with AreUnemia to get a quick anemia check, then answer a few health questions for better accuracy.</string>
+    <string name="scan_warning">Remember, this is just a preliminary check— always consult a healthcare professional for a confirmed diagnosis.</string>
+    <string name="scan_start">Start scanning now to stay proactive about your health!</string>
+    <string name="anemia_prediction">Anemia Prediction:</string>
+    <string name="prediction_date">Prediction Date</string>
+    <string name="no_anemia_predicted">No Anemia Predicted</string>
+    <string name="eyes">Eyes</string>
+    <string name="questionnaire_response">Questionnaire Response</string>
+    <string name="edit_answer">Edit Answer</string>
+    <string name="change_image">Change image</string>
+    <string name="select_image_source">Select image source</string>
+
+    <string name="example_eye_picture">Eye Image Example</string>
+    <string name="eye_picture_description">Ensure that the picture is clear, taken in good lighting, shows the conjunctiva of the eye, and includes only one eye.</string>
+
+    <string name="photo_taken">Photo was taken</string>
+    <string name="photo_failed">Failed to take photo</string>
+    <string name="permission_granted">Permission request granted</string>
+    <string name="permission_denied">Permission request denied</string>
+    <string name="provide_all_information">Please provide all necessary information</string>
+
+    <!--Questionnaire-->
+    <string name="questionnaire">Questionnaire</string>
+
+    <string name="question_one">Question 1</string>
+    <string name="first_question">Do you often feel tired or fatigued, even after getting enough sleep?</string>
+
+    <string name="question_two">Question 2</string>
+    <string name="second_question">Do you notice that your skin tone, particularly on your face or palms, is paler than usual?</string>
+
+    <string name="question_three">Question 3</string>
+    <string name="third_question">Do you experience shortness of breath or rapid heartbeat, especially during physical activity?</string>
+
+    <string name="question_four">Question 4</string>
+    <string name="fourth_question"> Do you experience unusual or excessive bruising or bleeding, such as nosebleeds or bleeding gums?</string>
+
+    <string name="question_five">Question 5</string>
+    <string name="fifth_question">Do you have frequent episodes of dizziness or lightheadedness, particularly when standing up quickly?</string>
+
+    <string name="question_six">Question 6</string>
+    <string name="sixth_question">Do you often experience intense headaches, particularly ones that seem to come on suddenly or persist for long periods?</string>
+
+    <string name="question_seven">Question 7</string>
+    <string name="seventh_question">Have you noticed a significant change in your appetite, such as a decreased desire to eat or unusual cravings for non-food items?</string>
+
+    <string name="question_eight">Question 8</string>
+    <string name="eighth_question">Have you been feeling more irritable or moody than usual, without any obvious cause?</string>
+
+    <string name="question_nine">Question 9</string>
+    <string name="ninth_question">Do you experience numbness or tingling sensations, particularly in your hands or feet?</string>
+
+    <string name="question_ten">Question 10</string>
+    <string name="tenth_question">Have you noticed any changes in your nail beds, such as pale or spoon-shaped nails?</string>
+
+    <string name="question_title">Question %1$d</string>
+    <string name="question_template">This is a question template. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+    <string name="you_are_predicted">You are predicted with:</string>
+    <string name="anemia_results">Anemia Results</string>
+    <string name="go_to_scan_history">Go to Scan History</string>
+    <string name="go_back_to_home">Go back to Home</string>
+
+    <!--Result-->
+    <string name="severe_desc">Seek immediate medical attention. Treatment may include iron supplements, vitamins, dietary changes, or blood transfusions. It\'s crucial to follow your doctor\'s advice to manage symptoms and improve your health.</string>
+    <string name="moderate_desc">Consult with a healthcare professional for advice, which may include dietary changes, iron supplements, or other treatments. Focus on iron-rich foods and consider vitamin C for better absorption. Pace yourself and avoid strenuous activities to manage symptoms like fatigue.</string>
+    <string name="mild_desc">Adjust your diet to include iron-rich foods like spinach and lentils, and consider vitamin C sources for better absorption. Iron supplements could help, but consult a healthcare professional first. Monitor symptoms like fatigue and weakness, seek medical advice if they persist.</string>
+    <string name="healthy_desc">Focus on a balanced diet with iron-rich foods like lean meats and leafy greens. Stay hydrated and exercise regularly for overall well-being. If experiencing fatigue or weakness, consult a healthcare professional to rule out other health issues. Regular check-ups help maintain optimal health.</string>
+
+    <string name="severe">High Risk</string>
+    <string name="moderate">Moderate Risk</string>
+    <string name="mild">Low Risk</string>
+    <string name="no_anemia">No Anemia</string>
+
+    <string name="anemia_text">%1$s of Anemia</string>
+    <string name="anemia_prediction_template">Anemia Prediction: %1$s</string>
+    <string name="unknown_prediction">Unknown Prediction</string>
+    <string name="no_history">No history to show</string>
+
+
+    <!-- Account -->
+
+    <string name="language">Language</string>
+    <string name="logout">Logout</string>
+    <string name="user_name">User Name</string>
+
+    <string name="edit_password">Edit Password</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="old_password">Old Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="submit_password">Submit Password</string>
+    <string name="submit_data">Submit Data</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="other_menu">Other Menu</string>
+    <string name="recommendation">Recommendation</string>
+
+    <string name="headline">headline</string>
+    <string name="description">description</string>
+    <string name="medication_name">Medication Name</string>
+    <string name="enter_medication_name">Enter Medication Name</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="tap_to_select_reminder_time">Tap to select Reminder Time</string>
+    <string name="information">Information</string>
+    <string name="medication_reminder">Medication Reminder</string>
+    <string name="view_all">View All</string>
+    <string name="skip">Skip</string>
+    <string name="done">Done</string>
+    <string name="add">Add</string>
+    <string name="new_medication">New Medication</string>
+    <string name="submit">Submit</string>
+    <string name="date_text">Date</string>
+    <string name="notes">Notes (optional) </string>
+    <string name="dosage_in_mg">Dosage (in mg)</string>
+    <string name="add_more_schedule">Add More Schedule</string>
+    <string name="schedule">Schedule</string>
+    <string name="delete_schedule">Delete Schedule</string>
+    <string name="dosage_error_message">Please enter a valid dosage amount.</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="maximum_field_schedule">Maximum of 5 schedules allowed.</string>
+    <string name="medication_added_message">Medication added successfully</string>
+    <string name="medication_duplicate_message">Medication already exists!</string>
+    <string name="failed_add_medication">Failed to add medication</string>
+    <string name="save">Save</string>
+    <string name="end_date_before_start_date">End date cannot be before the start date.</string>
+    <string name="failed_get_medication">Error getting medications</string>
+    <string name="user_id_required">User ID is required</string>
+    <string name="medication_desc_initial">%1$smg</string>
+    <string name="medication_desc">%1$smg, %2$s</string>
+    <string name="to_take">To Take</string>
+    <string name="login_to_use_reminder">Login to use reminder</string>
+    <string name="no_medications_found">No medications to show</string>
+    <string name="formatted_date_with_time">%1$s at %2$s</string>
+    <string name="today">Today</string>
+
+    <string name="confirm_delete_medication">Are you sure you want to delete this medication and all its schedules?</string>
+    <string name="confirm_mark_done">Are you sure you want to mark this medication as done?</string>
+    <string name="confirm_mark_skip">Are you sure you want to mark this medication as skipped?</string>
+    <string name="medication_deleted">Medication deleted successfully.</string>
+    <string name="medication_done">Medication marked as done successfully.</string>
+    <string name="medication_skipped">Medication marked as skipped successfully.</string>
+    <string name="failed_delete_medication">Error deleting medications</string>
+    <string name="medication_not_found">Medication not found</string>
+    <string name="failed_update">Failed to update medication schedule</string>
+    <string name="please_answer_all">Please answer all the questions.</string>
+
 </resources>
