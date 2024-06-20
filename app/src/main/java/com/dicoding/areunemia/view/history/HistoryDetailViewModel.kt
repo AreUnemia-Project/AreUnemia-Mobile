@@ -11,7 +11,6 @@ import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.HistoryDetailResponse
 import com.dicoding.areunemia.data.remote.response.HistoryDetailItem
-import com.dicoding.areunemia.data.remote.retrofit.ApiConfig
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,7 +33,7 @@ class HistoryDetailViewModel (private val repository: UserRepository) : ViewMode
 
     fun getHistoryDetail(id: String, context: Context) {
         _isLoading.value = true
-        val client = ApiConfig.getApiServiceMock().getHistoryDetail(id)
+        val client = repository.apiServiceML.getHistoryDetail(id)
 
         client.enqueue(object : Callback<HistoryDetailResponse> {
             override fun onResponse(

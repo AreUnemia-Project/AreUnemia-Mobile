@@ -10,18 +10,12 @@ import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.PredictionResponse
-import com.dicoding.areunemia.data.remote.response.QuestionnaireAnswers
-import com.dicoding.areunemia.data.remote.retrofit.ApiConfig
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.RequestBody.Companion.asRequestBody
-import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.File
 
 class ScanProcessViewModel(private val repository: UserRepository) : ViewModel() {
     private val _currentImageUri = MutableLiveData<Uri>()
@@ -61,7 +55,7 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
 
     fun uploadScan(eyePhoto: MultipartBody.Part, questionnaireAnswers: RequestBody, context: Context) {
         _isLoading.value = true
-        val client = ApiConfig.getApiServiceMock().postScan(eyePhoto, questionnaireAnswers)
+        val client = repository.apiServiceML.postScan(eyePhoto, questionnaireAnswers)
 
         client.enqueue(object : Callback<PredictionResponse> {
             override fun onResponse(call: Call<PredictionResponse>, response: Response<PredictionResponse>) {
@@ -77,7 +71,7 @@ class ScanProcessViewModel(private val repository: UserRepository) : ViewModel()
                 response.errorBody()?.let {
                     val errorResponse = response.errorBody()?.string()
                     val errorMessage = try {
-                        JSONObject(errorResponse ?: "").getString("message")
+                        JSONObject(errorResponse ?: "").getString("detail")
                     } catch (e: Exception) {
                         response.message()
                     }

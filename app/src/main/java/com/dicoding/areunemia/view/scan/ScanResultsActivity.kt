@@ -3,8 +3,6 @@ package com.dicoding.areunemia.view.scan
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivityScanResultsBinding
@@ -49,7 +47,7 @@ class ScanResultsActivity : AppCompatActivity() {
             "Severe" -> Triple(R.drawable.pic_severe_anemia, R.string.severe, R.string.severe_desc)
             "Moderate" -> Triple(R.drawable.pic_moderate_anemia, R.string.moderate, R.string.moderate_desc)
             "Mild" -> Triple(R.drawable.pic_mild_anemia, R.string.mild, R.string.mild_desc)
-            "Healthy" -> Triple(R.drawable.pic_no_anemia, R.string.no, R.string.healthy_desc)
+            "Healthy" -> Triple(R.drawable.pic_no_anemia, R.string.no_anemia, R.string.healthy_desc)
             else -> {
                 showErrorDialog(this, getString(R.string.error_message))
                 return
@@ -65,7 +63,11 @@ class ScanResultsActivity : AppCompatActivity() {
         }
 
         binding.ivResultsPhoto.setImageResource(imageRes)
-        binding.tvPredictionResults.text = getString(R.string.anemia_text, getString(severityRes))
+        if (result == "Healthy") {
+            binding.tvPredictionResults.text = getString(severityRes)
+        } else {
+            binding.tvPredictionResults.text = getString(R.string.anemia_text, getString(severityRes))
+        }
         binding.tvPredictionResults.setTextColor(ContextCompat.getColor(this@ScanResultsActivity, colorRes))
         binding.tvPredictionDesc.text = getString(descTextRes)
 

@@ -42,9 +42,9 @@ class ConfirmScanFragment : Fragment() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                showToast(requireContext(), "Permission request granted")
+                showToast(requireContext(), requireContext().getString(R.string.permission_granted))
             } else {
-                showToast(requireContext(), "Permission request denied")
+                showToast(requireContext(), requireContext().getString(R.string.permission_denied))
             }
         }
 
@@ -53,9 +53,15 @@ class ConfirmScanFragment : Fragment() {
             ActivityResultContracts.TakePicture()
         ) { isSuccess ->
             if (isSuccess) {
+                showToast(requireContext(), requireContext().getString(R.string.photo_taken))
+                Log.e("Picture", requireContext().getString(R.string.photo_taken))
                 currentImageUri?.let { uri ->
                     startCrop(this, uri)
                 }
+            } else {
+                showToast(requireContext(), requireContext().getString(R.string.photo_failed))
+                currentImageUri = null
+                Log.e("Picture", requireContext().getString(R.string.photo_failed))
             }
         }
 
@@ -160,6 +166,7 @@ class ConfirmScanFragment : Fragment() {
 
     private fun showImage(uri: Uri) {
         binding.ivEyesPhoto.setImageURI(uri)
+        currentImageUri = uri
     }
 
     private fun getButtonColor(answer: Int): Int {
@@ -229,7 +236,7 @@ class ConfirmScanFragment : Fragment() {
         val answersList = scanProcessViewModel.answers.value
         val eyePhotoUri = scanProcessViewModel.currentImageUri.value
 
-        if (answersList != null && eyePhotoUri != null) {
+        if (currentImageUri != null && answersList != null && eyePhotoUri != null) {
 
             val eyePhotoFile = eyePhotoUri.let {
                 uriToFile(it, requireContext()).reduceFileImage()
@@ -237,7 +244,7 @@ class ConfirmScanFragment : Fragment() {
             val requestImageFile = eyePhotoFile.asRequestBody("image/jpeg".toMediaType())
             val multipartBody = requestImageFile.let {
                 MultipartBody.Part.createFormData(
-                    "photo",
+                    "eye_photo",
                     eyePhotoFile.name,
                     it
                 )
@@ -251,11 +258,11 @@ class ConfirmScanFragment : Fragment() {
             }
 
             val answersBody = questionnaireAnswers.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
-
+            Log.e("ConfirmScanFragment", answersBody.toString())
             scanProcessViewModel.uploadScan(multipartBody, answersBody, requireContext())
 
         } else {
-            showToast(requireContext(), "Please provide all necessary information")
+            showToast(requireContext(), requireContext().getString(R.string.provide_all_information))
         }
     }
 

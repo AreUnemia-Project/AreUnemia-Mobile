@@ -26,9 +26,11 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "BASE_URL", "\"https://backend-areunemia-3cv52zngvq-et.a.run.app/\"")
+            buildConfigField("String", "BASE_URL_ML", "\"https://fastapi-app-3cv52zngvq-et.a.run.app/\"")
         }
         debug {
             buildConfigField("String", "BASE_URL", "\"https://backend-areunemia-3cv52zngvq-et.a.run.app/\"")
+            buildConfigField("String", "BASE_URL_ML", "\"https://fastapi-app-3cv52zngvq-et.a.run.app/\"")
         }
     }
     compileOptions {
@@ -71,4 +73,5 @@ dependencies {
     implementation("com.github.yalantis:ucrop:2.2.8")
 
     implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation("com.github.dewinjm:monthyear-picker:1.0.2")
 }

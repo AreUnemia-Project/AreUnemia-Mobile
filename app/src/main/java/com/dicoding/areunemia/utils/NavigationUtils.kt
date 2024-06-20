@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 
 fun navigateToOtherFeature(context: Context, activityClass: Class<*>) {
     context.startActivity(Intent(context, activityClass))

@@ -35,9 +35,9 @@ class EyeUploadFragment : Fragment() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                showToast(requireContext(), "Permission request granted")
+                showToast(requireContext(), requireContext().getString(R.string.permission_granted))
             } else {
-                showToast(requireContext(), "Permission request denied")
+                showToast(requireContext(), requireContext().getString(R.string.permission_denied))
             }
         }
 
@@ -46,14 +46,15 @@ class EyeUploadFragment : Fragment() {
             ActivityResultContracts.TakePicture()
         ) { isSuccess ->
             if (isSuccess) {
-                showToast(requireContext(), "Photo was taken")
-                Log.e("Picture", "Photo was taken")
+                showToast(requireContext(), requireContext().getString(R.string.photo_taken))
+                Log.e("Picture", requireContext().getString(R.string.photo_taken))
                 currentImageUri?.let { uri ->
                     startCrop(this, uri)
                 }
             } else {
-                showToast(requireContext(), "Failed to take photo")
-                Log.e("Picture", "Failed in taking Photo")
+                showToast(requireContext(), requireContext().getString(R.string.photo_failed))
+                currentImageUri = null
+                Log.e("Picture", requireContext().getString(R.string.photo_failed))
             }
         }
 

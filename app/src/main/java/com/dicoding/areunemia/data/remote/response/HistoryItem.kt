@@ -6,7 +6,7 @@ data class HistoryItem (
     @field:SerializedName("createdAt")
     val createdAt: String? = null,
 
-    @field:SerializedName("predictionResult")
+    @field:SerializedName("result")
     val predictionResult: String? = null,
 
     @field:SerializedName("predictionId")

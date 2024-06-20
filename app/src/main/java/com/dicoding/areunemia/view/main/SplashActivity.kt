@@ -3,11 +3,8 @@ package com.dicoding.areunemia.view.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivitySplashBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -21,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        installSplashScreen() // Ensure this is called to display the splash screen
+        installSplashScreen()
 
         lifecycleScope.launch {
             delay(splashTime)

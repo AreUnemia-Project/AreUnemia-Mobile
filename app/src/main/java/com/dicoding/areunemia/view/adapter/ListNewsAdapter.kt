@@ -2,6 +2,7 @@ package com.dicoding.areunemia.view
 
 import android.content.Context
 import android.content.Intent
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,10 +23,11 @@ class ListNewsAdapter(private val context: Context, private val listNews: List<N
     override fun getItemCount(): Int = listNews.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (title, description, img) = listNews[position]
+        val (title, description, img, date) = listNews[position]
         holder.imgPhoto.setImageResource(img)
         holder.tvTitle.text = title
-        holder.tvDescription.text = description
+        holder.tvDescription.text = Html.fromHtml(description, Html.FROM_HTML_MODE_LEGACY)
+        holder.tvDate.text = date
 
         holder.itemView.setOnClickListener {
             val clickedItem = listNews[position]
@@ -39,5 +41,6 @@ class ListNewsAdapter(private val context: Context, private val listNews: List<N
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvTitle: TextView = itemView.findViewById(R.id.tv_item_name)
         val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+        val tvDate: TextView = itemView.findViewById(R.id.tv_item_date)
     }
 }

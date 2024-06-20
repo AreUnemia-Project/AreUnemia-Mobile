@@ -12,7 +12,8 @@ object Injection {
     fun provideRepository(context: Context): UserRepository {
         val pref = UserPreference.getInstance(context.dataStore)
         val user = runBlocking { pref.getSession().first() }
-        val apiService = ApiConfig.getApiService(user.token)
-        return UserRepository.getInstance(apiService, pref)
+        val apiService = ApiConfig.getApiService(user.token, context)
+        val apiServiceML = ApiConfig.getApiServiceML(user.token, context)
+        return UserRepository.getInstance(apiService, apiServiceML, pref)
     }
 }

@@ -41,7 +41,6 @@ class CalendarAdapter(
         holder.dayOfMonth.text = calendarData.calendarDate
         holder.dayOfWeek.text = calendarData.calendarDay
 
-        // Highlight selected day or day with event
         if (calendarData.isSelected || calendarData.hasEvent) {
             holder.itemView.setBackgroundResource(R.color.red)
             holder.dayOfMonth.setTextColor(holder.itemView.context.getColor(R.color.white))
@@ -63,7 +62,6 @@ class CalendarAdapter(
             selectedPosition = position
             calendarList[selectedPosition].isSelected = true
 
-            // Ensure previous item is deselected only if it does not have an event
             if (previousPosition != -1) {
                 val previousData = calendarList[previousPosition]
                 if (!previousData.hasEvent) {

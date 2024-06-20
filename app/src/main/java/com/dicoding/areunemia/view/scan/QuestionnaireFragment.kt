@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import com.dicoding.areunemia.R
-import com.dicoding.areunemia.databinding.FragmentEyeUploadBinding
 import com.dicoding.areunemia.databinding.FragmentQuestionnaireBinding
 import com.dicoding.areunemia.utils.showToast
 import com.dicoding.areunemia.view.ViewModelFactory
@@ -115,7 +112,7 @@ class QuestionnaireFragment : Fragment() {
         if (!questionOneAnswered || !questionTwoAnswered || !questionThreeAnswered || !questionFourAnswered
             || !questionFiveAnswered || !questionSixAnswered || !questionSevenAnswered || !questionEightAnswered
             || !questionNineAnswered || !questionTenAnswered) {
-            showToast(requireContext(), "Please answer all the questions.")
+            showToast(requireContext(), requireContext().getString(R.string.please_answer_all))
             return false
         }
 
