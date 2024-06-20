@@ -102,7 +102,10 @@ class MedicationReminderActivity : AppCompatActivity(), CalendarAdapter.OnItemCl
                             )
                         }
                     }
-                    .sortedBy { parseDate(it.startDate) }
+                    .sortedWith(compareBy(
+                        { parseDate(it.startDate) },
+                        { parseTime(it.schedule) }
+                    ))
 
                 if (medicationDataList.isEmpty()) {
                     setMedicationResults(emptyList())
@@ -180,6 +183,16 @@ class MedicationReminderActivity : AppCompatActivity(), CalendarAdapter.OnItemCl
         return try {
             val inputFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
             inputFormat.parse(dateString)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    private fun parseTime(timeString: String?): Date? {
+        return try {
+            val inputFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+            inputFormat.parse(timeString)
         } catch (e: Exception) {
             e.printStackTrace()
             null

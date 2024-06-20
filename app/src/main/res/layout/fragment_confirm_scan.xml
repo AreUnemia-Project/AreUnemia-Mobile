@@ -1,203 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.scan.ConfirmScanFragment">
 
-    <TextView
-        android:id="@+id/tvEyesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/eyes"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivEyesPhoto"
-        android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEyesTitle"
-        tools:src="@drawable/ic_image_24"
-        app:srcCompat="@drawable/ic_image_24"/>
-
-    <TextView
-        android:id="@+id/tvQuestionnaireTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/questionnaire"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivEyesPhoto" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutQuestionnaireAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestionnaireTitle" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/layoutTopQuestionnaire"
+        <TextView
+            android:id="@+id/tvEyesTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/eyes"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/buttonQuestionOne"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:background="@drawable/circle_shape"
-                android:text="1"
-                android:textColor="#fff" />
+        <ImageView
+            android:id="@+id/ivEyesPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEyesTitle"
+            tools:src="@drawable/ic_image_24"
+            app:srcCompat="@drawable/ic_image_24"/>
 
-            <Button
-                android:id="@+id/buttonQuestionTwo"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="2"
-                android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/buttonQuestionThree"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="3"
-                android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/buttonQuestionFour"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="4"
-                android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/buttonQuestionFive"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="5"
-                android:textColor="#fff" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutBottomQuestionnaire"
+        <TextView
+            android:id="@+id/tvQuestionnaireTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/questionnaire"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layoutTopQuestionnaire">
+            app:layout_constraintTop_toBottomOf="@id/ivEyesPhoto" />
 
-            <Button
-                android:id="@+id/buttonQuestionSix"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:background="@drawable/circle_shape"
-                android:text="6"
-                android:textColor="#fff" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutQuestionnaireAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestionnaireTitle" >
 
-            <Button
-                android:id="@+id/buttonQuestionSeven"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="7"
-                android:textSize="16sp"
-                android:textColor="#fff" />
+            <LinearLayout
+                android:id="@+id/layoutTopQuestionnaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/buttonQuestionEight"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="8"
-                android:textColor="#fff" />
+                <Button
+                    android:id="@+id/buttonQuestionOne"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="1"
+                    android:textColor="#fff" />
 
-            <Button
-                android:id="@+id/buttonQuestionNine"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="9"
-                android:textColor="#fff" />
+                <Button
+                    android:id="@+id/buttonQuestionTwo"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="2"
+                    android:textColor="#fff" />
 
-            <Button
-                android:id="@+id/buttonQuestionTen"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_shape"
-                android:text="10"
-                android:textColor="#fff"
-                android:includeFontPadding="false"
-                android:lineSpacingExtra="0dp"
-                android:padding="0dp" />
+                <Button
+                    android:id="@+id/buttonQuestionThree"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="3"
+                    android:textColor="#fff" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/buttonQuestionFour"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="4"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/buttonQuestionFive"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="5"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBottomQuestionnaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTopQuestionnaire">
+
+                <Button
+                    android:id="@+id/buttonQuestionSix"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="6"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/buttonQuestionSeven"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="7"
+                    android:textSize="16sp"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/buttonQuestionEight"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="8"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/buttonQuestionNine"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="9"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/buttonQuestionTen"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/circle_shape"
+                    android:text="10"
+                    android:textColor="#fff"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:padding="0dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/continueConfirmButton"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="@color/red"
+            android:text="@string/confirm"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutQuestionnaireAnswer"
+            tools:alpha="100" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/continueConfirmButton"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
-        android:backgroundTint="@color/red"
-        android:text="@string/confirm"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutQuestionnaireAnswer"
-        tools:alpha="100" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

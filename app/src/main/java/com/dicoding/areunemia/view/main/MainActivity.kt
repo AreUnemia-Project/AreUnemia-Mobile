@@ -117,10 +117,8 @@ class MainActivity : AppCompatActivity() {
     private fun observeViewModel() {
         viewModel.listMedication.observe(this) { medResult ->
             if (medResult.isNullOrEmpty()) {
-                Log.e("MedicationReminderActivity", "medResult is empty")
                 showNoMedicationMessage(true)
             } else {
-                Log.e("MedicationReminderActivity", "medResult not empty")
                 val today = Calendar.getInstance().apply {
                     set(Calendar.HOUR_OF_DAY, 0)
                     set(Calendar.MINUTE, 0)
@@ -147,7 +145,10 @@ class MainActivity : AppCompatActivity() {
                             )
                         }
                     }
-                    .sortedBy { parseDate(it.startDate) }
+                    .sortedWith(compareBy(
+                        { parseDate(it.startDate) },
+                        { parseTime(it.schedule) }
+                    ))
                     .take(2) // Pick only the top two items
 
                 if (medicationDataList.isEmpty()) {
@@ -189,6 +190,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun parseTime(timeString: String?): Date? {
+        return try {
+            val inputFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+            inputFormat.parse(timeString)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
 
     private fun setMedicationResults(listMedicationResult: List<MedicationData>) {
         val adapter = MedicationPreviewAdapter()
