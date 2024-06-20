@@ -10,8 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
-import com.dicoding.areunemia.data.remote.response.EditPasswordResponse
-import com.dicoding.areunemia.data.remote.response.EditUserDataResponse
+import com.dicoding.areunemia.data.remote.response.BaseResponse
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import retrofit2.Call
@@ -19,11 +18,11 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class EditProfileViewModel(private val repository: UserRepository) : ViewModel() {
-    private val _editUserDataResult = MutableLiveData<EditUserDataResponse>()
-    val editUserDataResult: LiveData<EditUserDataResponse> = _editUserDataResult
+    private val _editUserDataResult = MutableLiveData<BaseResponse>()
+    val editUserDataResult: LiveData<BaseResponse> = _editUserDataResult
 
-    private val _editPasswordResult = MutableLiveData<EditPasswordResponse>()
-    val editPasswordResult: LiveData<EditPasswordResponse> = _editPasswordResult
+    private val _editPasswordResult = MutableLiveData<BaseResponse>()
+    val editPasswordResult: LiveData<BaseResponse> = _editPasswordResult
 
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
@@ -45,8 +44,8 @@ class EditProfileViewModel(private val repository: UserRepository) : ViewModel()
         _isLoading.value = true
         val client = repository.apiService.updateUserData(name, birthDate, gender)
 
-        client.enqueue(object : Callback<EditUserDataResponse> {
-            override fun onResponse(call: Call<EditUserDataResponse>, response: Response<EditUserDataResponse>) {
+        client.enqueue(object : Callback<BaseResponse> {
+            override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
                 _isLoading.value = false
                 response.body()?.let { editResponse ->
                     if (editResponse.status == "error") {
@@ -67,7 +66,7 @@ class EditProfileViewModel(private val repository: UserRepository) : ViewModel()
                 }
             }
 
-            override fun onFailure(call: Call<EditUserDataResponse>, t: Throwable) {
+            override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
                 _isLoading.value = false
                 Log.e(TAG, "onFailure: ${t.message.toString()}")
                 _error.value = t.message.toString()
@@ -79,8 +78,8 @@ class EditProfileViewModel(private val repository: UserRepository) : ViewModel()
         _isLoading.value = true
         val client = repository.apiService.updatePassword(oldPassword, password, confirmPassword)
 
-        client.enqueue(object : Callback<EditPasswordResponse> {
-            override fun onResponse(call: Call<EditPasswordResponse>, response: Response<EditPasswordResponse>) {
+        client.enqueue(object : Callback<BaseResponse> {
+            override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
                 _isLoading.value = false
                 response.body()?.let { editResponse ->
                     if (editResponse.status == "error") {
@@ -101,7 +100,7 @@ class EditProfileViewModel(private val repository: UserRepository) : ViewModel()
                 }
             }
 
-            override fun onFailure(call: Call<EditPasswordResponse>, t: Throwable) {
+            override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
                 _isLoading.value = false
                 Log.e(TAG, "onFailure: ${t.message.toString()}")
                 _error.value = t.message.toString()

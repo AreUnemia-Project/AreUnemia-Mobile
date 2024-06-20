@@ -12,7 +12,6 @@ import com.dicoding.areunemia.data.local.pref.UserModel
 import com.dicoding.areunemia.data.local.repository.UserRepository
 import com.dicoding.areunemia.data.remote.response.HistoryItem
 import com.dicoding.areunemia.data.remote.response.HistoryResponse
-import com.dicoding.areunemia.data.remote.retrofit.ApiConfig
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import retrofit2.Call

@@ -10,7 +10,9 @@ import com.dicoding.areunemia.view.account.EditProfileViewModel
 import com.dicoding.areunemia.view.history.HistoryDetailViewModel
 import com.dicoding.areunemia.view.history.HistoryViewModel
 import com.dicoding.areunemia.view.login.LoginViewModel
+import com.dicoding.areunemia.view.main.AddMedicationViewModel
 import com.dicoding.areunemia.view.main.MainViewModel
+import com.dicoding.areunemia.view.main.MedicationReminderViewModel
 import com.dicoding.areunemia.view.register.RegisterViewModel
 import com.dicoding.areunemia.view.scan.ScanProcessViewModel
 import com.dicoding.areunemia.view.scan.ScanViewModel
@@ -47,7 +49,12 @@ class ViewModelFactory(private val repository: UserRepository) : ViewModelProvid
             modelClass.isAssignableFrom(EditProfileViewModel::class.java) -> {
                 EditProfileViewModel(repository) as T
             }
-            // add view models here
+            modelClass.isAssignableFrom(AddMedicationViewModel::class.java) -> {
+                AddMedicationViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(MedicationReminderViewModel::class.java) -> {
+                MedicationReminderViewModel(repository) as T
+            }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

@@ -1,12 +1,10 @@
 package com.dicoding.areunemia.view.scan
 
 import android.animation.ValueAnimator
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AlertDialog
 import com.dicoding.areunemia.R
 import com.dicoding.areunemia.databinding.ActivityScanProcessBinding
 import com.dicoding.areunemia.utils.showConfirmationDialog
@@ -54,8 +52,6 @@ class ScanProcessActivity : AppCompatActivity() {
         if (nextFragment != null) {
             slideToNextFragment(nextFragment)
             updateStateProgressBar(nextFragment)
-        } else {
-            // Handle case when there is no next fragment
         }
     }
 

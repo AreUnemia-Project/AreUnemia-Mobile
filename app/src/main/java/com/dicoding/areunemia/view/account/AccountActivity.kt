@@ -59,7 +59,6 @@ class AccountActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        // Handle button clicks
         binding.apply {
             loginButton.setOnClickListener {
                 startActivity(Intent(this@AccountActivity, LoginActivity::class.java))

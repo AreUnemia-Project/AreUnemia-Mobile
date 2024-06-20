@@ -89,12 +89,10 @@ class HistoryDetailActivity : AppCompatActivity() {
     private fun formatDate(dateString: String?): String? {
         dateString?.let {
             try {
-                // Correct the date format to match the date string, including fractional seconds
                 val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'", Locale.getDefault())
                 sdf.timeZone = TimeZone.getTimeZone("UTC")
                 val date = sdf.parse(dateString)
 
-                // Create a new SimpleDateFormat for WIB
                 val newSdf = SimpleDateFormat("EEEE • dd MMMM yyyy • HH:mm:ss", Locale.getDefault())
                 newSdf.timeZone = TimeZone.getTimeZone("Asia/Jakarta") // WIB timezone
 
